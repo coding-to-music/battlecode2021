@@ -1,84 +1,86 @@
 # battlecode2021
 
-BattleCode 2020 - Overview
+BattleCode 2020 - Overview  
+  
+  
+  
+https://2020.battlecode.org/getting-started  
+  
+   
+This is the Battlecode 2020 contest website, which will be your main hub for all Battlecode-related things for the duration of the contest. For a general overview of what Battlecode is, visit our landing page.  
+This year's game is a thrilling survival adventure involving 🍲, ▀⛓, 🐮, 🤖, and more. You will write bots in Java.  
+Battlecode 2020 is released! Read the game specifications. Check out this example replay for a demo of the game!  
+Account and Team Creation  
+To participate in Battlecode, you need an account and a team. Each team can consist of 1 to 4 people.  
+Create an account on this website, and then go to the team section to either create or join a team.  
 
-
-
-https://2020.battlecode.org/getting-started
-
- 
-This is the Battlecode 2020 contest website, which will be your main hub for all Battlecode-related things for the duration of the contest. For a general overview of what Battlecode is, visit our landing page.
-This year's game is a thrilling survival adventure involving 🍲, ▀⛓, 🐮, 🤖, and more. You will write bots in Java.
-Battlecode 2020 is released! Read the game specifications. Check out this example replay for a demo of the game!
-Account and Team Creation
-To participate in Battlecode, you need an account and a team. Each team can consist of 1 to 4 people.
-Create an account on this website, and then go to the team section to either create or join a team.
-Installation
-If you experience problems with the instructions below, check common issues, and if that doesn't help, ask on the Discord.
-STEP 1: INSTALL JAVA
-You'll need a Java Development Kit (JDK) version 8. Unfortunately, higher versions will not work. Download it here. You may need to create an Oracle account.
-I downloaded 
-jdk-8u271-linux-aarch64
- 
-Installation Instructions for Java JDK
-https://docs.datastax.com/en/jdk-install/doc/jdk-install/installOpenJdkDeb.html
- 
-http://openjdk.java.net/install/
- 
- 
-If you're unsure how to install the JDK, you can find instructions for all operating systems here (pay attention to PATH and CLASSPATH).
- 
- 
-Linux
-Click the appropriate link:
-"JDK Installation for Linux Platforms"
-"JRE Installation for Linux Platforms"
-"Server JRE 8 Installation for Linux Platforms"
-"Manual Installation and Registration of Java Plugin for Linux"
-To run Java applets in a browser, you must install the JRE plugin manually. This does not apply to the server JRE.
-JRE for Linux system requirements and gives installation instructions for several JRE-Linux combinations.
-This page contains these topics:
-"System Requirements"
-"JRE 8 Installation Instructions"
-"General Installation Notes"
-See "JDK 8 and JRE 8 Installation Start Here" for general information about installing JDK 8 and JRE 8.
-Linux - To find out if the path is properly set
-To find out if the path is properly set:
-In a terminal windows, enter:
-% java -version
-connorstom@penguin:~$ java -version
-openjdk version "1.8.0_232"
-OpenJDK Runtime Environment (build 1.8.0_232-8u232-b09-1~deb9u1-b09)
-OpenJDK 64-Bit Server VM (build 25.232-b09, mixed mode)
- 
- 
-
-This will print the version of the java tool, if it can find it. If the version is old or you get the error java: Command not found, then the path is not properly set.
-Determine which java executable is the first one found in your PATH
-In a terminal window, enter:
-% which java
-Set the PATH permanently
-To set the path permanently, set the path in your startup file.
-Note: Instructions for two most popular Shells on Linux and Solaris are listed. If you are using other shells, see the Path Setting Tutorial.
-Bash Shell
-Edit the startup file (~/.bashrc)
-Modify PATH variable
-PATH=/usr/local/jdk1.8.0/bin:$PATH
-export PATH
-Save and close the file
-Load the startup file
-% . /.profile
-Verify that the path is set by repeating the java command
-% java -version
-Modify build.gradle to view the Java version
-task version {
-    group 'battlecode'
-    doLast{
-        println("\nJDK version: ${System.properties['java.home']}")
-        println("\nVersion: " + versions.battlecode + "\n")
-    }
-}
- 
+## Installation  
+If you experience problems with the instructions below, check common issues, and if that doesn't help, ask on the Discord.  
+STEP 1: INSTALL JAVA  
+You'll need a Java Development Kit (JDK) version 8. Unfortunately, higher versions will not work. Download it here. You may need to create an Oracle account.  
+I downloaded   
+jdk-8u271-linux-aarch64  
+   
+## Installation Instructions for Java JDK  
+https://docs.datastax.com/en/jdk-install/doc/jdk-install/installOpenJdkDeb.html  
+   
+http://openjdk.java.net/install/  
+   
+   
+If you're unsure how to install the JDK, you can find instructions for all operating systems here (pay attention to PATH and CLASSPATH).  
+   
+   
+Linux  
+Click the appropriate link:  
+"JDK Installation for Linux Platforms"  
+"JRE Installation for Linux Platforms"  
+"Server JRE 8 Installation for Linux Platforms"  
+"Manual Installation and Registration of Java Plugin for Linux"  
+To run Java applets in a browser, you must install the JRE plugin manually. This does not apply to the server JRE.  
+JRE for Linux system requirements and gives installation instructions for several JRE-Linux combinations.  
+This page contains these topics:  
+"System Requirements"  
+"JRE 8 Installation Instructions"  
+"General Installation Notes"  
+See "JDK 8 and JRE 8 Installation Start Here" for general information about installing JDK 8 and JRE 8.  
+Linux - To find out if the path is properly set  
+To find out if the path is properly set:  
+In a terminal windows, enter:  
+% java -version  
+connorstom@penguin:~$ java -version  
+openjdk version "1.8.0_232"  
+OpenJDK Runtime Environment (build 1.8.0_232-8u232-b09-1~deb9u1-b09)  
+OpenJDK 64-Bit Server VM (build 25.232-b09, mixed mode)  
+   
+   
+  
+This will print the version of the java tool, if it can find it. If the version is old or you get the error java: Command not found, then the path is not properly set.  
+Determine which java executable is the first one found in your PATH  
+In a terminal window, enter:  
+% which java  
+Set the PATH permanently  
+To set the path permanently, set the path in your startup file.  
+Note: Instructions for two most popular Shells on Linux and Solaris are listed. If you are using other shells, see the Path Setting Tutorial.  
+Bash Shell  
+Edit the startup file (~/.bashrc)  
+Modify PATH variable  
+PATH=/usr/local/jdk1.8.0/bin:$PATH  
+export PATH  
+Save and close the file  
+Load the startup file  
+```java
+% . /.profile  
+// Verify that the path is set by repeating the java command  
+% java -version  
+// Modify build.gradle to view the Java version  
+task version {  
+    group 'battlecode'  
+    doLast{  
+        println("\nJDK version: ${System.properties['java.home']}")  
+        println("\nVersion: " + versions.battlecode + "\n")  
+    }  
+}  
+```   
  
  
 STEP 2: DOWNLOAD BATTLECODE
