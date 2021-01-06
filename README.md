@@ -7,7 +7,7 @@
 </b>
 
 - [BattleCode 2021 - Overview](#battlecode-2021---overview)
-- [Introduction](#introduction)
+  - [Introduction](#introduction)
   - [Account and Team Creation](#account-and-team-creation)
   - [Links and resources for this year's Battlecode](#links-and-resources-for-this-years-battlecode)
 - [Getting Set Up](#getting-set-up)
@@ -40,7 +40,7 @@
 - [Upload Your Bot and Scrimmage](#upload-your-bot-and-scrimmage)
   
 
-# Introduction  
+## Introduction  
 This is the Battlecode 2021 contest website, which will be your main hub for all Battlecode-related things for the duration of the contest. For a general overview of what Battlecode is, visit our landing page.  
 This year's game is a thrilling survival adventure involving 🍲, ▀⛓, 🐮, 🤖, and more. You will write bots in Java.  
 
