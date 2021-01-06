@@ -1,10 +1,9 @@
 # BattleCode 2021 - Overview  
   
 - [BattleCode 2021 - Overview](#battlecode-2021---overview)
-  - [Links and resources for this year's Battlecode](#links-and-resources-for-this-years-battlecode)
-- [Overview of Battlecode](#overview-of-battlecode)
-- [Battlecode 2021 is released!](#battlecode-2021-is-released)
+- [Introduction](#introduction)
   - [Account and Team Creation](#account-and-team-creation)
+  - [Links and resources for this year's Battlecode](#links-and-resources-for-this-years-battlecode)
 - [Getting Set Up](#getting-set-up)
   - [Setup your computer](#setup-your-computer)
     - [Download the file.](#download-the-file)
@@ -31,6 +30,13 @@
 - [Upload Your Bot and Scrimmage](#upload-your-bot-and-scrimmage)
   
 
+# Introduction  
+This is the Battlecode 2021 contest website, which will be your main hub for all Battlecode-related things for the duration of the contest. For a general overview of what Battlecode is, visit our landing page.  
+This year's game is a thrilling survival adventure involving 🍲, ▀⛓, 🐮, 🤖, and more. You will write bots in Java.  
+
+## Account and Team Creation  
+To participate in Battlecode, you need an account and a team. Each team can consist of 1 to 4 people.  
+Create an account at (battlecode.org)[https://2021.battlecode.org/getting-started], and then go to the (team)[https://2021.battlecode.org/team] section to either create or join a team.  
 
 ## Links and resources for this year's Battlecode  
 (battlecode.org - getting started)[https://2020.battlecode.org/getting-started]  
@@ -39,23 +45,18 @@
 (Scaffold Repository)[https://github.com/battlecode/battlecode21-scaffold]    
 (Robot properties)[https://2021.battlecode.org/javadoc/index.html]  
 (Game Specifications for this year)[https://2021.battlecode.org/specs/specs.md.html#]  
-
-
-# Overview of Battlecode  
-This is the Battlecode 2021 contest website, which will be your main hub for all Battlecode-related things for the duration of the contest. For a general overview of what Battlecode is, visit our landing page.  
-This year's game is a thrilling survival adventure involving 🍲, ▀⛓, 🐮, 🤖, and more. You will write bots in Java.  
-
-# Battlecode 2021 is released! 
-(Read the game specifications) []
-Check out this example replay for a demo of the game!  
-
-## Account and Team Creation  
-To participate in Battlecode, you need an account and a team. Each team can consist of 1 to 4 people.  
-Create an account on this website, and then go to the team section to either create or join a team.  
+Some tweets about battlecode are on (Twitter)[https://twitter.com/search?q=thomasconnors%20battlecode]  
+A great postmortum from 2020 (Team Battlegaode)[http://web.mit.edu/agrebe/www/battlecode/20/index.html]    
 
 # Getting Set Up  
 ## Setup your computer  
-  
+
+You will need the following, we will cover each item:
+- Java version 8
+- Set environment variables `foo` and `bar`
+- and editor such as vscode, IntelliJ, Eclipse etc
+- The Battlecode Scaffold, where you can 
+
 Installation of the 64-bit JDK on Linux Platforms  
 This procedure installs the Java Development Kit (JDK) for 64-bit Linux, using an archive binary file (.tar.gz).  
 These instructions use the following file:  
