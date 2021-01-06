@@ -1,14 +1,13 @@
-# battlecode2021
-
 # BattleCode 2021 - Overview  
   
-- [battlecode2021](#battlecode2021)
 - [BattleCode 2021 - Overview](#battlecode-2021---overview)
-  - [Links for this year's Battlecode](#links-for-this-years-battlecode)
+  - [Links and resources for this year's Battlecode](#links-and-resources-for-this-years-battlecode)
 - [Overview of Battlecode](#overview-of-battlecode)
 - [Battlecode 2021 is released!](#battlecode-2021-is-released)
   - [Account and Team Creation](#account-and-team-creation)
 - [Getting Set Up](#getting-set-up)
+  - [Setup your computer](#setup-your-computer)
+    - [Download the file.](#download-the-file)
   - [Installation](#installation)
 - [Install Java Release 8](#install-java-release-8)
   - [STEP 1: INSTALL JAVA](#step-1-install-java)
@@ -16,29 +15,30 @@
   - [Linux](#linux)
   - [Bash Shell](#bash-shell)
 - [Install the Scaffold](#install-the-scaffold)
-  - [STEP 2: DOWNLOAD BATTLECODE](#step-2-download-battlecode)
+  - [STEP 2: DOWNLOAD the competition scaffold for BATTLECODE](#step-2-download-the-competition-scaffold-for-battlecode)
     - [Error - Terminal won’t load from within Intellij and Gradle won’t build](#error---terminal-wont-load-from-within-intellij-and-gradle-wont-build)
-    - [STEP 3: LOCAL SETUP](#step-3-local-setup)
+- [STEP 3: Build the game - LOCAL SETUP](#step-3-build-the-game---local-setup)
+- [Use VSCode](#use-vscode)
 - [Install IntelliJ](#install-intellij)
     - [View instructions for:](#view-instructions-for)
-  - [Setup your computer](#setup-your-computer)
-    - [Download the file.](#download-the-file)
   - [Idea Installation Instructions](#idea-installation-instructions)
 - [Install the sample player bot](#install-the-sample-player-bot)
 - [Have the sample bot play itself](#have-the-sample-bot-play-itself)
 - [Modify the bot and make it your own](#modify-the-bot-and-make-it-your-own)
+- [RUNNING GAME FROM THE TERMINAL](#running-game-from-the-terminal)
 - [Run a Match](#run-a-match)
 - [Upload the bot to compete against others](#upload-the-bot-to-compete-against-others)
 - [Upload Your Bot and Scrimmage](#upload-your-bot-and-scrimmage)
   
 
 
-## Links for this year's Battlecode  
-https://2020.battlecode.org/getting-started  
-Discord
-Battlecode Github
-Scaffold Repository  
-Game Specifications for this year
+## Links and resources for this year's Battlecode  
+(battlecode.org - getting started)[https://2020.battlecode.org/getting-started]  
+(Discord)[https://discord.com/channels/386965718572466197/386965718572466199]  
+(Battlecode Github)[https://github.com/battlecode/battlecode21]  
+(Scaffold Repository)[https://github.com/battlecode/battlecode21-scaffold]    
+(Robot properties)[https://2021.battlecode.org/javadoc/index.html]  
+(Game Specifications for this year)[https://2021.battlecode.org/specs/specs.md.html#]  
 
 
 # Overview of Battlecode  
@@ -54,6 +54,31 @@ To participate in Battlecode, you need an account and a team. Each team can cons
 Create an account on this website, and then go to the team section to either create or join a team.  
 
 # Getting Set Up  
+## Setup your computer  
+  
+Installation of the 64-bit JDK on Linux Platforms  
+This procedure installs the Java Development Kit (JDK) for 64-bit Linux, using an archive binary file (.tar.gz).  
+These instructions use the following file:  
+  
+```java  
+jdk-8u<version>-linux-x64.tar.gz  
+```  
+  
+### Download the file.  
+Before the file can be downloaded, you must accept the license agreement. The archive binary can be installed by anyone (not only root users), in any location that you can write to. However, only the root user can install the JDK into the system location.
+Change directory to the location where you would like the JDK to be installed, then move the .tar.gz archive binary to the current directory.  
+
+Unpack the tarball and install the JDK.  
+```java
+% tar zxvf jdk-8uversion-linux-x64.tar.gz  
+```
+    
+The Java Development Kit files are installed in a directory called jdk1.8.0_version in the current directory.  
+Delete the .tar.gz file if you want to save disk space.  
+   
+
+
+
 ## Installation  
 If you experience problems with the instructions below, check common issues, and if that doesn't help, ask on the Discord.  
 
@@ -140,7 +165,7 @@ task version {
  
  
 # Install the Scaffold  
-## STEP 2: DOWNLOAD BATTLECODE  
+## STEP 2: DOWNLOAD the competition scaffold for BATTLECODE  
 Next, you should download the Battlecode 2020 scaffold. To get up and running quickly, you can click "Clone or download" and then "Download ZIP," and move on to the next step.  
 We recommend, however, that you instead use Git to organize your code. If you haven't used Git before, read this guide (or wait for our lecture covering it). On the scaffold page, click "Use this template." Importantly, on the next page, make your new repo private (you don't want other teams to steal your code!). You can then clone your newly created repo and invite your team members to collaborate on it.  
 ```java
@@ -151,9 +176,14 @@ git clone https://github.com/battlecode/battlecode21-scaffold.git
 Message when trying to open Terminal within Intellij  
 Platform SDK does not point to valid JDK  
   
-### STEP 3: LOCAL SETUP  
+# STEP 3: Build the game - LOCAL SETUP  
+
+Open a terminal in the scaffold you just downloaded. Run the commands `./gradlew update` and `./gradlew build`  
+
 We recommend using an IDE like IntelliJ IDEA or Eclipse to work on Battlecode, but you can also use your favorite text editor combined with a terminal. Battlecode 2020 uses Gradle to run tasks like run, debug and jarForUpload (but don't worry about that — you don't need to install it).  
   
+# Use VSCode  
+
 # Install IntelliJ
 ### View instructions for:  
 - IntelliJ IDEAEclipseTerminal  
@@ -178,28 +208,6 @@ If you haven't seen any errors, you should be good to go.
 There should now be a folder called client in your scaffold folder; if you go in there, and double click the Battlecode Client application, you should be able to run and watch matches. (Please don't move that application, it will be sad.) If you're on Linux, navigate to the client folder and run ./battlecode-visualizer to launch the client.  
   
   
-## Setup your computer  
-  
-Installation of the 64-bit JDK on Linux Platforms  
-This procedure installs the Java Development Kit (JDK) for 64-bit Linux, using an archive binary file (.tar.gz).  
-These instructions use the following file:  
-  
-```java  
-jdk-8uversion-linux-x64.tar.gz  
-```  
-  
-### Download the file.  
-Before the file can be downloaded, you must accept the license agreement. The archive binary can be installed by anyone (not only root users), in any location that you can write to. However, only the root user can install the JDK into the system location.
-Change directory to the location where you would like the JDK to be installed, then move the .tar.gz archive binary to the current directory.  
-
-Unpack the tarball and install the JDK.  
-```java
-% tar zxvf jdk-8uversion-linux-x64.tar.gz  
-```
-    
-The Java Development Kit files are installed in a directory called jdk1.8.0_version in the current directory.  
-Delete the .tar.gz file if you want to save disk space.  
-   
 ## Idea Installation Instructions  
 Unpack the idea idea-2019.3.1.tar.gz file to an empty directory using the following command:   
   
@@ -220,7 +228,10 @@ Run idea.sh from the bin subdirectory.
   
 
 # Modify the bot and make it your own  
-  
+Place each version of your robot in a new subfolder in the `src` folder. Make sure every version has a `RobotPlayer.java`    
+
+# RUNNING GAME FROM THE TERMINAL  
+Open a terminal in the scaffold. Run the commands `./gradlew run -Pmaps=[map] -PteamA=[Team A] -PteamB=[Team B]`  
 
 # Run a Match  
 Player code is in the src directory of the scaffold: each package inside src corresponds to one distinct player. We have provided examplefuncsplayer, and you can create your own player by either modifying it or copying and renaming it.  
