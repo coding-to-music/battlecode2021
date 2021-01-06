@@ -6,11 +6,9 @@
   - [Links and resources for this year's Battlecode](#links-and-resources-for-this-years-battlecode)
 - [Getting Set Up](#getting-set-up)
   - [Setup your computer](#setup-your-computer)
-    - [Download the file.](#download-the-file)
-  - [Installation](#installation)
 - [Install Java Release 8](#install-java-release-8)
-  - [STEP 1: INSTALL JAVA](#step-1-install-java)
   - [Installation Instructions for Java JDK](#installation-instructions-for-java-jdk)
+    - [Download the file.](#download-the-file)
   - [Linux](#linux)
   - [Bash Shell](#bash-shell)
 - [Install the Scaffold](#install-the-scaffold)
@@ -36,26 +34,47 @@ This year's game is a thrilling survival adventure involving 🍲, ▀⛓, 🐮,
 
 ## Account and Team Creation  
 To participate in Battlecode, you need an account and a team. Each team can consist of 1 to 4 people.  
-Create an account at (battlecode.org)[https://2021.battlecode.org/getting-started], and then go to the (team)[https://2021.battlecode.org/team] section to either create or join a team.  
+Create an account at [battlecode.org](https://2021.battlecode.org/getting-started), and then go to the [team](https://2021.battlecode.org/team) section to either create or join a team.  
 
 ## Links and resources for this year's Battlecode  
-(battlecode.org - getting started)[https://2020.battlecode.org/getting-started]  
-(Discord)[https://discord.com/channels/386965718572466197/386965718572466199]  
-(Battlecode Github)[https://github.com/battlecode/battlecode21]  
-(Scaffold Repository)[https://github.com/battlecode/battlecode21-scaffold]    
-(Robot properties)[https://2021.battlecode.org/javadoc/index.html]  
-(Game Specifications for this year)[https://2021.battlecode.org/specs/specs.md.html#]  
-Some tweets about battlecode are on (Twitter)[https://twitter.com/search?q=thomasconnors%20battlecode]  
-A great postmortum from 2020 (Team Battlegaode)[http://web.mit.edu/agrebe/www/battlecode/20/index.html]    
+[battlecode.org - getting started](https://2020.battlecode.org/getting-started)  
+[Discord](https://discord.com/channels/386965718572466197/386965718572466199)  
+[Battlecode Github](https://github.com/battlecode/battlecode21)  
+[Scaffold Repository](https://github.com/battlecode/battlecode21-scaffold)    
+[Robot properties](https://2021.battlecode.org/javadoc/index.html)  
+[Game Specifications for this year](https://2021.battlecode.org/specs/specs.md.html#)  
+Some tweets about battlecode are on [Twitter](https://twitter.com/search?q=thomasconnors%20battlecode)  
+A great postmortum from 2020 [Team Battlegaode](http://web.mit.edu/agrebe/www/battlecode/20/index.html)    
 
 # Getting Set Up  
 ## Setup your computer  
 
 You will need the following, we will cover each item:
 - Java version 8
-- Set environment variables `foo` and `bar`
+- Set environment variables `PATH` and `CLASSPATH`
 - and editor such as vscode, IntelliJ, Eclipse etc
 - The Battlecode Scaffold, where you can 
+
+# Install Java Release 8  
+## Installation Instructions for Java JDK  
+
+If you're unsure how to install the JDK, you can find instructions for all operating systems here (pay attention to PATH and CLASSPATH).  
+   
+https://docs.datastax.com/en/jdk-install/doc/jdk-install/installOpenJdkDeb.html  
+   
+http://openjdk.java.net/install/  
+   
+I am using a chromebook, which is Debian flavor of Linux   
+
+There are two related packages  
+- JRE - Java Runtime Environment
+- JDK - Java Development Kit
+
+```java
+$ sudo apt-get install openjre-8-jre
+
+$ sudo apt-get install openjdk-8-jdk
+```
 
 Installation of the 64-bit JDK on Linux Platforms  
 This procedure installs the Java Development Kit (JDK) for 64-bit Linux, using an archive binary file (.tar.gz).  
@@ -69,37 +88,32 @@ jdk-8u<version>-linux-x64.tar.gz
 Before the file can be downloaded, you must accept the license agreement. The archive binary can be installed by anyone (not only root users), in any location that you can write to. However, only the root user can install the JDK into the system location.
 Change directory to the location where you would like the JDK to be installed, then move the .tar.gz archive binary to the current directory.  
 
-Unpack the tarball and install the JDK.  
-```java
-% tar zxvf jdk-8uversion-linux-x64.tar.gz  
-```
-    
-The Java Development Kit files are installed in a directory called jdk1.8.0_version in the current directory.  
-Delete the .tar.gz file if you want to save disk space.  
-   
+Here is a possible download location [here - be sure to get Java version 8 of the JDK](https://www.oracle.com/java/technologies/javase-downloads.html)
 
+That leads to this page [here](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
 
+Debian on Chromebook would want this file:  
+- File Type: Linux ARM 64 Compressed Archive	
+- Size: 71.26 MB	
+- File Name: jdk-8u271-linux-aarch64.tar.gz
 
-## Installation  
-If you experience problems with the instructions below, check common issues, and if that doesn't help, ask on the Discord.  
-
-# Install Java Release 8  
-## STEP 1: INSTALL JAVA  
-You'll need a Java Development Kit (JDK) version 8. Unfortunately, higher versions will not work. (Download it here.)[] You may need to create an Oracle account.  
 ```java
 // I downloaded   
 jdk-8u271-linux-aarch64  
 ```
 
-## Installation Instructions for Java JDK  
-https://docs.datastax.com/en/jdk-install/doc/jdk-install/installOpenJdkDeb.html  
-   
-http://openjdk.java.net/install/  
-   
-   
-If you're unsure how to install the JDK, you can find instructions for all operating systems here (pay attention to PATH and CLASSPATH).  
-   
-   
+
+Unpack the tarball and install the JDK.  
+```java
+% tar zxvf jdk-8u<version>-linux-x64.tar.gz  
+
+// for my specific file:
+% tar zxvf jdk-8u271-linux-aarch64.tar.gz    
+```
+    
+The Java Development Kit files are installed in a directory called `jdk1.8.0_version` in the current directory.  
+Delete the .tar.gz file if you want to save disk space.  
+      
 ## Linux  
 Click the appropriate link:  
 - "JDK Installation for Linux Platforms"  
