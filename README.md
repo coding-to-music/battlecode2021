@@ -1,6 +1,6 @@
 # BattleCode 2021 - Overview  
 
-<img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/master/assets/2021_battlecode.png?raw=true" align="center" alt="Battlecode 2021 Image" />
+<img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/master/Assets/2021_Battlecode.png?raw=true" align="center" alt="Battlecode 2021 Image" />
 </b>
 
 
