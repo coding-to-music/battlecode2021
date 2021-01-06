@@ -5,11 +5,17 @@
   - [Account and Team Creation](#account-and-team-creation)
   - [Links and resources for this year's Battlecode](#links-and-resources-for-this-years-battlecode)
 - [Getting Set Up](#getting-set-up)
-  - [Setup your computer](#setup-your-computer)
+  - [Setup your computer, we will cover each item](#setup-your-computer-we-will-cover-each-item)
+    - [Java version 8](#java-version-8)
+    - [Set environment variables `PATH` and `CLASSPATH`](#set-environment-variables-path-and-classpath)
+    - [Setup editor such as vscode, IntelliJ, Eclipse etc](#setup-editor-such-as-vscode-intellij-eclipse-etc)
+    - [The Battlecode Scaffold, where you can run your robot](#the-battlecode-scaffold-where-you-can-run-your-robot)
+    - [Run the sample robot](#run-the-sample-robot)
+    - [Create and modify your own robot](#create-and-modify-your-own-robot)
+    - [Run your robot](#run-your-robot)
 - [Install Java Release 8](#install-java-release-8)
   - [Installation Instructions for Java JDK](#installation-instructions-for-java-jdk)
-    - [Download the file.](#download-the-file)
-  - [Linux](#linux)
+  - [Download the correct Java Version 8](#download-the-correct-java-version-8)
   - [Bash Shell](#bash-shell)
 - [Install the Scaffold](#install-the-scaffold)
   - [STEP 2: DOWNLOAD the competition scaffold for BATTLECODE](#step-2-download-the-competition-scaffold-for-battlecode)
@@ -47,13 +53,15 @@ Some tweets about battlecode are on [Twitter](https://twitter.com/search?q=thoma
 A great postmortum from 2020 [Team Battlegaode](http://web.mit.edu/agrebe/www/battlecode/20/index.html)    
 
 # Getting Set Up  
-## Setup your computer  
-
-You will need the following, we will cover each item:
-- Java version 8
-- Set environment variables `PATH` and `CLASSPATH`
-- and editor such as vscode, IntelliJ, Eclipse etc
-- The Battlecode Scaffold, where you can 
+## Setup your computer, we will cover each item  
+### Java version 8
+### Set environment variables `PATH` and `CLASSPATH`
+### Setup editor such as vscode, IntelliJ, Eclipse etc
+### The Battlecode Scaffold, where you can run your robot
+### Run the sample robot
+### Create and modify your own robot
+### Run your robot  
+  
 
 # Install Java Release 8  
 ## Installation Instructions for Java JDK  
@@ -84,11 +92,11 @@ These instructions use the following file:
 jdk-8u<version>-linux-x64.tar.gz  
 ```  
   
-### Download the file.  
+## Download the correct Java Version 8  
 Before the file can be downloaded, you must accept the license agreement. The archive binary can be installed by anyone (not only root users), in any location that you can write to. However, only the root user can install the JDK into the system location.
 Change directory to the location where you would like the JDK to be installed, then move the .tar.gz archive binary to the current directory.  
 
-Here is a possible download location [here - be sure to get Java version 8 of the JDK](https://www.oracle.com/java/technologies/javase-downloads.html)
+Obtain the file [here - be sure to get Java version 8 of the JDK](https://www.oracle.com/java/technologies/javase-downloads.html)
 
 That leads to this page [here](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
 
@@ -114,24 +122,7 @@ Unpack the tarball and install the JDK.
 The Java Development Kit files are installed in a directory called `jdk1.8.0_version` in the current directory.  
 Delete the .tar.gz file if you want to save disk space.  
       
-## Linux  
-Click the appropriate link:  
-- "JDK Installation for Linux Platforms"  
-- "JRE Installation for Linux Platforms"  
-- "Server JRE 8 Installation for Linux Platforms"  
-- "Manual Installation and Registration of Java Plugin for Linux"  
-
-To run Java applets in a browser, you must install the JRE plugin manually. This does not apply to the server JRE.  
-JRE for Linux system requirements and gives installation instructions for several JRE-Linux combinations.  
-
-This page contains these topics:  
-- "System Requirements"  
-- "JRE 8 Installation Instructions"  
-- "General Installation Notes"  
-
-See "JDK 8 and JRE 8 Installation Start Here" for general information about installing JDK 8 and JRE 8.  
-Linux - To find out if the path is properly set  
-To find out if the path is properly set:  
+To find out if the environment variables are properly set:  
 
 In a terminal windows, enter:  
 ```java 
@@ -142,7 +133,6 @@ OpenJDK Runtime Environment (build 1.8.0_232-8u232-b09-1~deb9u1-b09)
 OpenJDK 64-Bit Server VM (build 25.232-b09, mixed mode)  
 ```   
    
-  
 This will print the version of the java tool, if it can find it. If the version is old or you get the error java: Command not found, then the path is not properly set.  
 Determine which java executable is the first one found in your PATH  
 In a terminal window, enter:  
@@ -156,12 +146,12 @@ Note: Instructions for two most popular Shells on Linux and Solaris are listed. 
 
 ## Bash Shell  
 ```java
-Edit the startup file (~/.bashrc)  
-Modify PATH variable  
+// Edit the startup file (~/.bashrc)  
+// Modify PATH variable  
 PATH=/usr/local/jdk1.8.0/bin:$PATH  
 export PATH  
-Save and close the file  
-Load the startup file  
+// Save and close the file  
+// Load the startup file  
 ```
 
 ```java
