@@ -10,15 +10,7 @@
   - [Introduction](#introduction)
   - [Account and Team Creation](#account-and-team-creation)
   - [Links and resources for this year's Battlecode](#links-and-resources-for-this-years-battlecode)
-- [Getting Set Up](#getting-set-up)
-  - [Setup your computer, we will cover each item](#setup-your-computer-we-will-cover-each-item)
-    - [Java version 8](#java-version-8)
-    - [Set environment variables `PATH` and `CLASSPATH`](#set-environment-variables-path-and-classpath)
-    - [Setup editor such as vscode, IntelliJ, Eclipse etc](#setup-editor-such-as-vscode-intellij-eclipse-etc)
-    - [The Battlecode Scaffold, where you can run your robot](#the-battlecode-scaffold-where-you-can-run-your-robot)
-    - [Run the sample robot](#run-the-sample-robot)
-    - [Create and modify your own robot](#create-and-modify-your-own-robot)
-    - [Run your robot](#run-your-robot)
+- [Setup your computer, we will cover each item](#setup-your-computer-we-will-cover-each-item)
 - [Install Java Release 8](#install-java-release-8)
   - [Installation Instructions for Java JDK](#installation-instructions-for-java-jdk)
   - [Download the correct Java Version 8](#download-the-correct-java-version-8)
@@ -58,15 +50,14 @@ Create an account at [battlecode.org](https://2021.battlecode.org/getting-starte
 Some tweets about battlecode are on [Twitter](https://twitter.com/search?q=thomasconnors%20battlecode)  
 A great postmortum from 2020 [Team Battlegaode](http://web.mit.edu/agrebe/www/battlecode/20/index.html)    
 
-# Getting Set Up  
-## Setup your computer, we will cover each item  
-### Java version 8
-### Set environment variables `PATH` and `CLASSPATH`
-### Setup editor such as vscode, IntelliJ, Eclipse etc
-### The Battlecode Scaffold, where you can run your robot
-### Run the sample robot
-### Create and modify your own robot
-### Run your robot  
+# Setup your computer, we will cover each item  
+- ## Java version 8
+- ## Set environment variables `PATH` and `CLASSPATH`
+- ## Setup editor such as vscode, IntelliJ, Eclipse etc
+- ## The Battlecode Scaffold, where you can run your robot
+- ## Run the sample robot
+- ## Create and modify your own robot
+- ## Run your robot  
   
 
 # Install Java Release 8  
@@ -85,6 +76,8 @@ There are two related packages
 - JDK - Java Development Kit
 
 ```java
+sudo apt-get update
+// neither of these appeazr to work
 $ sudo apt-get install openjre-8-jre
 
 $ sudo apt-get install openjdk-8-jdk
@@ -104,25 +97,24 @@ Change directory to the location where you would like the JDK to be installed, t
 
 Obtain the file [here - be sure to get Java version 8 of the JDK](https://www.oracle.com/java/technologies/javase-downloads.html)
 
-That leads to this page [here](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
+That leads to this page [here, you are looking for Java SE 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
 
 Debian on Chromebook would want this file:  
-- File Type: Linux ARM 64 Compressed Archive	
-- Size: 71.26 MB	
-- File Name: jdk-8u271-linux-aarch64.tar.gz
-
+- Linux x64 Debian Package  	
+- 154.79 MB  	
+- jdk-15.0.1_linux-x64_bin.deb  
 ```java
 // I downloaded   
-jdk-8u271-linux-aarch64  
+jdk-15.0.1_linux-x64_bin.deb  
 ```
 
 
-Unpack the tarball and install the JDK.  
 ```java
-% tar zxvf jdk-8u<version>-linux-x64.tar.gz  
+// run this when you are in /usr/local/
+// So if you have a .deb file, you can install it by:
+// Using: sudo dpkg -i /path/to/deb/file sudo apt-get install -f <nameOfFile>
+// Using: sudo apt install ./name.deb. Or sudo apt install /path/to/package/name.deb
 
-// for my specific file:
-% tar zxvf jdk-8u271-linux-aarch64.tar.gz    
 ```
     
 The Java Development Kit files are installed in a directory called `jdk1.8.0_version` in the current directory.  
@@ -148,12 +140,13 @@ In a terminal window, enter:
 
 Set the PATH permanently  
 To set the path permanently, set the path in your startup file.  
-Note: Instructions for two most popular Shells on Linux and Solaris are listed. If you are using other shells, see the Path Setting Tutorial.  
 
 ## Bash Shell  
 ```java
 // Edit the startup file (~/.bashrc)  
 // Modify PATH variable  
+export PATH=$PATH:/usr/local/jdk1.8.0/bin
+
 PATH=/usr/local/jdk1.8.0/bin:$PATH  
 export PATH  
 // Save and close the file  
