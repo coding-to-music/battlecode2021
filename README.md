@@ -11,6 +11,13 @@
   - [Account and Team Creation](#account-and-team-creation)
   - [Links and resources for this year's Battlecode](#links-and-resources-for-this-years-battlecode)
 - [Setup your computer, we will cover each item](#setup-your-computer-we-will-cover-each-item)
+  - [- Java version 8](#--java-version-8)
+  - [- Set environment variables `PATH` and `CLASSPATH`](#--set-environment-variables-path-and-classpath)
+  - [- Setup editor such as vscode, IntelliJ, Eclipse etc](#--setup-editor-such-as-vscode-intellij-eclipse-etc)
+  - [- The Battlecode Scaffold, where you can run your robot](#--the-battlecode-scaffold-where-you-can-run-your-robot)
+  - [- Run the sample robot](#--run-the-sample-robot)
+  - [- Create and modify your own robot](#--create-and-modify-your-own-robot)
+  - [- Run your robot](#--run-your-robot)
 - [Install Java Release 8](#install-java-release-8)
   - [Installation Instructions for Java JDK](#installation-instructions-for-java-jdk)
   - [Download the correct Java Version 8](#download-the-correct-java-version-8)
@@ -51,13 +58,13 @@ Some tweets about battlecode are on [Twitter](https://twitter.com/search?q=thoma
 A great postmortum from 2020 [Team Battlegaode](http://web.mit.edu/agrebe/www/battlecode/20/index.html)    
 
 # Setup your computer, we will cover each item  
-- ## Java version 8
-- ## Set environment variables `PATH` and `CLASSPATH`
-- ## Setup editor such as vscode, IntelliJ, Eclipse etc
-- ## The Battlecode Scaffold, where you can run your robot
-- ## Run the sample robot
-- ## Create and modify your own robot
-- ## Run your robot  
+## - Java version 8
+## - Set environment variables `PATH` and `CLASSPATH`
+## - Setup editor such as vscode, IntelliJ, Eclipse etc
+## - The Battlecode Scaffold, where you can run your robot
+## - Run the sample robot
+## - Create and modify your own robot
+## - Run your robot  
   
 
 # Install Java Release 8  
