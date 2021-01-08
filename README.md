@@ -21,7 +21,13 @@
 - [Install Java Release 8](#install-java-release-8)
   - [Installation Instructions for Java JDK](#installation-instructions-for-java-jdk)
   - [Download the correct Java Version 8](#download-the-correct-java-version-8)
-  - [Bash Shell](#bash-shell)
+  - [Changes to .bashrc for your environment variables, PATH and JAVA_HOME](#changes-to-bashrc-for-your-environment-variables-path-and-java_home)
+    - [This update-alternatives is something that may be useful but you probably do not need it](#this-update-alternatives-is-something-that-may-be-useful-but-you-probably-do-not-need-it)
+  - [Validating Java works correctly](#validating-java-works-correctly)
+    - [To verify the installation, get the Java version](#to-verify-the-installation-get-the-java-version)
+    - ['Which' Java as a validation test](#which-java-as-a-validation-test)
+  - [Cleaning up](#cleaning-up)
+- [FROM HERE ON is from Last Year and needs to be edited/corrected](#from-here-on-is-from-last-year-and-needs-to-be-editedcorrected)
 - [Install the Scaffold](#install-the-scaffold)
   - [STEP 2: DOWNLOAD the competition scaffold for BATTLECODE](#step-2-download-the-competition-scaffold-for-battlecode)
     - [Error - Terminal won’t load from within Intellij and Gradle won’t build](#error---terminal-wont-load-from-within-intellij-and-gradle-wont-build)
@@ -81,22 +87,6 @@ I am using a chromebook, which is Debian flavor of Linux
 There are two related packages  
 - JRE - Java Runtime Environment
 - JDK - Java Development Kit
-
-```java
-sudo apt-get update
-// neither of these appeazr to work
-$ sudo apt-get install openjre-8-jre
-
-$ sudo apt-get install openjdk-8-jdk
-```
-
-Installation of the 64-bit JDK on Linux Platforms  
-This procedure installs the Java Development Kit (JDK) for 64-bit Linux, using an archive binary file (.tar.gz).  
-These instructions use the following file:  
-  
-```java  
-jdk-8u<version>-linux-x64.tar.gz  
-```  
   
 ## Download the correct Java Version 8  
 Before the file can be downloaded, you must accept the license agreement. The archive binary can be installed by anyone (not only root users), in any location that you can write to. However, only the root user can install the JDK into the system location.
@@ -104,19 +94,14 @@ Before the file can be downloaded, you must accept the license agreement. The ar
 
 That leads to this page [here, you are looking for Java SE 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
 
-Debian on Chromebook would want this file:  
-- Linux x64 Debian Package  	
-- 154.79 MB  	
-- jdk-15.0.1_linux-x64_bin.deb  
 ```java
-// After prompting to sign-in, I downloaded   
-jdk-15.0.1_linux-x64_bin.deb  
-```
-
-```java
-connorstom@penguin:/usr/lib/jvm/jdk1.8.0_271$ java -version
+// Previously I had Java - let's see if it works
+// Oops, I ran into a problem and got this error 
+connorstom@penguin:$ java -version
 bash: /usr/local/jdk1.8.0_271/bin/java: No such file or directory
-connorstom@penguin:/usr/lib/jvm/jdk1.8.0_271$ find /usr -name java
+
+// yet I appeared to have java installed
+connorstom@penguin:$ find /usr -name java
 /usr/bin/java
 /usr/lib/jvm/jdk1.8.0_271/bin/java
 /usr/lib/jvm/jdk1.8.0_271/jre/bin/java
@@ -126,27 +111,6 @@ connorstom@penguin:/usr/lib/jvm/jdk1.8.0_271$ find /usr -name java
 /usr/share/code/resources/app/extensions/java
 ```
 
-Debian on Chromebook would want this file:  
-- Linux x86 Compressed Archive	
-- 136.69 MB	
-- jdk-8u271-linux-i586.tar.gz
-```java
-// I downloaded   
-jdk-8u271-linux-i586.tar.gz  
-
-connorstom@penguin:~$ sudo mv jdk-8u271-linux-i586.tar.gz /usr/local
-connorstom@penguin:~$ cd /usr/local
-
-// this is another options
-connorstom@penguin:~$ sudo apt install openjdk-8-jdk openjdk-8-jre
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-E: Unable to locate package openjdk-8-jdk
-E: Unable to locate package openjdk-8-jre
-connorstom@penguin:~$ 
-```
-
 From this video [How To Install Oracle Java 8 JDK on Linux - Ubuntu 20.04 / 18.04 / 16.04 LTS / Debian](https://youtu.be/kiaWng4wR-k)
 ```java
 // ok lets try this one
@@ -154,84 +118,79 @@ From this video [How To Install Oracle Java 8 JDK on Linux - Ubuntu 20.04 / 18.0
 - 136.51 MB	 
 - jdk-8u271-linux-x64.tar.gz  
 
+// I downloaded this and left it in my root home directory, it is just a temporary file we will delete it later
+jdk-8u271-linux-x64.tar.gz
+
+// you may not need to make this next directory, you may already have it
 mkdir /usr/lib/jvm
 cd /usr/lib/jvm
 
+// untar the file that is located in your home dir
 sudo tar -xzvf ~/jdk-8u271-linux-x64.tar.gz 
+```
 
+The Java Development Kit files are installed in a directory called `jdk1.8.0_version` in the current directory.  
+```java
+// this directory was just created
 /usr/lib/jvm/jdk1.8.0_271
+```
 
-:/usr/lib/jvm/jdk1.8.0_271/bin:/usr/lib/jvm/jdk1.8.0_271/jre/bin
-J2SDKDIR="/usr/lib/jvm/jdk1.8.0_271"
-J2REDIR="/usr/lib/jvm/jdk1.8.0_271/jre"
-JAVA_HOME="/usr/lib/jvm/jdk1.8.0_271"
+## Changes to .bashrc for your environment variables, PATH and JAVA_HOME  
+Paste thise into your Path in your .bashrc 
+```java
+export JAVA_HOME="/usr/lib/jvm/jdk1.8.0_271/bin"
+export PATH=$PATH:/usr/lib/jvm/jdk1.8.0_271/bin:/usr/lib/jvm/jdk1.8.0_271/jre/bin
+```
 
-
+### This update-alternatives is something that may be useful but you probably do not need it
+```java
+// probably not needed
 sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk1.8.0_271/bin/java" 0
 sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk1.8.0_271/bin/javac" 0
 sudo update-alternatives --set java /usr/lib/jvm/jdk1.8.0_271/bin/java
 sudo update-alternatives --set javac /usr/lib/jvm/jdk1.8.0_271/bin/javac
 
-
+// you can test this but it did not work for me
 update-alternatives --list java
 update-alternatives --list javac
 ```
-To verify the installation, get the Java version
-
-If getting this error
-Debian 8 -bash: /usr/bin/java: No such file or directory
-
-This is because there are some 32-bit libraries missing in your Ubuntu 64-bit. Run: apt-get install libc6-i386. you can refer to this Stack Overflow ...
-
-
+## Validating Java works correctly
+### To verify the installation, get the Java version
 ```java
-// run this when you are in /usr/local/
-// So if you have a .deb file, you can install it by:
-// Using: sudo dpkg -i /path/to/deb/file sudo apt-get install -f <nameOfFile>
-// Using: sudo apt install ./name.deb. Or sudo apt install /path/to/package/name.deb
+connorstom@penguin:~$ env | grep JAVA
+JAVA_HOME=/usr/lib/jvm/jdk1.8.0_271/bin
 
+// test to find the java version
+connorstom@penguin:~$ java -version
+java version "1.8.0_271"
+Java(TM) SE Runtime Environment (build 1.8.0_271-b09)
+Java HotSpot(TM) 64-Bit Server VM (build 25.271-b09, mixed mode)
 ```
-    
-The Java Development Kit files are installed in a directory called `jdk1.8.0_version` in the current directory.  
+
+### 'Which' Java as a validation test   
+This will print the version of the java tool, if it can find it. 
+If the version is old or you get the error `java: Command not found`, then the path is not properly set.  
+
+Determine which java executable is the first one found in your PATH  
+```java
+connorstom@penguin:~$ which java
+/usr/bin/java
+```
+
+## Cleaning up 
 Delete the .tar.gz file if you want to save disk space.  
       
-To find out if the environment variables are properly set:  
 
-In a terminal windows, enter:  
-```java 
-% java -version  
-connorstom@penguin:~$ java -version  
-openjdk version "1.8.0_232"  
-OpenJDK Runtime Environment (build 1.8.0_232-8u232-b09-1~deb9u1-b09)  
-OpenJDK 64-Bit Server VM (build 25.232-b09, mixed mode)  
-```   
-   
-This will print the version of the java tool, if it can find it. If the version is old or you get the error java: Command not found, then the path is not properly set.  
-Determine which java executable is the first one found in your PATH  
-In a terminal window, enter:  
-```java
-% which java  
-```
-
-Set the PATH permanently  
-To set the path permanently, set the path in your startup file.  
-
-## Bash Shell  
-```java
-// Edit the startup file (~/.bashrc)  
-// Modify PATH variable  
-export PATH=$PATH:/usr/local/jdk1.8.0/bin
-
-PATH=/usr/local/jdk1.8.0/bin:$PATH  
-export PATH  
-// Save and close the file  
-// Load the startup file  
-```
+This may also be useful but I have not tested it yet
 
 ```java
 % . /.profile  
 // Verify that the path is set by repeating the java command  
 % java -version  
+```   
+
+```java
+
 // Modify build.gradle to view the Java version  
 task version {  
     group 'battlecode'  
@@ -240,10 +199,10 @@ task version {
         println("\nVersion: " + versions.battlecode + "\n")  
     }  
 }  
-```   
- 
- 
-# Install the Scaffold  
+```
+
+# FROM HERE ON is from Last Year and needs to be edited/corrected   
+# Install the Scaffold   
 ## STEP 2: DOWNLOAD the competition scaffold for BATTLECODE  
 Next, you should download the Battlecode 2020 scaffold. To get up and running quickly, you can click "Clone or download" and then "Download ZIP," and move on to the next step.  
 We recommend, however, that you instead use Git to organize your code. If you haven't used Git before, read this guide (or wait for our lecture covering it). On the scaffold page, click "Use this template." Importantly, on the next page, make your new repo private (you don't want other teams to steal your code!). You can then clone your newly created repo and invite your team members to collaborate on it.  
