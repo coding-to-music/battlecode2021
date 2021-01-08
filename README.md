@@ -100,9 +100,7 @@ jdk-8u<version>-linux-x64.tar.gz
   
 ## Download the correct Java Version 8  
 Before the file can be downloaded, you must accept the license agreement. The archive binary can be installed by anyone (not only root users), in any location that you can write to. However, only the root user can install the JDK into the system location.
-Change directory to the location where you would like the JDK to be installed, then move the .tar.gz archive binary to the current directory.  
-
-Obtain the file [here - be sure to get Java version 8 of the JDK](https://www.oracle.com/java/technologies/javase-downloads.html)
+// Change directory to the location where you would like the JDK to be installed, then move the .tar.gz archive binary to the current directory.  
 
 That leads to this page [here, you are looking for Java SE 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
 
@@ -111,9 +109,79 @@ Debian on Chromebook would want this file:
 - 154.79 MB  	
 - jdk-15.0.1_linux-x64_bin.deb  
 ```java
-// I downloaded   
+// After prompting to sign-in, I downloaded   
 jdk-15.0.1_linux-x64_bin.deb  
 ```
+
+```java
+connorstom@penguin:/usr/lib/jvm/jdk1.8.0_271$ java -version
+bash: /usr/local/jdk1.8.0_271/bin/java: No such file or directory
+connorstom@penguin:/usr/lib/jvm/jdk1.8.0_271$ find /usr -name java
+/usr/bin/java
+/usr/lib/jvm/jdk1.8.0_271/bin/java
+/usr/lib/jvm/jdk1.8.0_271/jre/bin/java
+/usr/local/jdk1.8.0_271/bin/java
+/usr/local/jdk1.8.0_271/jre/bin/java
+/usr/share/bash-completion/completions/java
+/usr/share/code/resources/app/extensions/java
+```
+
+Debian on Chromebook would want this file:  
+- Linux x86 Compressed Archive	
+- 136.69 MB	
+- jdk-8u271-linux-i586.tar.gz
+```java
+// I downloaded   
+jdk-8u271-linux-i586.tar.gz  
+
+connorstom@penguin:~$ sudo mv jdk-8u271-linux-i586.tar.gz /usr/local
+connorstom@penguin:~$ cd /usr/local
+
+// this is another options
+connorstom@penguin:~$ sudo apt install openjdk-8-jdk openjdk-8-jre
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package openjdk-8-jdk
+E: Unable to locate package openjdk-8-jre
+connorstom@penguin:~$ 
+```
+
+From this video [How To Install Oracle Java 8 JDK on Linux - Ubuntu 20.04 / 18.04 / 16.04 LTS / Debian](https://youtu.be/kiaWng4wR-k)
+```java
+// ok lets try this one
+- Linux x64 Compressed Archive	 
+- 136.51 MB	 
+- jdk-8u271-linux-x64.tar.gz  
+
+mkdir /usr/lib/jvm
+cd /usr/lib/jvm
+
+sudo tar -xzvf ~/jdk-8u271-linux-x64.tar.gz 
+
+/usr/lib/jvm/jdk1.8.0_271
+
+:/usr/lib/jvm/jdk1.8.0_271/bin:/usr/lib/jvm/jdk1.8.0_271/jre/bin
+J2SDKDIR="/usr/lib/jvm/jdk1.8.0_271"
+J2REDIR="/usr/lib/jvm/jdk1.8.0_271/jre"
+JAVA_HOME="/usr/lib/jvm/jdk1.8.0_271"
+
+
+sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk1.8.0_271/bin/java" 0
+sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk1.8.0_271/bin/javac" 0
+sudo update-alternatives --set java /usr/lib/jvm/jdk1.8.0_271/bin/java
+sudo update-alternatives --set javac /usr/lib/jvm/jdk1.8.0_271/bin/javac
+
+
+update-alternatives --list java
+update-alternatives --list javac
+```
+To verify the installation, get the Java version
+
+If getting this error
+Debian 8 -bash: /usr/bin/java: No such file or directory
+
+This is because there are some 32-bit libraries missing in your Ubuntu 64-bit. Run: apt-get install libc6-i386. you can refer to this Stack Overflow ...
 
 
 ```java
