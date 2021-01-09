@@ -204,7 +204,7 @@ task version {
 # FROM HERE ON is from Last Year and needs to be edited/corrected   
 # Install the Scaffold   
 ## STEP 2: DOWNLOAD the competition scaffold for BATTLECODE  
-Next, you should download the Battlecode 2020 scaffold. To get up and running quickly, you can click "Clone or download" and then "Download ZIP," and move on to the next step.  
+Next, you should download the Battlecode 2021 scaffold. To get up and running quickly, you can click "Clone or download" and then "Download ZIP," and move on to the next step.  
 We recommend, however, that you instead use Git to organize your code. If you haven't used Git before, read this guide (or wait for our lecture covering it). On the scaffold page, click "Use this template." Importantly, on the next page, make your new repo private (you don't want other teams to steal your code!). You can then clone your newly created repo and invite your team members to collaborate on it.  
 ```java
 git clone https://github.com/battlecode/battlecode21-scaffold.git
