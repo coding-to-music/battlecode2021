@@ -8,7 +8,7 @@
     - [vscode extensions such as this Table of Contents](#vscode-extensions-such-as-this-table-of-contents)
     - [ssh keys](#ssh-keys)
     - [Java version 8](#java-version-8)
-  - [Other recommended software](#other-recommended-software)
+  - [Not needed for Battlecode but recommended software if you are interested](#not-needed-for-battlecode-but-recommended-software-if-you-are-interested)
     - [nvm](#nvm)
     - [node](#node)
     - [yarn](#yarn)
@@ -34,7 +34,7 @@
 ### vscode extensions such as this Table of Contents  
 ### ssh keys  
 ### Java version 8  
-## Other recommended software  
+## Not needed for Battlecode but recommended software if you are interested    
 ### nvm
 ### node
 ### yarn   
