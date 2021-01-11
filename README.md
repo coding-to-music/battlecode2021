@@ -49,6 +49,8 @@
 This is the Battlecode 2021 contest website, which will be your main hub for all Battlecode-related things for the duration of the contest. For a general overview of what Battlecode is, visit our landing page.  
 This year's game is a thrilling survival adventure involving 🍲, ▀⛓, 🐮, 🤖, and more. You will write bots in Java.  
 
+## Why this document is needed  
+
 ## Account and Team Creation  
 To participate in Battlecode, you need an account and a team. Each team can consist of 1 to 4 people.  
 Create an account at [battlecode.org](https://2021.battlecode.org/getting-started), and then go to the [team](https://2021.battlecode.org/team) section to either create or join a team.  
@@ -64,10 +66,24 @@ Some tweets about battlecode are on [Twitter](https://twitter.com/search?q=thoma
 A great postmortum from 2020 [Team Battlegaode](http://web.mit.edu/agrebe/www/battlecode/20/index.html)    
 
 # Setup your computer, we will cover each item  
-## - Java version 8
-## - Set environment variables `PATH` and `CLASSPATH`
+## - Enable Linux on your Chromebook
 ## - Setup editor such as vscode, IntelliJ, Eclipse etc
-## - The Battlecode Scaffold, where you can run your robot
+## - Detailed instructions for vscode installation
+## - handy aliases and abbreviations into .bashrc and .bash_aliases
+## - create .ssh directory and generate SSH public and private keys
+## - git
+## - vscode
+## - use your ssh keys
+### - netflify - uses ssh keys
+### - digitalocean - uses ssh keys
+### - github - uses ssh keys
+## - nvm - node version manager
+## - npm - node package manager
+## - yarn - facebook's version of node
+## - Java version 8
+## - Set environment variables `PATH` and `CLASSPATH` `JAVA_HOME` etc
+## - Begin Battlecode 
+## - Clone the Battlecode Scaffold, where you can run your robot
 ## - Run the sample robot
 ## - Create and modify your own robot
 ## - Run your robot  
