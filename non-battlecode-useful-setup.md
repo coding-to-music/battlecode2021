@@ -137,16 +137,8 @@ Just print Linux kernel version, run:
 
 
 Sample outputs:
-<img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/2021_Battlecode.png?raw=true" align="center" alt="Battlecode 2021 Image" />
+<img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/uname-OS-info-example-output.jpg?raw=true" align="center" alt="Battlecode 2021 Image" />
 </b>
-
-
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image2.jpg "image_tooltip")
-
 
 Another option is to type the following command:
 
@@ -157,8 +149,12 @@ Another option is to type the following command:
 Sample outputs:
 
 
-```
-Linux version 3.10.0-693.11.6.el7.x86_64 (mockbuild@x86-041.build.eng.bos.redhat.com) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-16) (GCC) ) #1 SMP Thu Dec 28 14:23:39 EST 2017
+```java
+Linux   version 3.10.0-693.11.6.el7.x86_64  
+        (mockbuild@x86-041.build.eng.bos.redhat.com)   
+        (gcc version 4.8.5 20150623 (Red Hat 4.8.5-16)  
+        (GCC) ) 
+#1 SMP Thu Dec 28 14:23:39 EST 2017
 ```
 
 ### **Installation instructions - node**

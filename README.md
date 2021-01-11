@@ -25,9 +25,6 @@
       - [- netflify - uses ssh keys](#--netflify---uses-ssh-keys)
       - [- digitalocean - uses ssh keys](#--digitalocean---uses-ssh-keys)
       - [- github - uses ssh keys](#--github---uses-ssh-keys)
-    - [- nvm - node version manager](#--nvm---node-version-manager)
-    - [- npm - node package manager](#--npm---node-package-manager)
-    - [- yarn - facebook's version of node](#--yarn---facebooks-version-of-node)
     - [- End general setup of your computer](#--end-general-setup-of-your-computer)
   - [- Begin MIT Content](#--begin-mit-content)
     - [- Java version 8](#--java-version-8)
@@ -53,9 +50,6 @@
     - [- netflify - uses ssh keys](#--netflify---uses-ssh-keys-1)
     - [- digitalocean - uses ssh keys](#--digitalocean---uses-ssh-keys-1)
     - [- github - uses ssh keys](#--github---uses-ssh-keys-1)
-  - [- nvm - node version manager](#--nvm---node-version-manager-1)
-  - [- npm - node package manager](#--npm---node-package-manager-1)
-  - [- yarn - facebook's version of node](#--yarn---facebooks-version-of-node-1)
   - [**0 Installing Git for Linux**](#0-installing-git-for-linux)
   - [**1 Installing Git for Linux**](#1-installing-git-for-linux)
   - [**2 Configuring GitHub**](#2-configuring-github)
@@ -131,9 +125,6 @@ A great postmortum from 2020 [Team Battlegaode](http://web.mit.edu/agrebe/www/ba
 #### - netflify - uses ssh keys  
 #### - digitalocean - uses ssh keys  
 #### - github - uses ssh keys  
-### - nvm - node version manager  
-### - npm - node package manager  
-### - yarn - facebook's version of node  
 ### - End general setup of your computer  
 ## - Begin MIT Content  
 ### - Java version 8  
@@ -163,9 +154,6 @@ A great postmortum from 2020 [Team Battlegaode](http://web.mit.edu/agrebe/www/ba
 ### - netflify - uses ssh keys  
 ### - digitalocean - uses ssh keys  
 ### - github - uses ssh keys  
-## - nvm - node version manager  
-## - npm - node package manager  
-## - yarn - facebook's version of node  
 ## **0 Installing Git for Linux**  
 
 Edit the file .bash_aliases and put the contents from GitHub
