@@ -126,58 +126,58 @@ Create an account at [battlecode.org](https://2021.battlecode.org/getting-starte
 [Game Specifications for this year](https://2021.battlecode.org/specs/specs.md.html#)  
 Some tweets about battlecode are on [Twitter](https://twitter.com/search?q=thomasconnors%20battlecode)  
 A great postmortum from 2020 [Team Battlegaode](http://web.mit.edu/agrebe/www/battlecode/20/index.html)    
-# Outline of this document
-## Setup your computer, we will cover each item  
-### - Enable Linux on your Chromebook
-### - Setup editor such as vscode, IntelliJ, Eclipse etc
-### - Detailed instructions for vscode installation
-#### - vscode keyring so your settings persist when you log out  
-#### - vscode extensions such as this Table of Contents
-#### - vscode extensions for Markup, Go CSS JavaScript Java etc
-### - handy aliases and abbreviations into .bashrc and .bash_aliases
-### - create .ssh directory and generate SSH public and private keys
-### - git
-### - vscode
-### - use your ssh keys
-#### - netflify - uses ssh keys
-#### - digitalocean - uses ssh keys
-#### - github - uses ssh keys
-### - nvm - node version manager
-### - npm - node package manager
-### - yarn - facebook's version of node
-### - End general setup of your computer
-## - Begin MIT Content
-### - Java version 8
-### - Set environment variables `PATH` and `CLASSPATH` `JAVA_HOME` etc
-## - Begin Battlecode 
-### - Clone the Battlecode Scaffold, where you can run your robot
-### - Run the sample robot
-### - Create and modify your own robot
-### - Run your robot  
+# Outline of this document  
+## Setup your computer, we will cover each item    
+### - Enable Linux on your Chromebook  
+### - Setup editor such as vscode, IntelliJ, Eclipse etc  
+### - Detailed instructions for vscode installation  
+#### - vscode keyring so your settings persist when you log out    
+#### - vscode extensions such as this Table of Contents  
+#### - vscode extensions for Markup, Go CSS JavaScript Java etc  
+### - handy aliases and abbreviations into .bashrc and .bash_aliases  
+### - create .ssh directory and generate SSH public and private keys  
+### - git  
+### - vscode  
+### - use your ssh keys  
+#### - netflify - uses ssh keys  
+#### - digitalocean - uses ssh keys  
+#### - github - uses ssh keys  
+### - nvm - node version manager  
+### - npm - node package manager  
+### - yarn - facebook's version of node  
+### - End general setup of your computer  
+## - Begin MIT Content  
+### - Java version 8  
+### - Set environment variables `PATH` and `CLASSPATH` `JAVA_HOME` etc  
+## - Begin Battlecode   
+### - Clone the Battlecode Scaffold, where you can run your robot  
+### - Run the sample robot  
+### - Create and modify your own robot  
+### - Run your robot    
   
 
 
 
-# now the content begins
-# Setup your computer, we will cover each item  
-## - Enable Linux on your Chromebook  
-## - details about your computer and operating system  
-## - Setup editor such as vscode, IntelliJ, Eclipse etc  
-## - Detailed instructions for vscode installation
-### - vscode keyring so your settings persist when you log out  
-### - vscode extensions such as this Table of Contents
-### - vscode extensions for Markup, Go CSS JavaScript Java etc
-## - handy aliases and abbreviations into .bashrc and .bash_aliases
-## - git
-## - create .ssh directory and generate SSH public and private keys
-## - use your ssh keys
-### - netflify - uses ssh keys
-### - digitalocean - uses ssh keys
-### - github - uses ssh keys
-## - nvm - node version manager
-## - npm - node package manager
-## - yarn - facebook's version of node
-## **0 Installing Git for Linux**
+# now the content begins      
+# Setup your computer, we will cover each item    
+## - Enable Linux on your Chromebook    
+## - details about your computer and operating system    
+## - Setup editor such as vscode, IntelliJ, Eclipse etc    
+## - Detailed instructions for vscode installation  
+### - vscode keyring so your settings persist when you log out    
+### - vscode extensions such as this Table of Contents  
+### - vscode extensions for Markup, Go CSS JavaScript Java etc  
+## - handy aliases and abbreviations into .bashrc and .bash_aliases  
+## - git  
+## - create .ssh directory and generate SSH public and private keys  
+## - use your ssh keys  
+### - netflify - uses ssh keys  
+### - digitalocean - uses ssh keys  
+### - github - uses ssh keys  
+## - nvm - node version manager  
+## - npm - node package manager  
+## - yarn - facebook's version of node  
+## **0 Installing Git for Linux**  
 
 Edit the file .bash_aliases and put the contents from GitHub
 
@@ -353,7 +353,6 @@ UBUNTU_CODENAME=artful
 ```
 
 
-
 ## lsb_release command
 
 The lsb_release command gives LSB (Linux Standard Base) and distribution-specific information on the CLI. The syntax is:
@@ -362,7 +361,6 @@ The lsb_release command gives LSB (Linux Standard Base) and distribution-specifi
 ```
     $ lsb_release -a
 ```
-
 
 Sample outputs:
 
@@ -374,8 +372,6 @@ Description:        CentOS Linux release 7.4.1708 (Core)
 Release:        7.4.1708
 Codename:        Core
 ```
-
-
 
 ## hostnamectl command
 
@@ -426,11 +422,9 @@ Sample outputs:
 
 Another option is to type the following command:
 
-
 ```
     $ cat /proc/version
 ```
-
 
 Sample outputs:
 
@@ -438,8 +432,6 @@ Sample outputs:
 ```
 Linux version 3.10.0-693.11.6.el7.x86_64 (mockbuild@x86-041.build.eng.bos.redhat.com) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-16) (GCC) ) #1 SMP Thu Dec 28 14:23:39 EST 2017
 ```
-
-
 
 ### **Installation instructions - node**
 
@@ -457,8 +449,6 @@ sudo apt-get install -y nodejs
 curl -sL https://deb.nodesource.com/setup_15.x | sudo bash -
 sudo apt-get install -y nodejs
 ```
-
-
 
 ### **Installation instructions - yarn**
 
@@ -497,7 +487,6 @@ Also check latest info from: [https://github.com/nvm-sh/nvm](https://github.com/
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh | bash
 ```
 
-
 The command above will clone the NVM repository from Github to the `~/.nvm` directory:
 
 The script clones the nvm repository to ~/.nvm, and attempts to add the source lines from the snippet below to the correct profile file (~/.bash_profile, ~/.zshrc, ~/.profile, or ~/.bashrc).
@@ -522,8 +511,6 @@ nvm --version
 0.34.0
 ```
 
-
-
 ### **2. Installing Node.js and npm**
 
 Now that the `nvm` is installed you can install the latest available version of Node.js, by typing:
@@ -547,18 +534,14 @@ Now using node v12.8.1 (npm v6.10.2)
 Creating default alias: default -> node (-> v12.8.1)
 ```
 
-
 Once the installation is completed, verify it by printing the Node.js version:
-
 
 ```
 node --version
 v12.8.1
 ```
 
-
 Let’s install two more versions, the latest LTS version and version 8.10.0
-
 
 ```
 nvm install --lts
@@ -566,14 +549,12 @@ nvm install 8.10.0
 nvm install 10.20.0
 ```
 
-
 To list installed Node.js versions type:
 
 
 ```
 nvm ls
 ```
-
 
 The output should look something like this:
 
@@ -613,8 +594,6 @@ If you want to change the default Node.js version use the following command:
 nvm alias default 10.16.3
 ```
 
-
-
 # Install Yarn
 
 Before you start using Yarn, you'll first need to install it on your system. There are a growing number of different ways to install Yarn:
@@ -644,16 +623,12 @@ sudo apt update && sudo apt install yarn
 sudo apt update && sudo apt install apt-utils
 ```
 
-
-
 ### **Install build-essential Package**
 
 [https://www.osetc.com/en/how-to-install-build-essential-on-ubuntu-16-04-18-04-linux.html](https://www.osetc.com/en/how-to-install-build-essential-on-ubuntu-16-04-18-04-linux.html)
 
 
-
 ---
-
 
 The build-essential package is already available on the default Ubuntu repository. so you just need to install it with the apt install command. Before installing build-essential package, you need to update the Ubuntu repo index with the following command:
 
@@ -664,7 +639,6 @@ $ sudo apt update
 
 
 Then type the following command to install build-essential package:
-
 
 ```
 $ sudo apt install build-essential
@@ -696,7 +670,6 @@ Unpacking build-essential (12.4ubuntu1) ...
 Setting up build-essential (12.4ubuntu1) ...
 ```
 
-
 **Check GCC Version**
 
 After the installation process is completed, you can confirm your installation by checking for GCC version with the following command:
@@ -718,8 +691,6 @@ This is free software; see the source for copying conditions. There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
 
-
-
 ### **Create C program, compile and run it**
 
 Let’s write a simple C program as below:
@@ -734,15 +705,12 @@ int main()
 }
 ```
 
-
 Save this program as test.c file in your Ubuntu system, and try to execute the following command to compile and execute it:
-
 
 ```
 $ gcc -o test test.c
 $ ./test
 ```
-
 
 Outputs:
 
@@ -753,11 +721,7 @@ devops@devops-osetc:~$ ./test
 Hell, World!
 ```
 
-
-
-
 ---
-
 
 You should know that how to install build-essential on your Ubuntu 14.04 or 16.04 or 18.04 Linux from this guide. And if you want to learn more about the build-essential, you can go the below [official web site](https://packages.ubuntu.com/xenial/build-essential) to checking the getting started guide directly.
 
