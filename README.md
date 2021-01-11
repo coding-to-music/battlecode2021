@@ -86,7 +86,7 @@
   - [**Starting Visual Studio Code**](#starting-visual-studio-code)
   - [**Updating Visual Studio Code**](#updating-visual-studio-code)
     - [- Set environment variables `PATH` and `CLASSPATH` `JAVA_HOME` etc](#--set-environment-variables-path-and-classpath-java_home-etc-1)
-  - [- Begin Battlecode](#--begin-battlecode-1)
+- [- Begin Battlecode](#--begin-battlecode-1)
     - [- Clone the Battlecode Scaffold, where you can run your robot](#--clone-the-battlecode-scaffold-where-you-can-run-your-robot-1)
   - [Changes to .bashrc for your environment variables, PATH and JAVA_HOME](#changes-to-bashrc-for-your-environment-variables-path-and-java_home)
     - [This update-alternatives is something that may be useful but you probably do not need it](#this-update-alternatives-is-something-that-may-be-useful-but-you-probably-do-not-need-it)
@@ -873,7 +873,7 @@ The Java Development Kit files are installed in a directory called `jdk1.8.0_ver
 /usr/lib/jvm/jdk1.8.0_271
 ```
 ### - Set environment variables `PATH` and `CLASSPATH` `JAVA_HOME` etc
-## - Begin Battlecode 
+# - Begin Battlecode 
 ### - Clone the Battlecode Scaffold, where you can run your robot
 ## Changes to .bashrc for your environment variables, PATH and JAVA_HOME  
 Paste thise into your Path in your .bashrc 
