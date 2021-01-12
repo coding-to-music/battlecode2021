@@ -54,7 +54,15 @@
 - [Use VSCode](#use-vscode)
 - [Install IntelliJ](#install-intellij)
     - [View instructions for:](#view-instructions-for)
+  - [Download IntelliJ IDEA](#download-intellij-idea)
   - [Idea Installation Instructions](#idea-installation-instructions)
+  - [Changes to .bashrc for your PATH variable](#changes-to-bashrc-for-your-path-variable)
+- [THIS IS WHERE I LEFT OFF](#this-is-where-i-left-off)
+- [THIS IS WHERE I LEFT OFF](#this-is-where-i-left-off-1)
+- [THIS IS WHERE I LEFT OFF](#this-is-where-i-left-off-2)
+- [THIS IS WHERE I LEFT OFF](#this-is-where-i-left-off-3)
+- [THIS IS WHERE I LEFT OFF](#this-is-where-i-left-off-4)
+- [THIS IS WHERE I LEFT OFF](#this-is-where-i-left-off-5)
 - [Install the sample player bot](#install-the-sample-player-bot)
 - [Have the sample bot play itself](#have-the-sample-bot-play-itself)
 - [Modify the bot and make it your own](#modify-the-bot-and-make-it-your-own)
@@ -498,18 +506,47 @@ Time for a first build!
 If you haven't seen any errors, you should be good to go.  
 There should now be a folder called client in your scaffold folder; if you go in there, and double click the Battlecode Client application, you should be able to run and watch matches. (Please don't move that application, it will be sad.) If you're on Linux, navigate to the client folder and run ./battlecode-visualizer to launch the client.  
   
-  
+## Download IntelliJ IDEA
+The JetBrains website to [downlowd Intellij IDEA is located Here](https://www.jetbrains.com/idea/download/#section=linux)
+
+Choose windows/mac/linux  
+then, below that,  
+Choose the Community button   
+
 ## Idea Installation Instructions  
-Unpack the idea idea-2019.3.1.tar.gz file to an empty directory using the following command:   
-  
-```java
-tar -xzf idea-2019.3.1.tar.gz  
-```
-  
+
 Note: A new instance MUST NOT be extracted over an existing one. The target folder must be empty.  
+
+```java
+// install into a new directory
+cd /usr  
+// untar the file that is located in your home dir
+sudo tar -xzvf ~/ideaIC-2020.3.1.tar.gz 
+```
+
+The Java Development Kit files are installed in a directory called `idea-IC-203.6682.168` in the current directory.  
+```java
+// this directory was just created
+/usr/idea-IC-203.6682.168
+```
+## Changes to .bashrc for your PATH variable  
+Paste thise into your Path in your .bashrc 
+```java
+export PATH=$PATH:/usr/idea-IC-203.6682.168/bin
+```
+
+Now run IntelliJ!  
 ```java
 Run idea.sh from the bin subdirectory.  
 ```
+
+# THIS IS WHERE I LEFT OFF  
+# THIS IS WHERE I LEFT OFF  
+# THIS IS WHERE I LEFT OFF  
+# THIS IS WHERE I LEFT OFF  
+# THIS IS WHERE I LEFT OFF  
+# THIS IS WHERE I LEFT OFF  
+
 # Install the sample player bot  
   
 # Have the sample bot play itself  
