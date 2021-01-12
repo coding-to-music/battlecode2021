@@ -20,18 +20,18 @@
   - [- create .ssh directory and generate SSH public and private keys](#--create-ssh-directory-and-generate-ssh-public-and-private-keys)
     - [Create a directory for the public keys](#create-a-directory-for-the-public-keys)
     - [Create SSH Key for Github](#create-ssh-key-for-github)
-  - [- github - uses ssh keys](#--github---uses-ssh-keys)
+  - [- GitHub - set your ssh keys](#--github---set-your-ssh-keys)
     - [Get your vscode token from github account settings](#get-your-vscode-token-from-github-account-settings)
     - [Let vscode know about the GitHub token at the bottom left of vscode click and paste github token](#let-vscode-know-about-the-github-token-at-the-bottom-left-of-vscode-click-and-paste-github-token)
     - [VS Code install for Debian and Ubuntu based distributions](#vs-code-install-for-debian-and-ubuntu-based-distributions)
   - [**Installing Visual Studio Code on Ubuntu**](#installing-visual-studio-code-on-ubuntu)
   - [Starting Visual Studio Code](#starting-visual-studio-code)
-- [Connect with vscode in the cloud so your settings persist over devices and sessions](#connect-with-vscode-in-the-cloud-so-your-settings-persist-over-devices-and-sessions)
-- [setup a password you will be prompted for each time you start vscode](#setup-a-password-you-will-be-prompted-for-each-time-you-start-vscode)
-- [If you previously have a cloud account you can merge your data](#if-you-previously-have-a-cloud-account-you-can-merge-your-data)
+    - [Connect with vscode in the cloud so your settings persist over devices and sessions](#connect-with-vscode-in-the-cloud-so-your-settings-persist-over-devices-and-sessions)
+    - [setup a password you will be prompted for each time you start vscode](#setup-a-password-you-will-be-prompted-for-each-time-you-start-vscode)
+    - [If you previously have a cloud account you can merge your data](#if-you-previously-have-a-cloud-account-you-can-merge-your-data)
   - [**Updating Visual Studio Code**](#updating-visual-studio-code)
-  - [- End general setup of your computer](#--end-general-setup-of-your-computer)
-  - [- Begin MIT Content](#--begin-mit-content)
+- [- End general setup of your computer](#--end-general-setup-of-your-computer)
+- [- Begin MIT Content](#--begin-mit-content)
     - [- Java version 8](#--java-version-8)
 - [Install Java Release 8](#install-java-release-8)
   - [Installation Instructions for Java JDK](#installation-instructions-for-java-jdk)
@@ -193,7 +193,7 @@ file: ssh-rsa
 really big long private key
 -----END RSA PRIVATE KEY-----
 
-## - github - uses ssh keys   
+## - GitHub - set your ssh keys   
 
 Once you copy the key, 
 - sign into Github and 
@@ -297,17 +297,17 @@ When you start VS Code for the first time, a window like the following should ap
 <img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/vscode-default-home-screen.jpg?raw=true" align="center" alt="vscode-default-home-screen.jpg" />
 </b>
 
-# Connect with vscode in the cloud so your settings persist over devices and sessions
+### Connect with vscode in the cloud so your settings persist over devices and sessions
 
 vscode->settings->Sync Data
 
-# setup a password you will be prompted for each time you start vscode  
+### setup a password you will be prompted for each time you start vscode  
 <img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/choose-password-for-vscode-sync-data.png?raw=true" align="center" alt="choose-password-for-vscode-sync-data.png" />
 </b>
 
 
 
-# If you previously have a cloud account you can merge your data    
+### If you previously have a cloud account you can merge your data    
 <br />  
 <img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/merge-or-replace-cloud-sync-data.png?raw=true" align="center" alt="merge-or-replace-cloud-sync-data.png" />
 </b>
@@ -327,8 +327,8 @@ sudo apt update
 sudo apt upgrade
 ```
 
-## - End general setup of your computer
-## - Begin MIT Content
+# - End general setup of your computer
+# - Begin MIT Content
 ### - Java version 8
 # Install Java Release 8  
 ## Installation Instructions for Java JDK  
