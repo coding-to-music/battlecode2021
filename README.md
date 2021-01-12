@@ -261,13 +261,19 @@ home/tom/.ssh/id_rsa.pub         // this is the public key,         short paragr
 ```
 
 file: ssh-rsa 
-7 lines long private key - a short paragraph - this is what you will paste into GitHub and Digitalocean
-e1f0vfsMPOANChLOUWbSJTtf4s4P2x6CAYCOQYcd “connors.tom@gmail.com”
+- 7 lines long private key 
+- a short paragraph 
+- this is what you will paste into GitHub and Digitalocean
+  e1f0vfsMPOANChLOUWbSJTtf4s4P2x6CAYCOQYcd “connors.tom@gmail.com”
+
 -----BEGIN RSA PRIVATE KEY-----
 really big long private key
 -----END RSA PRIVATE KEY-----
 
-Once you copy the key, sign into Github and goto “Settings->SSH and GPG Keys” and add and name the new key   
+Once you copy the key, 
+- sign into Github and 
+- goto “Settings->SSH and GPG Keys” and 
+- add and name of the new key   
 
 
 <img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/ssh-keys-in-GitHub.png?raw=true" align="center" alt="Battlecode 2021 Image" />
