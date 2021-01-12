@@ -67,6 +67,8 @@
 This is the Battlecode 2021 contest website, which will be your main hub for all Battlecode-related things for the duration of the contest. For a general overview of what Battlecode is, visit our landing page.  
 This year's game is a thrilling survival adventure involving 🍲, ▀⛓, 🐮, 🤖, and more. You will write bots in Java.  
 ## Why this document is needed  
+In software it is common to write good documentation. This is so that other members of the team can be equally up-to-date with how things work. This is normal documentation for any well-run organization.  
+You really don't want to have some production problem and not have written down important details. Everything should be documented that you will need to be successful. Team members who do not document leave behind a technical debt of unfinished work that snowballs up and eventually really disrupts the stability and effectiveness of the organization.  
 
 ## Account and Team Creation  
 To participate in Battlecode, you need an account and a team. Each team can consist of 1 to 4 people.  
@@ -82,6 +84,7 @@ Create an account at [battlecode.org](https://2021.battlecode.org/getting-starte
 Some tweets about battlecode are on [Twitter](https://twitter.com/search?q=thomasconnors%20battlecode)  
 A great postmortum from 2020 [Team Battlegaode](http://web.mit.edu/agrebe/www/battlecode/20/index.html)    
 
+It is assumed you will be developing on a linux environment, this document provides instructions for Chromebook and also there are some references to Digitalocean, that way you can use the cloud for your development environment, giving access to greater stability and unlimted resources. By developing in Digitalocean you can create specific environments and install and remove software without worrying about it messing up your Chromebook or main computer. Generally I have to wipe and rebuild my chromebook linux environment several times per year, all the various changes end up hurting the stablility of the chromebook, so better to use Digitalocean in the cloud as your messy sandbox.
 
 # Setup your computer, we will cover each item     
 ## Enable Linux on your Chromebook     
@@ -129,7 +132,7 @@ In this file here [.bash_aliases](https://raw.githubusercontent.com/coding-to-mu
 
 
 Edit the file .bash_aliases and put the contents from GitHub
-```
+```java
 source ~/.bashrc
 
 // in the future, you will just need to type 'sc' and it will source your .bashrc which calls .bash_aliases
@@ -137,7 +140,7 @@ source ~/.bashrc
 ## Installing Git so you can work with GitHub
 
 Download and install Git
-```
+```java
 $ sudo apt-get install git
 // Now git should be installed. To check use
 $ git --version
@@ -147,7 +150,7 @@ git version 2.19.1
 ### Configuring GitHub git config user.name user.email 
 
 Once the installation has successfully completed, the next thing to do is to set up the configuration details of the GitHub user. To do this use the following two commands by replacing "user_name" with your GitHub username and replacing "email_id" with your email-id you used to create your GitHub account.
-```
+```java
 git config --global user.name coding-to-music
 git config --global user.email connors.tom@gmail.com
 ```
@@ -162,7 +165,7 @@ The following image shows an example of my configuration with my "user_name" bei
 The easiest way to install Visual Studio Code for Debian/Ubuntu based distributions is to download and install the [.deb package (64-bit)](https://go.microsoft.com/fwlink/?LinkID=760868), either through the graphical software center if it's available, or through the command line with:
 
 
-```
+```java
 sudo apt install ./<file>.deb
 
 download the file from the website to downloads and move it to linux file system then run:
@@ -185,7 +188,7 @@ Installing the .deb package will automatically install the apt repository and si
 The repository and key can also be installed manually with the following script:
 
 
-```
+```java
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
@@ -195,7 +198,7 @@ sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microso
 Then update the package cache and install the package using:
 
 
-```
+```java
 sudo apt-get install apt-transport-https
 sudo apt-get update
 sudo apt-get install code # or code-insiders
