@@ -53,7 +53,8 @@
   - [**0 Installing Git for Linux**](#0-installing-git-for-linux)
   - [**1 Installing Git for Linux**](#1-installing-git-for-linux)
   - [**2 Configuring GitHub**](#2-configuring-github)
-  - [Chromebook is Debian](#chromebook-is-debian)
+  - [- details about your computer and operating system](#--details-about-your-computer-and-operating-system-1)
+    - [Chromebook is Debian](#chromebook-is-debian)
   - [Digitalocean is Ubuntu](#digitalocean-is-ubuntu)
     - [Install Git on the server](#install-git-on-the-server)
   - [SSH Keys](#ssh-keys)
@@ -63,7 +64,17 @@
     - [**VS Code install for Debian and Ubuntu based distributions**](#vs-code-install-for-debian-and-ubuntu-based-distributions)
   - [**Installing Visual Studio Code on Ubuntu**](#installing-visual-studio-code-on-ubuntu)
   - [**Starting Visual Studio Code**](#starting-visual-studio-code)
+- [these need to go someplace](#these-need-to-go-someplace)
+- [these need to go someplace](#these-need-to-go-someplace-1)
+- [these need to go someplace](#these-need-to-go-someplace-2)
+- [these need to go someplace](#these-need-to-go-someplace-3)
   - [**Updating Visual Studio Code**](#updating-visual-studio-code)
+  - [- End general setup of your computer](#--end-general-setup-of-your-computer-1)
+  - [- Begin MIT Content](#--begin-mit-content-1)
+    - [- Java version 8](#--java-version-8-1)
+- [Install Java Release 8](#install-java-release-8)
+  - [Installation Instructions for Java JDK](#installation-instructions-for-java-jdk)
+  - [Download the correct Java Version 8](#download-the-correct-java-version-8)
     - [- Set environment variables `PATH` and `CLASSPATH` `JAVA_HOME` etc](#--set-environment-variables-path-and-classpath-java_home-etc-1)
 - [- Begin Battlecode](#--begin-battlecode-1)
     - [- Clone the Battlecode Scaffold, where you can run your robot](#--clone-the-battlecode-scaffold-where-you-can-run-your-robot-1)
@@ -157,47 +168,35 @@ A great postmortum from 2020 [Team Battlegaode](http://web.mit.edu/agrebe/www/ba
 ## **0 Installing Git for Linux**  
 
 Edit the file .bash_aliases and put the contents from GitHub
-
-
 ```
 source ~/.bashrc
 ```
-
-
 The above command is for Ubuntu and works on all Recent Ubuntu versions, tested from Ubuntu 
 
 
 ## **1 Installing Git for Linux**
 
 Download and install Git for Linux:
-
-
 ```
 sudo apt-get install git
 ```
-
-
 The above command is for Ubuntu and works on all Recent Ubuntu versions, tested from Ubuntu 16.04 to Ubuntu 18.04 LTS (Bionic Beaver) and it's likely to work the same way on future versions.
-
 
 ## **2 Configuring GitHub**
 
 Once the installation has successfully completed, the next thing to do is to set up the configuration details of the GitHub user. To do this use the following two commands by replacing "user_name" with your GitHub username and replacing "email_id" with your email-id you used to create your GitHub account.
-
-
 ```
 git config --global user.name coding-to-music
 git config --global user.email connors.tom@gmail.com
 ```
 
-
 The following image shows an example of my configuration with my "user_name" being "akshaypai" and my "email_id" being "abc123@gmail.com"
 
 
-## Chromebook is Debian
+## - details about your computer and operating system    
+### Chromebook is Debian
 
-
-```
+```java
 connorstom@penguin:~$ cat /etc/os-release
 PRETTY_NAME="Debian GNU/Linux 10 (buster)"
 NAME="Debian GNU/Linux"
@@ -212,26 +211,26 @@ BUG_REPORT_URL="https://bugs.debian.org/"
 
 
 
-## Digitalocean is Ubuntu
-
+## Digitalocean is Ubuntu  
 
 ### Install Git on the server
+```java
+$ sudo apt-get install git
 
- sudo apt-get install git
+// Now git should be installed. To check use
 
-Now git should be installed. To check use
-
- git --version
+$ git --version
 
 git version 2.19.1
-
+```
 
 ## SSH Keys
 
 
 ### Create a directory for the public keys
 
-In root
+```java
+// In root
 
 Mkdir .ssh
 
@@ -239,45 +238,40 @@ Chmod 700 .ssh
 
 Cd .ssh
 
-Create SSH public and private keys
-
-Store them here
+// Create SSH public and private keys  
+// Store them here  
 
 Chmod 600 private_key
-
+```
 
 ### Create SSH Key for Github
 
 Now you need to create your SSH key for Github
 
-ssh-keygen -t rsa -C “connors.tom@gmail.com”
+```java  
+ssh-keygen -t rsa -C “connors.tom@gmail.com”  
 
-It will get saved to 
+// It will get saved to 
 
 home/tom/.ssh/id_rsa                // this is the private key, very long paragraph
 
 home/tom/.ssh/id_rsa.pub         // this is the public key,         short paragraph
 
-Copy that key in that file. I would suggest using Win SCP to download the file similar to FTP
+// Copy that key in that file. I would suggest using Win SCP to download the file similar to FTP
+```
 
-ssh-rsa 
-7 lines long private key short paragraph this is what you will paste into GitHub and Digitalocean
+file: ssh-rsa 
+7 lines long private key - a short paragraph - this is what you will paste into GitHub and Digitalocean
 e1f0vfsMPOANChLOUWbSJTtf4s4P2x6CAYCOQYcd “connors.tom@gmail.com”
 -----BEGIN RSA PRIVATE KEY-----
 really big long private key
 -----END RSA PRIVATE KEY-----
 
-Once you copy the key, sign into Github and goto “Settings->SSH and GPG Keys” and add and name the new key 
+Once you copy the key, sign into Github and goto “Settings->SSH and GPG Keys” and add and name the new key   
 
 
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image1.png "image_tooltip")
-
-
-
+<img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/ssh-keys-in-GitHub.png?raw=true" align="center" alt="Battlecode 2021 Image" />
+</b>
 
 ### **Visual Studio Code on Linux**
 
@@ -359,14 +353,42 @@ That’s it. Visual Studio Code has been installed on your Ubuntu desktop and yo
 Now that VS Code is installed on your Ubuntu system you can launch it either from the command line by typing `code` or by clicking on the VS Code icon (`Activities -> Visual Studio Code`).
 
 When you start VS Code for the first time, a window like the following should appear:
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-![alt_text](images/image3.jpg "image_tooltip")
+
+<img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/vscode-default-home-screen.jpg?raw=true" align="center" alt="vscode-default-home-screen.jpg" />
+</b>
+
+# these need to go someplace  
+<br />  
+<img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/merge-or-replace-cloud-sync-data.png?raw=true" align="center" alt="merge-or-replace-cloud-sync-data.png" />
+</b>
+<br />  
+  
+# these need to go someplace  
+<img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/choose-password-for-vscode-sync-data.png?raw=true" align="center" alt="choose-password-for-vscode-sync-data.png" />
+</b>
+# these need to go someplace  
+
+<br />  
+<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/bottom-left-of-vscode-click-and-paste-github-token.png?raw=true" align="center" alt="bottom-left-of-vscode-click-and-paste-github-token.png" />
+</b>
+<br />  
+  
+# these need to go someplace  
+</b>
+<img width="400px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/vscode-github-token.png?raw=true" align="left" alt="vscode-github-token.png" />
+</b>
+  
+
+
 You can now start installing extensions and configuring VS Code according to your preferences.
 ## **Updating Visual Studio Code**
 When a new version is released you can update the Visual Studio Code package through your desktop standard Software Update tool or by running the following commands in your terminal:
-```
+
+```bash
 sudo apt update
 sudo apt upgrade
+```
+
 ## - End general setup of your computer
 ## - Begin MIT Content
 ### - Java version 8
@@ -386,7 +408,9 @@ There are two related packages
 ## Download the correct Java Version 8  
 Before the file can be downloaded, you must accept the license agreement. The archive binary can be installed by anyone (not only root users), in any location that you can write to. However, only the root user can install the JDK into the system location.
 // Change directory to the location where you would like the JDK to be installed, then move the .tar.gz archive binary to the current directory.  
-That leads to this page [here, you are looking for Java SE 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
+That leads to this page [here, you are looking for Java SE 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)  
+
+
 ```java
 // Previously I had Java - let's see if it works
 // Oops, I ran into a problem and got this error 
