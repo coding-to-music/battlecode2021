@@ -21,9 +21,9 @@
     - [Installing Visual Studio Code on Ubuntu](#installing-visual-studio-code-on-ubuntu)
     - [Starting Visual Studio Code](#starting-visual-studio-code)
     - [Connect with vscode in the cloud so your settings persist over devices and sessions](#connect-with-vscode-in-the-cloud-so-your-settings-persist-over-devices-and-sessions)
-    - [Setup a password for cloud sync - you will be prompted for each time you start vscode](#setup-a-password-for-cloud-sync---you-will-be-prompted-for-each-time-you-start-vscode)
+    - [Setup a password for cloud sync - you will be prompted each time you start vscode](#setup-a-password-for-cloud-sync---you-will-be-prompted-each-time-you-start-vscode)
     - [If you previously have a cloud account you can merge your data](#if-you-previously-have-a-cloud-account-you-can-merge-your-data)
-    - [Updating Visual Studio Code](#updating-visual-studio-code)
+    - [Updating Visual Studio Code - every month need to do this](#updating-visual-studio-code---every-month-need-to-do-this)
   - [Create .ssh directory and generate SSH public and private keys](#create-ssh-directory-and-generate-ssh-public-and-private-keys)
     - [Create a directory for the public keys](#create-a-directory-for-the-public-keys)
     - [Create SSH Key for Github](#create-ssh-key-for-github)
@@ -238,7 +238,7 @@ vscode->settings->Sync Data
 
 There is a very good set of detailed instructions about vscode cloud settings sync [HERE](https://code.visualstudio.com/docs/editor/settings-sync)
 
-### Setup a password for cloud sync - you will be prompted for each time you start vscode  
+### Setup a password for cloud sync - you will be prompted each time you start vscode  
 <img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/choose-password-for-vscode-sync-data.png?raw=true" align="center" alt="choose-password-for-vscode-sync-data.png" />
 </b>
 
@@ -254,14 +254,17 @@ There is a very good set of detailed instructions about vscode cloud settings sy
 You can now start installing extensions and configuring VS Code according to your preferences.
 
 
-### Updating Visual Studio Code
+### Updating Visual Studio Code - every month need to do this
 
 
 When a new version is released you can update the Visual Studio Code package through your desktop standard Software Update tool or by running the following commands in your terminal:
 
-```bash
+```java
 sudo apt update
 sudo apt upgrade
+// or just this
+sudo apt update
+sudo apt upgrade code
 ```
 
 ## Create .ssh directory and generate SSH public and private keys  
