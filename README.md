@@ -29,13 +29,13 @@
     - [Create SSH Key for Github](#create-ssh-key-for-github)
   - [GitHub - set your ssh key and get your GitHub token for vscode](#github---set-your-ssh-key-and-get-your-github-token-for-vscode)
     - [Get your vscode token from github account settings](#get-your-vscode-token-from-github-account-settings)
-    - [Let vscode know about the GitHub token at the bottom left of vscode click and paste github token](#let-vscode-know-about-the-github-token-at-the-bottom-left-of-vscode-click-and-paste-github-token)
+    - [Let vscode know about the GitHub token at the bottom left of vscode click bottom-left and paste github token into the command prompt area in the top menu toolbar](#let-vscode-know-about-the-github-token-at-the-bottom-left-of-vscode-click-bottom-left-and-paste-github-token-into-the-command-prompt-area-in-the-top-menu-toolbar)
 - [- End general setup of your computer](#--end-general-setup-of-your-computer)
 - [- Begin MIT Content](#--begin-mit-content)
     - [- Java version 8](#--java-version-8)
 - [Install Java Release 8](#install-java-release-8)
-  - [Installation Instructions for Java JDK](#installation-instructions-for-java-jdk)
-  - [Download the correct Java Version 8](#download-the-correct-java-version-8)
+  - [Installation Instructions for Java JDK using OpenJava - we won't use this but it is another option](#installation-instructions-for-java-jdk-using-openjava---we-wont-use-this-but-it-is-another-option)
+  - [We will use Oracle's version of Java - Download the correct Java Version 8](#we-will-use-oracles-version-of-java---download-the-correct-java-version-8)
     - [- Set environment variables `PATH` and `CLASSPATH` `JAVA_HOME` etc](#--set-environment-variables-path-and-classpath-java_home-etc)
 - [- Begin Battlecode](#--begin-battlecode)
     - [- Clone the Battlecode Scaffold, where you can run your robot](#--clone-the-battlecode-scaffold-where-you-can-run-your-robot)
@@ -64,7 +64,7 @@
 - [Upload Your Bot and Scrimmage](#upload-your-bot-and-scrimmage)
 
 ## Introduction  
-This is the Battlecode 2021 contest website, which will be your main hub for all Battlecode-related things for the duration of the contest. For a general overview of what Battlecode is, visit our landing page.  
+This is my scrapbook for the Battlecode 2021 contest, I will attempt to keep it up-to-date for all Battlecode-related things for the duration of the contest. For a general overview of what Battlecode is, visit the [Battlecode landing page](https://2020.battlecode.org).  
 This year's game is a thrilling survival adventure involving 🍲, ▀⛓, 🐮, 🤖, and more. You will write bots in Java.  
 ## Why this document is needed  
 In software it is common to write good documentation. This is so that other members of the team can be equally up-to-date with how things work. This is normal documentation for any well-run organization.  
@@ -326,7 +326,7 @@ Once you copy the key,
 </b>
 
 
-### Let vscode know about the GitHub token at the bottom left of vscode click and paste github token  
+### Let vscode know about the GitHub token at the bottom left of vscode click bottom-left and paste github token into the command prompt area in the top menu toolbar 
 
 <br />  
 <img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/bottom-left-of-vscode-click-and-paste-github-token.png?raw=true" align="center" alt="bottom-left-of-vscode-click-and-paste-github-token.png" />
@@ -337,7 +337,7 @@ Once you copy the key,
 # - Begin MIT Content
 ### - Java version 8
 # Install Java Release 8  
-## Installation Instructions for Java JDK  
+## Installation Instructions for Java JDK using OpenJava - we won't use this but it is another option  
 If you're unsure how to install the JDK, you can find instructions for all operating systems here (pay attention to PATH and CLASSPATH).  
    
 https://docs.datastax.com/en/jdk-install/doc/jdk-install/installOpenJdkDeb.html  
@@ -349,7 +349,7 @@ There are two related packages
 - JRE - Java Runtime Environment
 - JDK - Java Development Kit
   
-## Download the correct Java Version 8  
+## We will use Oracle's version of Java - Download the correct Java Version 8  
 Before the file can be downloaded, you must accept the license agreement. The archive binary can be installed by anyone (not only root users), in any location that you can write to. However, only the root user can install the JDK into the system location.
 // Change directory to the location where you would like the JDK to be installed, then move the .tar.gz archive binary to the current directory.  
 That leads to this page [here, you are looking for Java SE 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)  
@@ -372,6 +372,7 @@ connorstom@penguin:$ find /usr -name java
 ```
 From this video [How To Install Oracle Java 8 JDK on Linux - Ubuntu 20.04 / 18.04 / 16.04 LTS / Debian](https://youtu.be/kiaWng4wR-k)
 ```java
+// You will need to log into Oracle and agree to the conditions to start the download  
 // ok lets try this one
 - Linux x64 Compressed Archive	 
 - 136.51 MB	 
@@ -379,7 +380,7 @@ From this video [How To Install Oracle Java 8 JDK on Linux - Ubuntu 20.04 / 18.0
 // I downloaded this and left it in my root home directory, it is just a temporary file we will delete it later
 jdk-8u271-linux-x64.tar.gz
 // you may not need to make this next directory, you may already have it
-mkdir /usr/lib/jvm
+sudo mkdir /usr/lib/jvm
 cd /usr/lib/jvm
 // untar the file that is located in your home dir
 sudo tar -xzvf ~/jdk-8u271-linux-x64.tar.gz 
@@ -397,6 +398,12 @@ Paste thise into your Path in your .bashrc
 ```java
 export JAVA_HOME="/usr/lib/jvm/jdk1.8.0_271/bin"
 export PATH=$PATH:/usr/lib/jvm/jdk1.8.0_271/bin:/usr/lib/jvm/jdk1.8.0_271/jre/bin
+
+// then at the command line in root:
+$ source .bashrc
+
+// then in the future you just need to source .bashrc by using the alias 'sc'
+sc
 ```
 ### This update-alternatives is something that may be useful but you probably do not need it
 ```java
@@ -426,7 +433,7 @@ If the version is old or you get the error `java: Command not found`, then the p
 Determine which java executable is the first one found in your PATH  
 ```java
 connorstom@penguin:~$ which java
-/usr/bin/java
+/usr/lib/jvm/jdk1.8.0_271/bin/java  
 ```
 ## Cleaning up 
 Delete the .tar.gz file if you want to save disk space.  
@@ -453,7 +460,13 @@ task version {
 Next, you should download the Battlecode 2021 scaffold. To get up and running quickly, you can click "Clone or download" and then "Download ZIP," and move on to the next step.  
 We recommend, however, that you instead use Git to organize your code. If you haven't used Git before, read this guide (or wait for our lecture covering it). On the scaffold page, click "Use this template." Importantly, on the next page, make your new repo private (you don't want other teams to steal your code!). You can then clone your newly created repo and invite your team members to collaborate on it.  
 ```java
-git clone https://github.com/battlecode/battlecode21-scaffold.git
+connorstom@penguin:~/aprojects$ git clone https://github.com/battlecode/battlecode21-scaffold.git
+Cloning into 'battlecode21-scaffold'...
+remote: Enumerating objects: 50, done.
+remote: Counting objects: 100% (50/50), done.
+remote: Compressing objects: 100% (30/30), done.
+remote: Total 50 (delta 17), reused 36 (delta 10), pack-reused 0
+Unpacking objects: 100% (50/50), done.
 ```
     
 ### Error - Terminal won’t load from within Intellij and Gradle won’t build  
