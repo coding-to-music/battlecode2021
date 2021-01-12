@@ -21,7 +21,7 @@
     - [Connect with vscode in the cloud so your settings persist over devices and sessions](#connect-with-vscode-in-the-cloud-so-your-settings-persist-over-devices-and-sessions)
     - [Setup a password for cloud sync - you will be prompted for each time you start vscode](#setup-a-password-for-cloud-sync---you-will-be-prompted-for-each-time-you-start-vscode)
     - [If you previously have a cloud account you can merge your data](#if-you-previously-have-a-cloud-account-you-can-merge-your-data)
-  - [Updating Visual Studio Code](#updating-visual-studio-code)
+    - [Updating Visual Studio Code](#updating-visual-studio-code)
   - [Installing Git so you can work with GitHub](#installing-git-so-you-can-work-with-github)
   - [Configuring GitHub git config user.name user.email](#configuring-github-git-config-username-useremail)
   - [Create .ssh directory and generate SSH public and private keys](#create-ssh-directory-and-generate-ssh-public-and-private-keys)
@@ -232,7 +232,7 @@ vscode->settings->Sync Data
 You can now start installing extensions and configuring VS Code according to your preferences.
 
 
-## Updating Visual Studio Code
+### Updating Visual Studio Code
 
 
 When a new version is released you can update the Visual Studio Code package through your desktop standard Software Update tool or by running the following commands in your terminal:
