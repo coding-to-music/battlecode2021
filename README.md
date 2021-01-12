@@ -25,8 +25,7 @@
   - [- create .ssh directory and generate SSH public and private keys](#--create-ssh-directory-and-generate-ssh-public-and-private-keys)
     - [Create a directory for the public keys](#create-a-directory-for-the-public-keys)
     - [Create SSH Key for Github](#create-ssh-key-for-github)
-  - [- use your ssh keys (empty)](#--use-your-ssh-keys-empty)
-    - [- github - uses ssh keys (empty)](#--github---uses-ssh-keys-empty)
+  - [- github - uses ssh keys](#--github---uses-ssh-keys)
     - [Get your vscode token from github account settings](#get-your-vscode-token-from-github-account-settings)
     - [Let vscode know about the GitHub token at the bottom left of vscode click and paste github token](#let-vscode-know-about-the-github-token-at-the-bottom-left-of-vscode-click-and-paste-github-token)
     - [VS Code install for Debian and Ubuntu based distributions](#vs-code-install-for-debian-and-ubuntu-based-distributions)
@@ -207,17 +206,16 @@ file: ssh-rsa
 really big long private key
 -----END RSA PRIVATE KEY-----
 
+## - github - uses ssh keys   
+
 Once you copy the key, 
 - sign into Github and 
 - goto “Settings->SSH and GPG Keys” and 
 - add and name of the new key   
 
-
 <img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/ssh-keys-in-GitHub.png?raw=true" align="center" alt="Battlecode 2021 Image" />
 </b>
 
-## - use your ssh keys (empty)  
-### - github - uses ssh keys (empty)  
 
 ### Get your vscode token from github account settings 
 
