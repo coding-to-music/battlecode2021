@@ -46,25 +46,20 @@
     - [- vscode extensions such as this Table of Contents (empty)](#--vscode-extensions-such-as-this-table-of-contents-empty)
     - [- vscode extensions for Markup, Go CSS JavaScript Java etc (empty)](#--vscode-extensions-for-markup-go-css-javascript-java-etc-empty)
   - [- handy aliases and abbreviations into .bashrc and .bash_aliases](#--handy-aliases-and-abbreviations-into-bashrc-and-bash_aliases-1)
-  - [**1 Installing Git**](#1-installing-git)
-  - [**2 Configuring GitHub git config user.name user.email **](#2-configuring-github-git-config-username-useremail-)
+  - [Installing Git so you can work with GitHub](#installing-git-so-you-can-work-with-github)
+  - [Configuring GitHub git config user.name user.email](#configuring-github-git-config-username-useremail)
   - [- create .ssh directory and generate SSH public and private keys](#--create-ssh-directory-and-generate-ssh-public-and-private-keys-1)
     - [Create a directory for the public keys](#create-a-directory-for-the-public-keys)
     - [Create SSH Key for Github](#create-ssh-key-for-github)
   - [- use your ssh keys (empty)](#--use-your-ssh-keys-empty)
-    - [- netflify - uses ssh keys (empty)](#--netflify---uses-ssh-keys-empty)
-    - [- digitalocean - uses ssh keys (empty)](#--digitalocean---uses-ssh-keys-empty)
     - [- github - uses ssh keys (empty)](#--github---uses-ssh-keys-empty)
-  - [**0 Installing Git for Linux**   (empty)](#0-installing-git-for-linux---empty)
-    - [**Visual Studio Code on Linux**](#visual-studio-code-on-linux)
-    - [**VS Code install for Debian and Ubuntu based distributions**](#vs-code-install-for-debian-and-ubuntu-based-distributions)
+    - [bottom-left-of-vscode-click-and-paste-github-token](#bottom-left-of-vscode-click-and-paste-github-token)
+    - [vscode-github-token](#vscode-github-token)
+    - [VS Code install for Debian and Ubuntu based distributions](#vs-code-install-for-debian-and-ubuntu-based-distributions)
   - [**Installing Visual Studio Code on Ubuntu**](#installing-visual-studio-code-on-ubuntu)
   - [**Starting Visual Studio Code**](#starting-visual-studio-code)
 - [merge-or-replace-cloud-sync-data](#merge-or-replace-cloud-sync-data)
 - [choose-password-for-vscode-sync-data.png](#choose-password-for-vscode-sync-datapng)
-- [bottom-left-of-vscode-click-and-paste-github-token](#bottom-left-of-vscode-click-and-paste-github-token)
-- [vscode-github-token](#vscode-github-token)
-- [This line is not needed](#this-line-is-not-needed)
   - [**Updating Visual Studio Code**](#updating-visual-studio-code)
   - [- End general setup of your computer](#--end-general-setup-of-your-computer-1)
   - [- Begin MIT Content](#--begin-mit-content-1)
@@ -185,11 +180,14 @@ BUG_REPORT_URL="https://bugs.debian.org/"
 ```
 
 
+
+
 ## - Setup editor such as vscode, IntelliJ, Eclipse etc (empty)    
 ## - Detailed instructions for vscode installation (empty)  
 ### - vscode keyring so your settings persist when you log out (empty)    
 ### - vscode extensions such as this Table of Contents (empty)  
 ### - vscode extensions for Markup, Go CSS JavaScript Java etc (empty)  
+
 ## - handy aliases and abbreviations into .bashrc and .bash_aliases   
 
 There are some useful aliases in .bash_alias of this repo:
@@ -205,18 +203,17 @@ source ~/.bashrc
 // in the future, you will just need to type 'sc' and it will source your .bashrc which calls .bash_aliases
 ```
 
-## **1 Installing Git**
+## Installing Git so you can work with GitHub
 
-Download and install Git for Linux:
+Download and install Git
 ```
 $ sudo apt-get install git
 // Now git should be installed. To check use
 $ git --version
 git version 2.19.1
 ```
-The above command is for Ubuntu and works on all Recent Ubuntu versions, tested from Ubuntu 16.04 to Ubuntu 18.04 LTS (Bionic Beaver) and it's likely to work the same way on future versions.
 
-## **2 Configuring GitHub git config user.name user.email **
+## Configuring GitHub git config user.name user.email 
 
 Once the installation has successfully completed, the next thing to do is to set up the configuration details of the GitHub user. To do this use the following two commands by replacing "user_name" with your GitHub username and replacing "email_id" with your email-id you used to create your GitHub account.
 ```
@@ -274,15 +271,23 @@ Once you copy the key,
 </b>
 
 ## - use your ssh keys (empty)  
-### - netflify - uses ssh keys (empty)  
-### - digitalocean - uses ssh keys (empty)  
 ### - github - uses ssh keys (empty)  
-## **0 Installing Git for Linux**   (empty)
 
-### **Visual Studio Code on Linux**
+### bottom-left-of-vscode-click-and-paste-github-token  
+
+<br />  
+<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/bottom-left-of-vscode-click-and-paste-github-token.png?raw=true" align="center" alt="bottom-left-of-vscode-click-and-paste-github-token.png" />
+</b>
+<br />  
+  
+### vscode-github-token  
+
+</b>
+<img width="400px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/vscode-github-token.png?raw=true" align="center" alt="vscode-github-token.png" />
+</b>
 
 
-### **VS Code install for Debian and Ubuntu based distributions**
+### VS Code install for Debian and Ubuntu based distributions
 
 [https://code.visualstudio.com/docs/setup/linux](https://code.visualstudio.com/docs/setup/linux)
 
@@ -370,22 +375,6 @@ When you start VS Code for the first time, a window like the following should ap
 # choose-password-for-vscode-sync-data.png  
 <img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/choose-password-for-vscode-sync-data.png?raw=true" align="center" alt="choose-password-for-vscode-sync-data.png" />
 </b>
-
-# bottom-left-of-vscode-click-and-paste-github-token  
-
-<br />  
-<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/bottom-left-of-vscode-click-and-paste-github-token.png?raw=true" align="center" alt="bottom-left-of-vscode-click-and-paste-github-token.png" />
-</b>
-<br />  
-  
-# vscode-github-token  
-
-</b>
-<img width="400px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/vscode-github-token.png?raw=true" align="center" alt="vscode-github-token.png" />
-</b>
-  
-# This line is not needed  
-
 
 
 You can now start installing extensions and configuring VS Code according to your preferences.
