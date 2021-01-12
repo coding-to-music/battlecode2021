@@ -45,7 +45,7 @@
     - [To verify the installation, get the Java version](#to-verify-the-installation-get-the-java-version)
     - ['Which' Java as a validation test](#which-java-as-a-validation-test)
   - [Cleaning up](#cleaning-up)
-  - [DOWNLOAD (clone) the Battlecode competition scaffold for BATTLECODE](#download-clone-the-battlecode-competition-scaffold-for-battlecode)
+  - [Download (clone) the Battlecode competition scaffold for BATTLECODE](#download-clone-the-battlecode-competition-scaffold-for-battlecode)
 - [- Setup editor such as vscode, IntelliJ, Eclipse etc](#--setup-editor-such-as-vscode-intellij-eclipse-etc)
   - [Download IntelliJ IDEA](#download-intellij-idea)
   - [Idea Installation Instructions](#idea-installation-instructions)
@@ -460,7 +460,7 @@ task version {
     }  
 }  
 ```
-## DOWNLOAD (clone) the Battlecode competition scaffold for BATTLECODE  
+## Download (clone) the Battlecode competition scaffold for BATTLECODE  
 Next, you should download the Battlecode 2021 scaffold. To get up and running quickly, you can click "Clone or download" and then "Download ZIP," and move on to the next step.  
 We recommend, however, that you instead use Git to organize your code. If you haven't used Git before, read this guide (or wait for our lecture covering it). On the scaffold page, click "Use this template." Importantly, on the next page, make your new repo private (you don't want other teams to steal your code!). You can then clone your newly created repo and invite your team members to collaborate on it.  
 ```java
