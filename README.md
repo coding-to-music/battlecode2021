@@ -68,6 +68,7 @@
 - [these need to go someplace](#these-need-to-go-someplace-1)
 - [these need to go someplace](#these-need-to-go-someplace-2)
 - [these need to go someplace](#these-need-to-go-someplace-3)
+- [these need to go someplace](#these-need-to-go-someplace-4)
   - [**Updating Visual Studio Code**](#updating-visual-studio-code)
   - [- End general setup of your computer](#--end-general-setup-of-your-computer-1)
   - [- Begin MIT Content](#--begin-mit-content-1)
@@ -372,6 +373,7 @@ When you start VS Code for the first time, a window like the following should ap
 # these need to go someplace  
 <img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/choose-password-for-vscode-sync-data.png?raw=true" align="center" alt="choose-password-for-vscode-sync-data.png" />
 </b>
+
 # these need to go someplace  
 
 <br />  
@@ -384,6 +386,7 @@ When you start VS Code for the first time, a window like the following should ap
 <img width="400px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/vscode-github-token.png?raw=true" align="left" alt="vscode-github-token.png" />
 </b>
   
+# these need to go someplace  
 
 
 You can now start installing extensions and configuring VS Code according to your preferences.
