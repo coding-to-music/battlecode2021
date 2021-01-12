@@ -27,8 +27,8 @@
     - [Create SSH Key for Github](#create-ssh-key-for-github)
   - [- use your ssh keys (empty)](#--use-your-ssh-keys-empty)
     - [- github - uses ssh keys (empty)](#--github---uses-ssh-keys-empty)
-    - [bottom-left-of-vscode-click-and-paste-github-token](#bottom-left-of-vscode-click-and-paste-github-token)
-    - [vscode-github-token](#vscode-github-token)
+    - [Get your vscode token from github account settings](#get-your-vscode-token-from-github-account-settings)
+    - [Let vscode know about the GitHub token at the bottom left of vscode click and paste github token](#let-vscode-know-about-the-github-token-at-the-bottom-left-of-vscode-click-and-paste-github-token)
     - [VS Code install for Debian and Ubuntu based distributions](#vs-code-install-for-debian-and-ubuntu-based-distributions)
   - [**Installing Visual Studio Code on Ubuntu**](#installing-visual-studio-code-on-ubuntu)
   - [Starting Visual Studio Code](#starting-visual-studio-code)
@@ -219,20 +219,20 @@ Once you copy the key,
 ## - use your ssh keys (empty)  
 ### - github - uses ssh keys (empty)  
 
-### bottom-left-of-vscode-click-and-paste-github-token  
-
-<br />  
-<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/bottom-left-of-vscode-click-and-paste-github-token.png?raw=true" align="center" alt="bottom-left-of-vscode-click-and-paste-github-token.png" />
-</b>
-<br />  
-  
-### vscode-github-token  
+### Get your vscode token from github account settings 
 
 </b>
 <img width="400px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/vscode-github-token.png?raw=true" align="center" alt="vscode-github-token.png" />
 </b>
 
 
+### Let vscode know about the GitHub token at the bottom left of vscode click and paste github token  
+
+<br />  
+<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/bottom-left-of-vscode-click-and-paste-github-token.png?raw=true" align="center" alt="bottom-left-of-vscode-click-and-paste-github-token.png" />
+</b>
+<br />  
+  
 ### VS Code install for Debian and Ubuntu based distributions
 
 [https://code.visualstudio.com/docs/setup/linux](https://code.visualstudio.com/docs/setup/linux)
