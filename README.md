@@ -15,11 +15,11 @@
     - [Chromebook is Debian](#chromebook-is-debian)
     - [Digitalocean is Ubuntu](#digitalocean-is-ubuntu)
   - [Handy aliases and abbreviations into .bashrc and .bash_aliases](#handy-aliases-and-abbreviations-into-bashrc-and-bash_aliases)
-    - [VS Code install for Debian and Ubuntu based distributions](#vs-code-install-for-debian-and-ubuntu-based-distributions)
+  - [VS Code install for Debian and Ubuntu based distributions](#vs-code-install-for-debian-and-ubuntu-based-distributions)
   - [Installing Visual Studio Code on Ubuntu](#installing-visual-studio-code-on-ubuntu)
   - [Starting Visual Studio Code](#starting-visual-studio-code)
     - [Connect with vscode in the cloud so your settings persist over devices and sessions](#connect-with-vscode-in-the-cloud-so-your-settings-persist-over-devices-and-sessions)
-    - [setup a password you will be prompted for each time you start vscode](#setup-a-password-you-will-be-prompted-for-each-time-you-start-vscode)
+    - [Setup a password for cloud sync - you will be prompted for each time you start vscode](#setup-a-password-for-cloud-sync---you-will-be-prompted-for-each-time-you-start-vscode)
     - [If you previously have a cloud account you can merge your data](#if-you-previously-have-a-cloud-account-you-can-merge-your-data)
   - [Updating Visual Studio Code](#updating-visual-studio-code)
   - [Installing Git so you can work with GitHub](#installing-git-so-you-can-work-with-github)
@@ -135,7 +135,7 @@ source ~/.bashrc
 // in the future, you will just need to type 'sc' and it will source your .bashrc which calls .bash_aliases
 ```
 
-### VS Code install for Debian and Ubuntu based distributions
+## VS Code install for Debian and Ubuntu based distributions
 
 [https://code.visualstudio.com/docs/setup/linux](https://code.visualstudio.com/docs/setup/linux)
 
@@ -216,7 +216,7 @@ When you start VS Code for the first time, a window like the following should ap
 
 vscode->settings->Sync Data
 
-### setup a password you will be prompted for each time you start vscode  
+### Setup a password for cloud sync - you will be prompted for each time you start vscode  
 <img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/choose-password-for-vscode-sync-data.png?raw=true" align="center" alt="choose-password-for-vscode-sync-data.png" />
 </b>
 
