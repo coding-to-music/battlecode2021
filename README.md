@@ -384,7 +384,7 @@ When you start VS Code for the first time, a window like the following should ap
 # these need to go someplace  
 
 </b>
-<img width="400px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/vscode-github-token.png?raw=true" align="left" alt="vscode-github-token.png" />
+<img width="400px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/vscode-github-token.png?raw=true" align="center" alt="vscode-github-token.png" />
 </b>
   
 # these need to go someplace  
