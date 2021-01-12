@@ -9,34 +9,8 @@
   - [Why this document is needed](#why-this-document-is-needed)
   - [Account and Team Creation](#account-and-team-creation)
   - [Links and resources for this year's Battlecode](#links-and-resources-for-this-years-battlecode)
-- [Outline of this document](#outline-of-this-document)
-  - [Setup your computer, we will cover each item](#setup-your-computer-we-will-cover-each-item)
-    - [- Enable Linux on your Chromebook](#--enable-linux-on-your-chromebook)
-    - [- Setup editor such as vscode, IntelliJ, Eclipse etc](#--setup-editor-such-as-vscode-intellij-eclipse-etc)
-    - [- Detailed instructions for vscode installation](#--detailed-instructions-for-vscode-installation)
-      - [- vscode keyring so your settings persist when you log out](#--vscode-keyring-so-your-settings-persist-when-you-log-out)
-      - [- vscode extensions such as this Table of Contents](#--vscode-extensions-such-as-this-table-of-contents)
-      - [- vscode extensions for Markup, Go CSS JavaScript Java etc](#--vscode-extensions-for-markup-go-css-javascript-java-etc)
-    - [- handy aliases and abbreviations into .bashrc and .bash_aliases](#--handy-aliases-and-abbreviations-into-bashrc-and-bash_aliases)
-    - [- create .ssh directory and generate SSH public and private keys](#--create-ssh-directory-and-generate-ssh-public-and-private-keys)
-    - [- git](#--git)
-    - [- vscode](#--vscode)
-    - [- use your ssh keys](#--use-your-ssh-keys)
-      - [- netflify - uses ssh keys](#--netflify---uses-ssh-keys)
-      - [- digitalocean - uses ssh keys](#--digitalocean---uses-ssh-keys)
-      - [- github - uses ssh keys](#--github---uses-ssh-keys)
-    - [- End general setup of your computer](#--end-general-setup-of-your-computer)
-  - [- Begin MIT Content](#--begin-mit-content)
-    - [- Java version 8](#--java-version-8)
-    - [- Set environment variables `PATH` and `CLASSPATH` `JAVA_HOME` etc](#--set-environment-variables-path-and-classpath-java_home-etc)
-  - [- Begin Battlecode](#--begin-battlecode)
-    - [- Clone the Battlecode Scaffold, where you can run your robot](#--clone-the-battlecode-scaffold-where-you-can-run-your-robot)
-    - [- Run the sample robot](#--run-the-sample-robot)
-    - [- Create and modify your own robot](#--create-and-modify-your-own-robot)
-    - [- Run your robot](#--run-your-robot)
-- [now the content begins](#now-the-content-begins)
-- [Setup your computer, we will cover each item](#setup-your-computer-we-will-cover-each-item-1)
-  - [- Enable Linux on your Chromebook](#--enable-linux-on-your-chromebook-1)
+- [Setup your computer, we will cover each item](#setup-your-computer-we-will-cover-each-item)
+  - [- Enable Linux on your Chromebook](#--enable-linux-on-your-chromebook)
   - [- details about your computer and operating system](#--details-about-your-computer-and-operating-system)
     - [Chromebook is Debian](#chromebook-is-debian)
   - [Digitalocean is Ubuntu](#digitalocean-is-ubuntu)
@@ -45,10 +19,10 @@
     - [- vscode keyring so your settings persist when you log out (empty)](#--vscode-keyring-so-your-settings-persist-when-you-log-out-empty)
     - [- vscode extensions such as this Table of Contents (empty)](#--vscode-extensions-such-as-this-table-of-contents-empty)
     - [- vscode extensions for Markup, Go CSS JavaScript Java etc (empty)](#--vscode-extensions-for-markup-go-css-javascript-java-etc-empty)
-  - [- handy aliases and abbreviations into .bashrc and .bash_aliases](#--handy-aliases-and-abbreviations-into-bashrc-and-bash_aliases-1)
+  - [- handy aliases and abbreviations into .bashrc and .bash_aliases](#--handy-aliases-and-abbreviations-into-bashrc-and-bash_aliases)
   - [Installing Git so you can work with GitHub](#installing-git-so-you-can-work-with-github)
   - [Configuring GitHub git config user.name user.email](#configuring-github-git-config-username-useremail)
-  - [- create .ssh directory and generate SSH public and private keys](#--create-ssh-directory-and-generate-ssh-public-and-private-keys-1)
+  - [- create .ssh directory and generate SSH public and private keys](#--create-ssh-directory-and-generate-ssh-public-and-private-keys)
     - [Create a directory for the public keys](#create-a-directory-for-the-public-keys)
     - [Create SSH Key for Github](#create-ssh-key-for-github)
   - [- use your ssh keys (empty)](#--use-your-ssh-keys-empty)
@@ -61,15 +35,15 @@
 - [merge-or-replace-cloud-sync-data](#merge-or-replace-cloud-sync-data)
 - [choose-password-for-vscode-sync-data.png](#choose-password-for-vscode-sync-datapng)
   - [**Updating Visual Studio Code**](#updating-visual-studio-code)
-  - [- End general setup of your computer](#--end-general-setup-of-your-computer-1)
-  - [- Begin MIT Content](#--begin-mit-content-1)
-    - [- Java version 8](#--java-version-8-1)
+  - [- End general setup of your computer](#--end-general-setup-of-your-computer)
+  - [- Begin MIT Content](#--begin-mit-content)
+    - [- Java version 8](#--java-version-8)
 - [Install Java Release 8](#install-java-release-8)
   - [Installation Instructions for Java JDK](#installation-instructions-for-java-jdk)
   - [Download the correct Java Version 8](#download-the-correct-java-version-8)
-    - [- Set environment variables `PATH` and `CLASSPATH` `JAVA_HOME` etc](#--set-environment-variables-path-and-classpath-java_home-etc-1)
-- [- Begin Battlecode](#--begin-battlecode-1)
-    - [- Clone the Battlecode Scaffold, where you can run your robot](#--clone-the-battlecode-scaffold-where-you-can-run-your-robot-1)
+    - [- Set environment variables `PATH` and `CLASSPATH` `JAVA_HOME` etc](#--set-environment-variables-path-and-classpath-java_home-etc)
+- [- Begin Battlecode](#--begin-battlecode)
+    - [- Clone the Battlecode Scaffold, where you can run your robot](#--clone-the-battlecode-scaffold-where-you-can-run-your-robot)
   - [Changes to .bashrc for your environment variables, PATH and JAVA_HOME](#changes-to-bashrc-for-your-environment-variables-path-and-java_home)
     - [This update-alternatives is something that may be useful but you probably do not need it](#this-update-alternatives-is-something-that-may-be-useful-but-you-probably-do-not-need-it)
   - [Validating Java works correctly](#validating-java-works-correctly)
@@ -112,36 +86,7 @@ Create an account at [battlecode.org](https://2021.battlecode.org/getting-starte
 Some tweets about battlecode are on [Twitter](https://twitter.com/search?q=thomasconnors%20battlecode)  
 A great postmortum from 2020 [Team Battlegaode](http://web.mit.edu/agrebe/www/battlecode/20/index.html)    
 
-# Outline of this document  
-## Setup your computer, we will cover each item    
-### - Enable Linux on your Chromebook  
-### - Setup editor such as vscode, IntelliJ, Eclipse etc  
-### - Detailed instructions for vscode installation  
-#### - vscode keyring so your settings persist when you log out    
-#### - vscode extensions such as this Table of Contents  
-#### - vscode extensions for Markup, Go CSS JavaScript Java etc  
-### - handy aliases and abbreviations into .bashrc and .bash_aliases  
-### - create .ssh directory and generate SSH public and private keys  
-### - git  
-### - vscode  
-### - use your ssh keys  
-#### - netflify - uses ssh keys  
-#### - digitalocean - uses ssh keys  
-#### - github - uses ssh keys  
-### - End general setup of your computer  
-## - Begin MIT Content  
-### - Java version 8  
-### - Set environment variables `PATH` and `CLASSPATH` `JAVA_HOME` etc  
-## - Begin Battlecode   
-### - Clone the Battlecode Scaffold, where you can run your robot  
-### - Run the sample robot  
-### - Create and modify your own robot  
-### - Run your robot    
-  
 
-
-
-# now the content begins      
 # Setup your computer, we will cover each item     
 ## - Enable Linux on your Chromebook     
 
