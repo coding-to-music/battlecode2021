@@ -18,8 +18,8 @@
   - [Installing Git so you can work with GitHub](#installing-git-so-you-can-work-with-github)
     - [Configuring GitHub git config user.name user.email](#configuring-github-git-config-username-useremail)
   - [VS Code install for Debian and Ubuntu based distributions](#vs-code-install-for-debian-and-ubuntu-based-distributions)
-  - [Installing Visual Studio Code on Ubuntu](#installing-visual-studio-code-on-ubuntu)
-  - [Starting Visual Studio Code](#starting-visual-studio-code)
+    - [Installing Visual Studio Code on Ubuntu](#installing-visual-studio-code-on-ubuntu)
+    - [Starting Visual Studio Code](#starting-visual-studio-code)
     - [Connect with vscode in the cloud so your settings persist over devices and sessions](#connect-with-vscode-in-the-cloud-so-your-settings-persist-over-devices-and-sessions)
     - [Setup a password for cloud sync - you will be prompted for each time you start vscode](#setup-a-password-for-cloud-sync---you-will-be-prompted-for-each-time-you-start-vscode)
     - [If you previously have a cloud account you can merge your data](#if-you-previously-have-a-cloud-account-you-can-merge-your-data)
@@ -203,7 +203,7 @@ sudo apt-get install code # or code-insiders
 sudo apt install gnome-keyring
 ```
 
-## Installing Visual Studio Code on Ubuntu
+### Installing Visual Studio Code on Ubuntu
 
 [https://linuxize.com/post/how-to-install-visual-studio-code-on-ubuntu-18-04/](https://linuxize.com/post/how-to-install-visual-studio-code-on-ubuntu-18-04/)
 
@@ -223,7 +223,7 @@ To install Visual Studio Code on your Ubuntu system, follow these steps:
 That’s it. Visual Studio Code has been installed on your Ubuntu desktop and you can start using it.
 
 
-## Starting Visual Studio Code
+### Starting Visual Studio Code
 
 Now that VS Code is installed on your Ubuntu system you can launch it either from the command line by typing `code` or by clicking on the VS Code icon (`Activities -> Visual Studio Code`).
 
