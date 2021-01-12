@@ -15,6 +15,13 @@
     - [Chromebook is Debian](#chromebook-is-debian)
     - [Digitalocean is Ubuntu](#digitalocean-is-ubuntu)
   - [Handy aliases and abbreviations into .bashrc and .bash_aliases](#handy-aliases-and-abbreviations-into-bashrc-and-bash_aliases)
+    - [VS Code install for Debian and Ubuntu based distributions](#vs-code-install-for-debian-and-ubuntu-based-distributions)
+  - [Installing Visual Studio Code on Ubuntu](#installing-visual-studio-code-on-ubuntu)
+  - [Starting Visual Studio Code](#starting-visual-studio-code)
+    - [Connect with vscode in the cloud so your settings persist over devices and sessions](#connect-with-vscode-in-the-cloud-so-your-settings-persist-over-devices-and-sessions)
+    - [setup a password you will be prompted for each time you start vscode](#setup-a-password-you-will-be-prompted-for-each-time-you-start-vscode)
+    - [If you previously have a cloud account you can merge your data](#if-you-previously-have-a-cloud-account-you-can-merge-your-data)
+  - [Updating Visual Studio Code](#updating-visual-studio-code)
   - [Installing Git so you can work with GitHub](#installing-git-so-you-can-work-with-github)
   - [Configuring GitHub git config user.name user.email](#configuring-github-git-config-username-useremail)
   - [Create .ssh directory and generate SSH public and private keys](#create-ssh-directory-and-generate-ssh-public-and-private-keys)
@@ -23,13 +30,6 @@
   - [GitHub - set your ssh keys](#github---set-your-ssh-keys)
     - [Get your vscode token from github account settings](#get-your-vscode-token-from-github-account-settings)
     - [Let vscode know about the GitHub token at the bottom left of vscode click and paste github token](#let-vscode-know-about-the-github-token-at-the-bottom-left-of-vscode-click-and-paste-github-token)
-    - [VS Code install for Debian and Ubuntu based distributions](#vs-code-install-for-debian-and-ubuntu-based-distributions)
-  - [Installing Visual Studio Code on Ubuntu](#installing-visual-studio-code-on-ubuntu)
-  - [Starting Visual Studio Code](#starting-visual-studio-code)
-    - [Connect with vscode in the cloud so your settings persist over devices and sessions](#connect-with-vscode-in-the-cloud-so-your-settings-persist-over-devices-and-sessions)
-    - [setup a password you will be prompted for each time you start vscode](#setup-a-password-you-will-be-prompted-for-each-time-you-start-vscode)
-    - [If you previously have a cloud account you can merge your data](#if-you-previously-have-a-cloud-account-you-can-merge-your-data)
-  - [Updating Visual Studio Code](#updating-visual-studio-code)
 - [- End general setup of your computer](#--end-general-setup-of-your-computer)
 - [- Begin MIT Content](#--begin-mit-content)
     - [- Java version 8](#--java-version-8)
@@ -135,6 +135,113 @@ source ~/.bashrc
 // in the future, you will just need to type 'sc' and it will source your .bashrc which calls .bash_aliases
 ```
 
+### VS Code install for Debian and Ubuntu based distributions
+
+[https://code.visualstudio.com/docs/setup/linux](https://code.visualstudio.com/docs/setup/linux)
+
+The easiest way to install Visual Studio Code for Debian/Ubuntu based distributions is to download and install the [.deb package (64-bit)](https://go.microsoft.com/fwlink/?LinkID=760868), either through the graphical software center if it's available, or through the command line with:
+
+
+```
+sudo apt install ./<file>.deb
+
+download the file from the website to downloads and move it to linux file system then run:
+
+https://code.visualstudio.com/docs/setup/linux
+https://github.com/nodesource/distributions/blob/master/README.md#debinstall
+
+# If you're on an older Linux distribution, you will need to run this instead:
+# sudo dpkg -i <file>.deb
+# sudo apt-get install -f # Install dependencies
+connorstom@penguin:~$ code --version
+1.51.1
+e5a624b788d92b8d34d1392e4c4d9789406efe8f
+x64
+```
+
+
+Installing the .deb package will automatically install the apt repository and signing key to enable auto-updating using the system's package manager. Note that 32-bit and .tar.gz binaries are also available on the [VS Code download page](https://code.visualstudio.com/Download).
+
+The repository and key can also be installed manually with the following script:
+
+
+```
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+```
+
+
+Then update the package cache and install the package using:
+
+
+```
+sudo apt-get install apt-transport-https
+sudo apt-get update
+sudo apt-get install code # or code-insiders
+
+sudo apt install gnome-keyring
+```
+
+## Installing Visual Studio Code on Ubuntu
+
+[https://linuxize.com/post/how-to-install-visual-studio-code-on-ubuntu-18-04/](https://linuxize.com/post/how-to-install-visual-studio-code-on-ubuntu-18-04/)
+
+To install Visual Studio Code on your Ubuntu system, follow these steps:
+
+1. First, update the packages index and install the dependencies by typing:
+2. `sudo apt update`
+3. `sudo apt install software-properties-common apt-transport-https wget`
+4. Next, import the Microsoft GPG key using the following [wget command](https://linuxize.com/post/wget-command-examples/):
+5. `wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -`
+6. And enable the Visual Studio Code repository by typing:
+7. `sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"`
+8. Once the [apt repository is enabled](https://linuxize.com/post/how-to-add-apt-repository-in-ubuntu/), install the latest version of Visual Studio Code with:
+9. `sudo apt update`
+10. `sudo apt install code`
+
+That’s it. Visual Studio Code has been installed on your Ubuntu desktop and you can start using it.
+
+
+## Starting Visual Studio Code
+
+Now that VS Code is installed on your Ubuntu system you can launch it either from the command line by typing `code` or by clicking on the VS Code icon (`Activities -> Visual Studio Code`).
+
+When you start VS Code for the first time, a window like the following should appear:
+
+<img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/vscode-default-home-screen.jpg?raw=true" align="center" alt="vscode-default-home-screen.jpg" />
+</b>
+
+### Connect with vscode in the cloud so your settings persist over devices and sessions
+
+vscode->settings->Sync Data
+
+### setup a password you will be prompted for each time you start vscode  
+<img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/choose-password-for-vscode-sync-data.png?raw=true" align="center" alt="choose-password-for-vscode-sync-data.png" />
+</b>
+
+
+
+### If you previously have a cloud account you can merge your data    
+<br />  
+<img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/merge-or-replace-cloud-sync-data.png?raw=true" align="center" alt="merge-or-replace-cloud-sync-data.png" />
+</b>
+<br />  
+  
+
+You can now start installing extensions and configuring VS Code according to your preferences.
+
+
+## Updating Visual Studio Code
+
+
+When a new version is released you can update the Visual Studio Code package through your desktop standard Software Update tool or by running the following commands in your terminal:
+
+```bash
+sudo apt update
+sudo apt upgrade
+```
+
 ## Installing Git so you can work with GitHub
 
 Download and install Git
@@ -218,115 +325,6 @@ Once you copy the key,
 </b>
 <br />  
   
-### VS Code install for Debian and Ubuntu based distributions
-
-[https://code.visualstudio.com/docs/setup/linux](https://code.visualstudio.com/docs/setup/linux)
-
-The easiest way to install Visual Studio Code for Debian/Ubuntu based distributions is to download and install the [.deb package (64-bit)](https://go.microsoft.com/fwlink/?LinkID=760868), either through the graphical software center if it's available, or through the command line with:
-
-
-```
-sudo apt install ./<file>.deb
-
-download the file from the website to downloads and move it to linux file system then run:
-
-https://code.visualstudio.com/docs/setup/linux
-https://github.com/nodesource/distributions/blob/master/README.md#debinstall
-
-# If you're on an older Linux distribution, you will need to run this instead:
-# sudo dpkg -i <file>.deb
-# sudo apt-get install -f # Install dependencies
-connorstom@penguin:~$ code --version
-1.51.1
-e5a624b788d92b8d34d1392e4c4d9789406efe8f
-x64
-```
-
-
-Installing the .deb package will automatically install the apt repository and signing key to enable auto-updating using the system's package manager. Note that 32-bit and .tar.gz binaries are also available on the [VS Code download page](https://code.visualstudio.com/Download).
-
-The repository and key can also be installed manually with the following script:
-
-
-```
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
-sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-```
-
-
-Then update the package cache and install the package using:
-
-
-```
-sudo apt-get install apt-transport-https
-sudo apt-get update
-sudo apt-get install code # or code-insiders
-
-sudo apt install gnome-keyring
-```
-
-## Installing Visual Studio Code on Ubuntu
-
-[https://linuxize.com/post/how-to-install-visual-studio-code-on-ubuntu-18-04/](https://linuxize.com/post/how-to-install-visual-studio-code-on-ubuntu-18-04/)
-
-To install Visual Studio Code on your Ubuntu system, follow these steps:
-
-
-
-1. First, update the packages index and install the dependencies by typing:
-2. `sudo apt update`
-3. `sudo apt install software-properties-common apt-transport-https wget`
-4. Next, import the Microsoft GPG key using the following [wget command](https://linuxize.com/post/wget-command-examples/):
-5. `wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -`
-6. And enable the Visual Studio Code repository by typing:
-7. `sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"`
-8. Once the [apt repository is enabled](https://linuxize.com/post/how-to-add-apt-repository-in-ubuntu/), install the latest version of Visual Studio Code with:
-9. `sudo apt update`
-10. `sudo apt install code`
-
-That’s it. Visual Studio Code has been installed on your Ubuntu desktop and you can start using it.
-
-
-## Starting Visual Studio Code
-
-Now that VS Code is installed on your Ubuntu system you can launch it either from the command line by typing `code` or by clicking on the VS Code icon (`Activities -> Visual Studio Code`).
-
-When you start VS Code for the first time, a window like the following should appear:
-
-<img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/vscode-default-home-screen.jpg?raw=true" align="center" alt="vscode-default-home-screen.jpg" />
-</b>
-
-### Connect with vscode in the cloud so your settings persist over devices and sessions
-
-vscode->settings->Sync Data
-
-### setup a password you will be prompted for each time you start vscode  
-<img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/choose-password-for-vscode-sync-data.png?raw=true" align="center" alt="choose-password-for-vscode-sync-data.png" />
-</b>
-
-
-
-### If you previously have a cloud account you can merge your data    
-<br />  
-<img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/merge-or-replace-cloud-sync-data.png?raw=true" align="center" alt="merge-or-replace-cloud-sync-data.png" />
-</b>
-<br />  
-  
-
-You can now start installing extensions and configuring VS Code according to your preferences.
-
-
-## Updating Visual Studio Code
-
-
-When a new version is released you can update the Visual Studio Code package through your desktop standard Software Update tool or by running the following commands in your terminal:
-
-```bash
-sudo apt update
-sudo apt upgrade
-```
-
 # - End general setup of your computer
 # - Begin MIT Content
 ### - Java version 8
