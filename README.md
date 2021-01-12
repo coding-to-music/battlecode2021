@@ -382,6 +382,7 @@ When you start VS Code for the first time, a window like the following should ap
 <br />  
   
 # these need to go someplace  
+
 </b>
 <img width="400px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/vscode-github-token.png?raw=true" align="left" alt="vscode-github-token.png" />
 </b>
@@ -389,8 +390,13 @@ When you start VS Code for the first time, a window like the following should ap
 # these need to go someplace  
 
 
+
 You can now start installing extensions and configuring VS Code according to your preferences.
+
+
 ## **Updating Visual Studio Code**
+
+
 When a new version is released you can update the Visual Studio Code package through your desktop standard Software Update tool or by running the following commands in your terminal:
 
 ```bash
