@@ -45,15 +45,8 @@
     - [To verify the installation, get the Java version](#to-verify-the-installation-get-the-java-version)
     - ['Which' Java as a validation test](#which-java-as-a-validation-test)
   - [Cleaning up](#cleaning-up)
-- [FROM HERE ON is from Last Year and needs to be edited/corrected](#from-here-on-is-from-last-year-and-needs-to-be-editedcorrected)
-- [Install the Scaffold](#install-the-scaffold)
-  - [STEP 2: DOWNLOAD the competition scaffold for BATTLECODE](#step-2-download-the-competition-scaffold-for-battlecode)
-    - [Error - Terminal won’t load from within Intellij and Gradle won’t build](#error---terminal-wont-load-from-within-intellij-and-gradle-wont-build)
-- [STEP 3: Build the game - LOCAL SETUP](#step-3-build-the-game---local-setup)
-- [- Setup editor such as vscode, IntelliJ, Eclipse etc (empty)](#--setup-editor-such-as-vscode-intellij-eclipse-etc-empty)
-- [Use VSCode](#use-vscode)
-- [Install IntelliJ](#install-intellij)
-    - [View instructions for:](#view-instructions-for)
+  - [DOWNLOAD (clone) the Battlecode competition scaffold for BATTLECODE](#download-clone-the-battlecode-competition-scaffold-for-battlecode)
+- [- Setup editor such as vscode, IntelliJ, Eclipse etc](#--setup-editor-such-as-vscode-intellij-eclipse-etc)
   - [Download IntelliJ IDEA](#download-intellij-idea)
   - [Idea Installation Instructions](#idea-installation-instructions)
   - [Changes to .bashrc for your PATH variable](#changes-to-bashrc-for-your-path-variable)
@@ -63,6 +56,11 @@
 - [THIS IS WHERE I LEFT OFF](#this-is-where-i-left-off-3)
 - [THIS IS WHERE I LEFT OFF](#this-is-where-i-left-off-4)
 - [THIS IS WHERE I LEFT OFF](#this-is-where-i-left-off-5)
+- [Use VSCode](#use-vscode)
+- [Install IntelliJ](#install-intellij)
+    - [View instructions for:](#view-instructions-for)
+    - [Error - Terminal won’t load from within Intellij and Gradle won’t build](#error---terminal-wont-load-from-within-intellij-and-gradle-wont-build)
+- [STEP 3: Build the game - LOCAL SETUP](#step-3-build-the-game---local-setup)
 - [Install the sample player bot](#install-the-sample-player-bot)
 - [Have the sample bot play itself](#have-the-sample-bot-play-itself)
 - [Modify the bot and make it your own](#modify-the-bot-and-make-it-your-own)
@@ -462,9 +460,7 @@ task version {
     }  
 }  
 ```
-# FROM HERE ON is from Last Year and needs to be edited/corrected   
-# Install the Scaffold   
-## STEP 2: DOWNLOAD the competition scaffold for BATTLECODE  
+## DOWNLOAD (clone) the Battlecode competition scaffold for BATTLECODE  
 Next, you should download the Battlecode 2021 scaffold. To get up and running quickly, you can click "Clone or download" and then "Download ZIP," and move on to the next step.  
 We recommend, however, that you instead use Git to organize your code. If you haven't used Git before, read this guide (or wait for our lecture covering it). On the scaffold page, click "Use this template." Importantly, on the next page, make your new repo private (you don't want other teams to steal your code!). You can then clone your newly created repo and invite your team members to collaborate on it.  
 ```java
@@ -477,34 +473,7 @@ remote: Total 50 (delta 17), reused 36 (delta 10), pack-reused 0
 Unpacking objects: 100% (50/50), done.
 ```
     
-### Error - Terminal won’t load from within Intellij and Gradle won’t build  
-Message when trying to open Terminal within Intellij  
-Platform SDK does not point to valid JDK  
-  
-# STEP 3: Build the game - LOCAL SETUP  
-Open a terminal in the scaffold you just downloaded. Run the commands `./gradlew update` and `./gradlew build`  
-We recommend using an IDE like IntelliJ IDEA or Eclipse to work on Battlecode, but you can also use your favorite text editor combined with a terminal. Battlecode 2020 uses Gradle to run tasks like run, debug and jarForUpload (but don't worry about that — you don't need to install it).  
-  
-
-# - Setup editor such as vscode, IntelliJ, Eclipse etc (empty)    
-# Use VSCode  
-# Install IntelliJ
-### View instructions for:  
-- IntelliJ IDEAEclipseTerminal  
-- Install IntelliJ IDEA Community Edition from here.  
-In the Welcome to IntelliJ IDEA window that pops up when you start IntelliJ, select Import Project  
-In the Select File or Dictionary to Import window, select the build.gradle file in the scaffold folder.  
-- Hit OK.  
-We need to set the jdk properly; 
-- open the settings with File > Settings (IntelliJ IDEA > Preferences on Mac) or ctrl+alt+s. 
-- Navigate to Build, Execution, Deployment > Build Tools > Gradle and 
-- change Gradle JVM to 1.8  
-Time for a first build! 
-- On the right side of the screen, click the small button that says gradle and has a picture of an elephant. 
-- Navigate to battlecode20-scaffold > Tasks > battlecode and double click on build. 
-- This will install the client and engine for you.  
-If you haven't seen any errors, you should be good to go.  
-There should now be a folder called client in your scaffold folder; if you go in there, and double click the Battlecode Client application, you should be able to run and watch matches. (Please don't move that application, it will be sad.) If you're on Linux, navigate to the client folder and run ./battlecode-visualizer to launch the client.  
+# - Setup editor such as vscode, IntelliJ, Eclipse etc     
   
 ## Download IntelliJ IDEA
 The JetBrains website to [downlowd Intellij IDEA is located Here](https://www.jetbrains.com/idea/download/#section=linux)
@@ -522,6 +491,9 @@ Note: A new instance MUST NOT be extracted over an existing one. The target fold
 cd /usr  
 // untar the file that is located in your home dir
 sudo tar -xzvf ~/ideaIC-2020.3.1.tar.gz 
+
+// to clean up, remove the original tar file
+rm ~/ideaIC-2020.3.1.tar.gz
 ```
 
 The Java Development Kit files are installed in a directory called `idea-IC-203.6682.168` in the current directory.  
@@ -547,6 +519,35 @@ Run idea.sh from the bin subdirectory.
 # THIS IS WHERE I LEFT OFF  
 # THIS IS WHERE I LEFT OFF  
 
+# Use VSCode  
+# Install IntelliJ
+### View instructions for:  
+- IntelliJ IDEAEclipseTerminal  
+- Install IntelliJ IDEA Community Edition from here.  
+In the Welcome to IntelliJ IDEA window that pops up when you start IntelliJ, select Import Project  
+In the Select File or Dictionary to Import window, select the build.gradle file in the scaffold folder.  
+- Hit OK.  
+We need to set the jdk properly; 
+- open the settings with File > Settings (IntelliJ IDEA > Preferences on Mac) or ctrl+alt+s. 
+- Navigate to Build, Execution, Deployment > Build Tools > Gradle and 
+- change Gradle JVM to 1.8  
+Time for a first build! 
+- On the right side of the screen, click the small button that says gradle and has a picture of an elephant. 
+- Navigate to battlecode20-scaffold > Tasks > battlecode and double click on build. 
+- This will install the client and engine for you.  
+If you haven't seen any errors, you should be good to go.  
+There should now be a folder called client in your scaffold folder; if you go in there, and double click the Battlecode Client application, you should be able to run and watch matches. (Please don't move that application, it will be sad.) If you're on Linux, navigate to the client folder and run ./battlecode-visualizer to launch the client.  
+
+### Error - Terminal won’t load from within Intellij and Gradle won’t build  
+You may get this message:  
+
+Message when trying to open Terminal within Intellij  
+Platform SDK does not point to valid JDK  
+  
+# STEP 3: Build the game - LOCAL SETUP  
+Open a terminal in the scaffold you just downloaded. Run the commands `./gradlew update` and `./gradlew build`  
+We recommend using an IDE like IntelliJ IDEA or Eclipse to work on Battlecode, but you can also use your favorite text editor combined with a terminal. Battlecode 2020 uses Gradle to run tasks like run, debug and jarForUpload (but don't worry about that — you don't need to install it).  
+  
 # Install the sample player bot  
   
 # Have the sample bot play itself  
