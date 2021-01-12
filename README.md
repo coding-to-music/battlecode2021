@@ -10,26 +10,26 @@
   - [Account and Team Creation](#account-and-team-creation)
   - [Links and resources for this year's Battlecode](#links-and-resources-for-this-years-battlecode)
 - [Setup your computer, we will cover each item](#setup-your-computer-we-will-cover-each-item)
-  - [- Enable Linux on your Chromebook](#--enable-linux-on-your-chromebook)
-  - [- details about your computer and operating system](#--details-about-your-computer-and-operating-system)
+  - [Enable Linux on your Chromebook](#enable-linux-on-your-chromebook)
+  - [Details about your computer and operating system](#details-about-your-computer-and-operating-system)
     - [Chromebook is Debian](#chromebook-is-debian)
     - [Digitalocean is Ubuntu](#digitalocean-is-ubuntu)
-  - [- handy aliases and abbreviations into .bashrc and .bash_aliases](#--handy-aliases-and-abbreviations-into-bashrc-and-bash_aliases)
+  - [Handy aliases and abbreviations into .bashrc and .bash_aliases](#handy-aliases-and-abbreviations-into-bashrc-and-bash_aliases)
   - [Installing Git so you can work with GitHub](#installing-git-so-you-can-work-with-github)
   - [Configuring GitHub git config user.name user.email](#configuring-github-git-config-username-useremail)
-  - [- create .ssh directory and generate SSH public and private keys](#--create-ssh-directory-and-generate-ssh-public-and-private-keys)
+  - [Create .ssh directory and generate SSH public and private keys](#create-ssh-directory-and-generate-ssh-public-and-private-keys)
     - [Create a directory for the public keys](#create-a-directory-for-the-public-keys)
     - [Create SSH Key for Github](#create-ssh-key-for-github)
-  - [- GitHub - set your ssh keys](#--github---set-your-ssh-keys)
+  - [GitHub - set your ssh keys](#github---set-your-ssh-keys)
     - [Get your vscode token from github account settings](#get-your-vscode-token-from-github-account-settings)
     - [Let vscode know about the GitHub token at the bottom left of vscode click and paste github token](#let-vscode-know-about-the-github-token-at-the-bottom-left-of-vscode-click-and-paste-github-token)
     - [VS Code install for Debian and Ubuntu based distributions](#vs-code-install-for-debian-and-ubuntu-based-distributions)
-  - [**Installing Visual Studio Code on Ubuntu**](#installing-visual-studio-code-on-ubuntu)
+  - [Installing Visual Studio Code on Ubuntu](#installing-visual-studio-code-on-ubuntu)
   - [Starting Visual Studio Code](#starting-visual-studio-code)
     - [Connect with vscode in the cloud so your settings persist over devices and sessions](#connect-with-vscode-in-the-cloud-so-your-settings-persist-over-devices-and-sessions)
     - [setup a password you will be prompted for each time you start vscode](#setup-a-password-you-will-be-prompted-for-each-time-you-start-vscode)
     - [If you previously have a cloud account you can merge your data](#if-you-previously-have-a-cloud-account-you-can-merge-your-data)
-  - [**Updating Visual Studio Code**](#updating-visual-studio-code)
+  - [Updating Visual Studio Code](#updating-visual-studio-code)
 - [- End general setup of your computer](#--end-general-setup-of-your-computer)
 - [- Begin MIT Content](#--begin-mit-content)
     - [- Java version 8](#--java-version-8)
@@ -84,11 +84,11 @@ A great postmortum from 2020 [Team Battlegaode](http://web.mit.edu/agrebe/www/ba
 
 
 # Setup your computer, we will cover each item     
-## - Enable Linux on your Chromebook     
+## Enable Linux on your Chromebook     
 
 In your Chromebook settings, enable the Linux (Beta)
 
-## - details about your computer and operating system    
+## Details about your computer and operating system    
 ### Chromebook is Debian
 
 ```java
@@ -120,7 +120,7 @@ SUPPORT_URL="https://www.debian.org/support"
 BUG_REPORT_URL="https://bugs.debian.org/"
 ```
 
-## - handy aliases and abbreviations into .bashrc and .bash_aliases   
+## Handy aliases and abbreviations into .bashrc and .bash_aliases   
 
 There are some useful aliases in .bash_alias of this repo:
 https://github.com/coding-to-music/bash_aliases_docker_alias_cheat_sheet
@@ -155,7 +155,7 @@ git config --global user.email connors.tom@gmail.com
 
 The following image shows an example of my configuration with my "user_name" being "akshaypai" and my "email_id" being "abc123@gmail.com"
 
-## - create .ssh directory and generate SSH public and private keys  
+## Create .ssh directory and generate SSH public and private keys  
 
 ### Create a directory for the public keys
 
@@ -193,7 +193,7 @@ file: ssh-rsa
 really big long private key
 -----END RSA PRIVATE KEY-----
 
-## - GitHub - set your ssh keys   
+## GitHub - set your ssh keys   
 
 Once you copy the key, 
 - sign into Github and 
@@ -266,7 +266,7 @@ sudo apt-get install code # or code-insiders
 sudo apt install gnome-keyring
 ```
 
-## **Installing Visual Studio Code on Ubuntu**
+## Installing Visual Studio Code on Ubuntu
 
 [https://linuxize.com/post/how-to-install-visual-studio-code-on-ubuntu-18-04/](https://linuxize.com/post/how-to-install-visual-studio-code-on-ubuntu-18-04/)
 
@@ -317,7 +317,7 @@ vscode->settings->Sync Data
 You can now start installing extensions and configuring VS Code according to your preferences.
 
 
-## **Updating Visual Studio Code**
+## Updating Visual Studio Code
 
 
 When a new version is released you can update the Visual Studio Code package through your desktop standard Software Update tool or by running the following commands in your terminal:
