@@ -15,6 +15,8 @@
     - [Chromebook is Debian](#chromebook-is-debian)
     - [Digitalocean is Ubuntu](#digitalocean-is-ubuntu)
   - [Handy aliases and abbreviations into .bashrc and .bash_aliases](#handy-aliases-and-abbreviations-into-bashrc-and-bash_aliases)
+  - [Installing Git so you can work with GitHub](#installing-git-so-you-can-work-with-github)
+    - [Configuring GitHub git config user.name user.email](#configuring-github-git-config-username-useremail)
   - [VS Code install for Debian and Ubuntu based distributions](#vs-code-install-for-debian-and-ubuntu-based-distributions)
   - [Installing Visual Studio Code on Ubuntu](#installing-visual-studio-code-on-ubuntu)
   - [Starting Visual Studio Code](#starting-visual-studio-code)
@@ -22,8 +24,6 @@
     - [Setup a password for cloud sync - you will be prompted for each time you start vscode](#setup-a-password-for-cloud-sync---you-will-be-prompted-for-each-time-you-start-vscode)
     - [If you previously have a cloud account you can merge your data](#if-you-previously-have-a-cloud-account-you-can-merge-your-data)
     - [Updating Visual Studio Code](#updating-visual-studio-code)
-  - [Installing Git so you can work with GitHub](#installing-git-so-you-can-work-with-github)
-    - [Configuring GitHub git config user.name user.email](#configuring-github-git-config-username-useremail)
   - [Create .ssh directory and generate SSH public and private keys](#create-ssh-directory-and-generate-ssh-public-and-private-keys)
     - [Create a directory for the public keys](#create-a-directory-for-the-public-keys)
     - [Create SSH Key for Github](#create-ssh-key-for-github)
@@ -134,6 +134,26 @@ source ~/.bashrc
 
 // in the future, you will just need to type 'sc' and it will source your .bashrc which calls .bash_aliases
 ```
+## Installing Git so you can work with GitHub
+
+Download and install Git
+```
+$ sudo apt-get install git
+// Now git should be installed. To check use
+$ git --version
+git version 2.19.1
+```
+
+### Configuring GitHub git config user.name user.email 
+
+Once the installation has successfully completed, the next thing to do is to set up the configuration details of the GitHub user. To do this use the following two commands by replacing "user_name" with your GitHub username and replacing "email_id" with your email-id you used to create your GitHub account.
+```
+git config --global user.name coding-to-music
+git config --global user.email connors.tom@gmail.com
+```
+
+The following image shows an example of my configuration with my "user_name" being "akshaypai" and my "email_id" being "abc123@gmail.com"
+
 
 ## VS Code install for Debian and Ubuntu based distributions
 
@@ -243,26 +263,6 @@ When a new version is released you can update the Visual Studio Code package thr
 sudo apt update
 sudo apt upgrade
 ```
-
-## Installing Git so you can work with GitHub
-
-Download and install Git
-```
-$ sudo apt-get install git
-// Now git should be installed. To check use
-$ git --version
-git version 2.19.1
-```
-
-### Configuring GitHub git config user.name user.email 
-
-Once the installation has successfully completed, the next thing to do is to set up the configuration details of the GitHub user. To do this use the following two commands by replacing "user_name" with your GitHub username and replacing "email_id" with your email-id you used to create your GitHub account.
-```
-git config --global user.name coding-to-music
-git config --global user.email connors.tom@gmail.com
-```
-
-The following image shows an example of my configuration with my "user_name" being "akshaypai" and my "email_id" being "abc123@gmail.com"
 
 ## Create .ssh directory and generate SSH public and private keys  
 
