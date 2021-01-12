@@ -38,37 +38,33 @@
 - [Setup your computer, we will cover each item](#setup-your-computer-we-will-cover-each-item-1)
   - [- Enable Linux on your Chromebook](#--enable-linux-on-your-chromebook-1)
   - [- details about your computer and operating system](#--details-about-your-computer-and-operating-system)
-  - [- Setup editor such as vscode, IntelliJ, Eclipse etc](#--setup-editor-such-as-vscode-intellij-eclipse-etc-1)
-  - [- Detailed instructions for vscode installation](#--detailed-instructions-for-vscode-installation-1)
-    - [- vscode keyring so your settings persist when you log out](#--vscode-keyring-so-your-settings-persist-when-you-log-out-1)
-    - [- vscode extensions such as this Table of Contents](#--vscode-extensions-such-as-this-table-of-contents-1)
-    - [- vscode extensions for Markup, Go CSS JavaScript Java etc](#--vscode-extensions-for-markup-go-css-javascript-java-etc-1)
-  - [- handy aliases and abbreviations into .bashrc and .bash_aliases](#--handy-aliases-and-abbreviations-into-bashrc-and-bash_aliases-1)
-  - [- git](#--git-1)
-  - [- create .ssh directory and generate SSH public and private keys](#--create-ssh-directory-and-generate-ssh-public-and-private-keys-1)
-  - [- use your ssh keys](#--use-your-ssh-keys-1)
-    - [- netflify - uses ssh keys](#--netflify---uses-ssh-keys-1)
-    - [- digitalocean - uses ssh keys](#--digitalocean---uses-ssh-keys-1)
-    - [- github - uses ssh keys](#--github---uses-ssh-keys-1)
-  - [**0 Installing Git for Linux**](#0-installing-git-for-linux)
-  - [**1 Installing Git for Linux**](#1-installing-git-for-linux)
-  - [**2 Configuring GitHub**](#2-configuring-github)
-  - [- details about your computer and operating system](#--details-about-your-computer-and-operating-system-1)
     - [Chromebook is Debian](#chromebook-is-debian)
   - [Digitalocean is Ubuntu](#digitalocean-is-ubuntu)
-    - [Install Git on the server](#install-git-on-the-server)
-  - [SSH Keys](#ssh-keys)
+  - [- Setup editor such as vscode, IntelliJ, Eclipse etc (empty)](#--setup-editor-such-as-vscode-intellij-eclipse-etc-empty)
+  - [- Detailed instructions for vscode installation (empty)](#--detailed-instructions-for-vscode-installation-empty)
+    - [- vscode keyring so your settings persist when you log out (empty)](#--vscode-keyring-so-your-settings-persist-when-you-log-out-empty)
+    - [- vscode extensions such as this Table of Contents (empty)](#--vscode-extensions-such-as-this-table-of-contents-empty)
+    - [- vscode extensions for Markup, Go CSS JavaScript Java etc (empty)](#--vscode-extensions-for-markup-go-css-javascript-java-etc-empty)
+  - [- handy aliases and abbreviations into .bashrc and .bash_aliases](#--handy-aliases-and-abbreviations-into-bashrc-and-bash_aliases-1)
+  - [**1 Installing Git**](#1-installing-git)
+  - [**2 Configuring GitHub git config user.name user.email **](#2-configuring-github-git-config-username-useremail-)
+  - [- create .ssh directory and generate SSH public and private keys](#--create-ssh-directory-and-generate-ssh-public-and-private-keys-1)
     - [Create a directory for the public keys](#create-a-directory-for-the-public-keys)
     - [Create SSH Key for Github](#create-ssh-key-for-github)
+  - [- use your ssh keys (empty)](#--use-your-ssh-keys-empty)
+    - [- netflify - uses ssh keys (empty)](#--netflify---uses-ssh-keys-empty)
+    - [- digitalocean - uses ssh keys (empty)](#--digitalocean---uses-ssh-keys-empty)
+    - [- github - uses ssh keys (empty)](#--github---uses-ssh-keys-empty)
+  - [**0 Installing Git for Linux**   (empty)](#0-installing-git-for-linux---empty)
     - [**Visual Studio Code on Linux**](#visual-studio-code-on-linux)
     - [**VS Code install for Debian and Ubuntu based distributions**](#vs-code-install-for-debian-and-ubuntu-based-distributions)
   - [**Installing Visual Studio Code on Ubuntu**](#installing-visual-studio-code-on-ubuntu)
   - [**Starting Visual Studio Code**](#starting-visual-studio-code)
-- [these need to go someplace](#these-need-to-go-someplace)
-- [these need to go someplace](#these-need-to-go-someplace-1)
-- [these need to go someplace](#these-need-to-go-someplace-2)
-- [these need to go someplace](#these-need-to-go-someplace-3)
-- [these need to go someplace](#these-need-to-go-someplace-4)
+- [merge-or-replace-cloud-sync-data](#merge-or-replace-cloud-sync-data)
+- [choose-password-for-vscode-sync-data.png](#choose-password-for-vscode-sync-datapng)
+- [bottom-left-of-vscode-click-and-paste-github-token](#bottom-left-of-vscode-click-and-paste-github-token)
+- [vscode-github-token](#vscode-github-token)
+- [This line is not needed](#this-line-is-not-needed)
   - [**Updating Visual Studio Code**](#updating-visual-studio-code)
   - [- End general setup of your computer](#--end-general-setup-of-your-computer-1)
   - [- Begin MIT Content](#--begin-mit-content-1)
@@ -151,48 +147,10 @@ A great postmortum from 2020 [Team Battlegaode](http://web.mit.edu/agrebe/www/ba
 
 
 # now the content begins      
-# Setup your computer, we will cover each item    
-## - Enable Linux on your Chromebook    
-## - details about your computer and operating system    
-## - Setup editor such as vscode, IntelliJ, Eclipse etc    
-## - Detailed instructions for vscode installation  
-### - vscode keyring so your settings persist when you log out    
-### - vscode extensions such as this Table of Contents  
-### - vscode extensions for Markup, Go CSS JavaScript Java etc  
-## - handy aliases and abbreviations into .bashrc and .bash_aliases  
-## - git  
-## - create .ssh directory and generate SSH public and private keys  
-## - use your ssh keys  
-### - netflify - uses ssh keys  
-### - digitalocean - uses ssh keys  
-### - github - uses ssh keys  
-## **0 Installing Git for Linux**  
+# Setup your computer, we will cover each item     
+## - Enable Linux on your Chromebook     
 
-Edit the file .bash_aliases and put the contents from GitHub
-```
-source ~/.bashrc
-```
-The above command is for Ubuntu and works on all Recent Ubuntu versions, tested from Ubuntu 
-
-
-## **1 Installing Git for Linux**
-
-Download and install Git for Linux:
-```
-sudo apt-get install git
-```
-The above command is for Ubuntu and works on all Recent Ubuntu versions, tested from Ubuntu 16.04 to Ubuntu 18.04 LTS (Bionic Beaver) and it's likely to work the same way on future versions.
-
-## **2 Configuring GitHub**
-
-Once the installation has successfully completed, the next thing to do is to set up the configuration details of the GitHub user. To do this use the following two commands by replacing "user_name" with your GitHub username and replacing "email_id" with your email-id you used to create your GitHub account.
-```
-git config --global user.name coding-to-music
-git config --global user.email connors.tom@gmail.com
-```
-
-The following image shows an example of my configuration with my "user_name" being "akshaypai" and my "email_id" being "abc123@gmail.com"
-
+In your Chromebook settings, enable the Linux (Beta)
 
 ## - details about your computer and operating system    
 ### Chromebook is Debian
@@ -210,35 +168,73 @@ SUPPORT_URL="https://www.debian.org/support"
 BUG_REPORT_URL="https://bugs.debian.org/"
 ```
 
-
-
 ## Digitalocean is Ubuntu  
 
-### Install Git on the server
 ```java
-$ sudo apt-get install git
-
-// Now git should be installed. To check use
-
-$ git --version
-
-git version 2.19.1
+// this chart would be different on Ubuntu. Here is a Debain example
+connorstom@penguin:~$ cat /etc/os-release
+PRETTY_NAME="Debian GNU/Linux 10 (buster)"
+NAME="Debian GNU/Linux"
+VERSION_ID="10"
+VERSION="10 (buster)"
+VERSION_CODENAME=buster
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
 ```
 
-## SSH Keys
 
+## - Setup editor such as vscode, IntelliJ, Eclipse etc (empty)    
+## - Detailed instructions for vscode installation (empty)  
+### - vscode keyring so your settings persist when you log out (empty)    
+### - vscode extensions such as this Table of Contents (empty)  
+### - vscode extensions for Markup, Go CSS JavaScript Java etc (empty)  
+## - handy aliases and abbreviations into .bashrc and .bash_aliases   
+
+There are some useful aliases in .bash_alias of this repo:
+https://github.com/coding-to-music/bash_aliases_docker_alias_cheat_sheet
+
+In this file here [.bash_aliases](https://raw.githubusercontent.com/coding-to-music/bash_aliases_docker_alias_cheat_sheet/master/.bash_aliases)
+
+
+Edit the file .bash_aliases and put the contents from GitHub
+```
+source ~/.bashrc
+
+// in the future, you will just need to type 'sc' and it will source your .bashrc which calls .bash_aliases
+```
+
+## **1 Installing Git**
+
+Download and install Git for Linux:
+```
+$ sudo apt-get install git
+// Now git should be installed. To check use
+$ git --version
+git version 2.19.1
+```
+The above command is for Ubuntu and works on all Recent Ubuntu versions, tested from Ubuntu 16.04 to Ubuntu 18.04 LTS (Bionic Beaver) and it's likely to work the same way on future versions.
+
+## **2 Configuring GitHub git config user.name user.email **
+
+Once the installation has successfully completed, the next thing to do is to set up the configuration details of the GitHub user. To do this use the following two commands by replacing "user_name" with your GitHub username and replacing "email_id" with your email-id you used to create your GitHub account.
+```
+git config --global user.name coding-to-music
+git config --global user.email connors.tom@gmail.com
+```
+
+The following image shows an example of my configuration with my "user_name" being "akshaypai" and my "email_id" being "abc123@gmail.com"
+
+## - create .ssh directory and generate SSH public and private keys  
 
 ### Create a directory for the public keys
 
 ```java
 // In root
-
 Mkdir .ssh
-
 Chmod 700 .ssh
-
 Cd .ssh
-
 // Create SSH public and private keys  
 // Store them here  
 
@@ -253,11 +249,8 @@ Now you need to create your SSH key for Github
 ssh-keygen -t rsa -C “connors.tom@gmail.com”  
 
 // It will get saved to 
-
 home/tom/.ssh/id_rsa                // this is the private key, very long paragraph
-
 home/tom/.ssh/id_rsa.pub         // this is the public key,         short paragraph
-
 // Copy that key in that file. I would suggest using Win SCP to download the file similar to FTP
 ```
 
@@ -279,6 +272,12 @@ Once you copy the key,
 
 <img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/ssh-keys-in-GitHub.png?raw=true" align="center" alt="Battlecode 2021 Image" />
 </b>
+
+## - use your ssh keys (empty)  
+### - netflify - uses ssh keys (empty)  
+### - digitalocean - uses ssh keys (empty)  
+### - github - uses ssh keys (empty)  
+## **0 Installing Git for Linux**   (empty)
 
 ### **Visual Studio Code on Linux**
 
@@ -331,8 +330,6 @@ sudo apt-get install code # or code-insiders
 sudo apt install gnome-keyring
 ```
 
-
-
 ## **Installing Visual Studio Code on Ubuntu**
 
 [https://linuxize.com/post/how-to-install-visual-studio-code-on-ubuntu-18-04/](https://linuxize.com/post/how-to-install-visual-studio-code-on-ubuntu-18-04/)
@@ -364,30 +361,30 @@ When you start VS Code for the first time, a window like the following should ap
 <img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/vscode-default-home-screen.jpg?raw=true" align="center" alt="vscode-default-home-screen.jpg" />
 </b>
 
-# these need to go someplace  
+# merge-or-replace-cloud-sync-data  
 <br />  
 <img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/merge-or-replace-cloud-sync-data.png?raw=true" align="center" alt="merge-or-replace-cloud-sync-data.png" />
 </b>
 <br />  
   
-# these need to go someplace  
+# choose-password-for-vscode-sync-data.png  
 <img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/choose-password-for-vscode-sync-data.png?raw=true" align="center" alt="choose-password-for-vscode-sync-data.png" />
 </b>
 
-# these need to go someplace  
+# bottom-left-of-vscode-click-and-paste-github-token  
 
 <br />  
 <img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/bottom-left-of-vscode-click-and-paste-github-token.png?raw=true" align="center" alt="bottom-left-of-vscode-click-and-paste-github-token.png" />
 </b>
 <br />  
   
-# these need to go someplace  
+# vscode-github-token  
 
 </b>
 <img width="400px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/vscode-github-token.png?raw=true" align="center" alt="vscode-github-token.png" />
 </b>
   
-# these need to go someplace  
+# This line is not needed  
 
 
 
