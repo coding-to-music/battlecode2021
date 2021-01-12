@@ -13,7 +13,7 @@
   - [- Enable Linux on your Chromebook](#--enable-linux-on-your-chromebook)
   - [- details about your computer and operating system](#--details-about-your-computer-and-operating-system)
     - [Chromebook is Debian](#chromebook-is-debian)
-  - [Digitalocean is Ubuntu](#digitalocean-is-ubuntu)
+    - [Digitalocean is Ubuntu](#digitalocean-is-ubuntu)
   - [- Setup editor such as vscode, IntelliJ, Eclipse etc (empty)](#--setup-editor-such-as-vscode-intellij-eclipse-etc-empty)
   - [- Detailed instructions for vscode installation (empty)](#--detailed-instructions-for-vscode-installation-empty)
     - [- vscode keyring so your settings persist when you log out (empty)](#--vscode-keyring-so-your-settings-persist-when-you-log-out-empty)
@@ -31,9 +31,10 @@
     - [vscode-github-token](#vscode-github-token)
     - [VS Code install for Debian and Ubuntu based distributions](#vs-code-install-for-debian-and-ubuntu-based-distributions)
   - [**Installing Visual Studio Code on Ubuntu**](#installing-visual-studio-code-on-ubuntu)
-  - [**Starting Visual Studio Code**](#starting-visual-studio-code)
-- [merge-or-replace-cloud-sync-data](#merge-or-replace-cloud-sync-data)
-- [choose-password-for-vscode-sync-data.png](#choose-password-for-vscode-sync-datapng)
+  - [Starting Visual Studio Code](#starting-visual-studio-code)
+- [Connect with vscode in the cloud so your settings persist over devices and sessions](#connect-with-vscode-in-the-cloud-so-your-settings-persist-over-devices-and-sessions)
+- [setup a password you will be prompted for each time you start vscode](#setup-a-password-you-will-be-prompted-for-each-time-you-start-vscode)
+- [If you previously have a cloud account you can merge your data](#if-you-previously-have-a-cloud-account-you-can-merge-your-data)
   - [**Updating Visual Studio Code**](#updating-visual-studio-code)
   - [- End general setup of your computer](#--end-general-setup-of-your-computer)
   - [- Begin MIT Content](#--begin-mit-content)
@@ -108,7 +109,7 @@ SUPPORT_URL="https://www.debian.org/support"
 BUG_REPORT_URL="https://bugs.debian.org/"
 ```
 
-## Digitalocean is Ubuntu  
+### Digitalocean is Ubuntu  
 
 ```java
 // this chart would be different on Ubuntu. Here is a Debain example
@@ -302,7 +303,7 @@ To install Visual Studio Code on your Ubuntu system, follow these steps:
 That’s it. Visual Studio Code has been installed on your Ubuntu desktop and you can start using it.
 
 
-## **Starting Visual Studio Code**
+## Starting Visual Studio Code
 
 Now that VS Code is installed on your Ubuntu system you can launch it either from the command line by typing `code` or by clicking on the VS Code icon (`Activities -> Visual Studio Code`).
 
@@ -311,16 +312,22 @@ When you start VS Code for the first time, a window like the following should ap
 <img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/vscode-default-home-screen.jpg?raw=true" align="center" alt="vscode-default-home-screen.jpg" />
 </b>
 
-# merge-or-replace-cloud-sync-data  
+# Connect with vscode in the cloud so your settings persist over devices and sessions
+
+vscode->settings->Sync Data
+
+# setup a password you will be prompted for each time you start vscode  
+<img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/choose-password-for-vscode-sync-data.png?raw=true" align="center" alt="choose-password-for-vscode-sync-data.png" />
+</b>
+
+
+
+# If you previously have a cloud account you can merge your data    
 <br />  
 <img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/merge-or-replace-cloud-sync-data.png?raw=true" align="center" alt="merge-or-replace-cloud-sync-data.png" />
 </b>
 <br />  
   
-# choose-password-for-vscode-sync-data.png  
-<img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/choose-password-for-vscode-sync-data.png?raw=true" align="center" alt="choose-password-for-vscode-sync-data.png" />
-</b>
-
 
 You can now start installing extensions and configuring VS Code according to your preferences.
 
