@@ -23,11 +23,11 @@
     - [If you previously have a cloud account you can merge your data](#if-you-previously-have-a-cloud-account-you-can-merge-your-data)
     - [Updating Visual Studio Code](#updating-visual-studio-code)
   - [Installing Git so you can work with GitHub](#installing-git-so-you-can-work-with-github)
-  - [Configuring GitHub git config user.name user.email](#configuring-github-git-config-username-useremail)
+    - [Configuring GitHub git config user.name user.email](#configuring-github-git-config-username-useremail)
   - [Create .ssh directory and generate SSH public and private keys](#create-ssh-directory-and-generate-ssh-public-and-private-keys)
     - [Create a directory for the public keys](#create-a-directory-for-the-public-keys)
     - [Create SSH Key for Github](#create-ssh-key-for-github)
-  - [GitHub - set your ssh keys](#github---set-your-ssh-keys)
+  - [GitHub - set your ssh key and get your GitHub token for vscode](#github---set-your-ssh-key-and-get-your-github-token-for-vscode)
     - [Get your vscode token from github account settings](#get-your-vscode-token-from-github-account-settings)
     - [Let vscode know about the GitHub token at the bottom left of vscode click and paste github token](#let-vscode-know-about-the-github-token-at-the-bottom-left-of-vscode-click-and-paste-github-token)
 - [- End general setup of your computer](#--end-general-setup-of-your-computer)
@@ -216,6 +216,8 @@ When you start VS Code for the first time, a window like the following should ap
 
 vscode->settings->Sync Data
 
+There is a very good set of detailed instructions about vscode cloud settings sync [HERE](https://code.visualstudio.com/docs/editor/settings-sync)
+
 ### Setup a password for cloud sync - you will be prompted for each time you start vscode  
 <img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/choose-password-for-vscode-sync-data.png?raw=true" align="center" alt="choose-password-for-vscode-sync-data.png" />
 </b>
@@ -252,7 +254,7 @@ $ git --version
 git version 2.19.1
 ```
 
-## Configuring GitHub git config user.name user.email 
+### Configuring GitHub git config user.name user.email 
 
 Once the installation has successfully completed, the next thing to do is to set up the configuration details of the GitHub user. To do this use the following two commands by replacing "user_name" with your GitHub username and replacing "email_id" with your email-id you used to create your GitHub account.
 ```
@@ -300,7 +302,7 @@ file: ssh-rsa
 really big long private key
 -----END RSA PRIVATE KEY-----
 
-## GitHub - set your ssh keys   
+## GitHub - set your ssh key and get your GitHub token for vscode   
 
 Once you copy the key, 
 - sign into Github and 
