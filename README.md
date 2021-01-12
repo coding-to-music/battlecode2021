@@ -14,11 +14,6 @@
   - [- details about your computer and operating system](#--details-about-your-computer-and-operating-system)
     - [Chromebook is Debian](#chromebook-is-debian)
     - [Digitalocean is Ubuntu](#digitalocean-is-ubuntu)
-  - [- Setup editor such as vscode, IntelliJ, Eclipse etc (empty)](#--setup-editor-such-as-vscode-intellij-eclipse-etc-empty)
-  - [- Detailed instructions for vscode installation (empty)](#--detailed-instructions-for-vscode-installation-empty)
-    - [- vscode keyring so your settings persist when you log out (empty)](#--vscode-keyring-so-your-settings-persist-when-you-log-out-empty)
-    - [- vscode extensions such as this Table of Contents (empty)](#--vscode-extensions-such-as-this-table-of-contents-empty)
-    - [- vscode extensions for Markup, Go CSS JavaScript Java etc (empty)](#--vscode-extensions-for-markup-go-css-javascript-java-etc-empty)
   - [- handy aliases and abbreviations into .bashrc and .bash_aliases](#--handy-aliases-and-abbreviations-into-bashrc-and-bash_aliases)
   - [Installing Git so you can work with GitHub](#installing-git-so-you-can-work-with-github)
   - [Configuring GitHub git config user.name user.email](#configuring-github-git-config-username-useremail)
@@ -55,6 +50,7 @@
   - [STEP 2: DOWNLOAD the competition scaffold for BATTLECODE](#step-2-download-the-competition-scaffold-for-battlecode)
     - [Error - Terminal won’t load from within Intellij and Gradle won’t build](#error---terminal-wont-load-from-within-intellij-and-gradle-wont-build)
 - [STEP 3: Build the game - LOCAL SETUP](#step-3-build-the-game---local-setup)
+- [- Setup editor such as vscode, IntelliJ, Eclipse etc (empty)](#--setup-editor-such-as-vscode-intellij-eclipse-etc-empty)
 - [Use VSCode](#use-vscode)
 - [Install IntelliJ](#install-intellij)
     - [View instructions for:](#view-instructions-for)
@@ -123,15 +119,6 @@ HOME_URL="https://www.debian.org/"
 SUPPORT_URL="https://www.debian.org/support"
 BUG_REPORT_URL="https://bugs.debian.org/"
 ```
-
-
-
-
-## - Setup editor such as vscode, IntelliJ, Eclipse etc (empty)    
-## - Detailed instructions for vscode installation (empty)  
-### - vscode keyring so your settings persist when you log out (empty)    
-### - vscode extensions such as this Table of Contents (empty)  
-### - vscode extensions for Markup, Go CSS JavaScript Java etc (empty)  
 
 ## - handy aliases and abbreviations into .bashrc and .bash_aliases   
 
@@ -471,6 +458,8 @@ Platform SDK does not point to valid JDK
 Open a terminal in the scaffold you just downloaded. Run the commands `./gradlew update` and `./gradlew build`  
 We recommend using an IDE like IntelliJ IDEA or Eclipse to work on Battlecode, but you can also use your favorite text editor combined with a terminal. Battlecode 2020 uses Gradle to run tasks like run, debug and jarForUpload (but don't worry about that — you don't need to install it).  
   
+
+# - Setup editor such as vscode, IntelliJ, Eclipse etc (empty)    
 # Use VSCode  
 # Install IntelliJ
 ### View instructions for:  
