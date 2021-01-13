@@ -58,7 +58,6 @@
 - [THIS IS WHERE I LEFT OFF](#this-is-where-i-left-off-5)
 - [Use VSCode](#use-vscode)
 - [Install IntelliJ](#install-intellij)
-    - [View instructions for:](#view-instructions-for)
     - [Error - Terminal won’t load from within Intellij and Gradle won’t build](#error---terminal-wont-load-from-within-intellij-and-gradle-wont-build)
 - [STEP 3: Build the game - LOCAL SETUP](#step-3-build-the-game---local-setup)
 - [Install the sample player bot](#install-the-sample-player-bot)
@@ -521,23 +520,41 @@ Run idea.sh from the bin subdirectory.
 
 # Use VSCode  
 # Install IntelliJ
-### View instructions for:  
-- IntelliJ IDEAEclipseTerminal  
-- Install IntelliJ IDEA Community Edition from here.  
-In the Welcome to IntelliJ IDEA window that pops up when you start IntelliJ, select Import Project  
-In the Select File or Dictionary to Import window, select the build.gradle file in the scaffold folder.  
-- Hit OK.  
-We need to set the jdk properly; 
-- open the settings with File > Settings (IntelliJ IDEA > Preferences on Mac) or ctrl+alt+s. 
-- Navigate to Build, Execution, Deployment > Build Tools > Gradle and 
-- change Gradle JVM to 1.8  
-Time for a first build! 
-- On the right side of the screen, click the small button that says gradle and has a picture of an elephant. 
-- Navigate to battlecode20-scaffold > Tasks > battlecode and double click on build. 
-- This will install the client and engine for you.  
-If you haven't seen any errors, you should be good to go.  
-There should now be a folder called client in your scaffold folder; if you go in there, and double click the Battlecode Client application, you should be able to run and watch matches. (Please don't move that application, it will be sad.) If you're on Linux, navigate to the client folder and run ./battlecode-visualizer to launch the client.  
+Battlecode 2020 uses Gradle to run tasks like `run`, `debug` and `jarForUpload` (but don't worry about that — you don't need to install it).
 
+View instructions for:
+
+<span style="color:white">some white text</span>  
+<span style="color:white">some *white* text</span>  
+
+<span style="color:yellow">some yellow text</span>  
+<span style="color:yellow">some *yellow* text</span>  
+
+<span style="color:green">some green text</span>  
+<span style="color:green">some *green* text</span>  
+
+<span style="color:red">some red text</span>  
+<span style="color:red">some *red* text</span>  
+
+<span style="color:blue">some blue text</span>  
+<span style="color:blue">some *blue* text</span>  
+
+Install IntelliJ IDEA Community Edition from [here]().
+In the `Welcome to IntelliJ IDEA window` that pops up when you start IntelliJ, select Import Project
+In the Select File or Dictionary to Import window, select the build.gradle file in the scaffold folder.
+Hit OK.
+We need to set the jdk properly; open the settings with File > Settings (IntelliJ IDEA > Preferences on Mac) or ctrl+alt+s. Navigate to Build, Execution, Deployment > Build Tools > Gradle and change Gradle JVM to 1.8
+Time for a first build! On the right side of the screen, click the small button that says gradle and has a picture of an elephant. Navigate to battlecode20-scaffold > Tasks > battlecode and double click on build. This will install the client and engine for you.
+If you haven't seen any errors, you should be good to go.
+
+There should now be a folder called client in your scaffold folder; if you go in there, and double click the Battlecode Client application, you should be able to run and watch matches. (Please don't move that application, it will be sad.) If you're on Linux, navigate to the client folder and run ./battlecode-visualizer to launch the client.
+
+Run a Match
+Player code is in the src directory of the scaffold: each package inside src corresponds to one distinct player. We have provided examplefuncsplayer, and you can create your own player by either modifying it or copying and renaming it.
+
+You should have a client application in the client folder. Launch it, and go to the Runner section. There, you can specify which players to run against each other, and on which map, and you can view the match as it is running.
+
+You can also run a match without the client, by invoking the Gradle task run. For example, gradle run -PteamA=examplefuncsplayer -PteamB=examplefuncsplayer -Pmaps=FourLakeLand runs examplefuncsplayer against itself on the FourLakeLand map. This produces a replay file in the matches directory of the scaffold, which you can upload to the client to view.
 ### Error - Terminal won’t load from within Intellij and Gradle won’t build  
 You may get this message:  
 
