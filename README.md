@@ -527,9 +527,12 @@ Battlecode 2020 uses Gradle to run tasks like `run`, `debug` and `jarForUpload` 
 Install IntelliJ IDEA Community Edition from [here](https://www.jetbrains.com/idea/download/).
 In the `Welcome to IntelliJ IDEA window` that pops up when you start IntelliJ, select `Import Project`
 In the `Select File or Dictionary to Import` window, select the `build.gradle` file in the scaffold folder.
-Hit OK.
-We need to set the jdk properly; open the settings with `File > Settings (IntelliJ IDEA > Preferences on Mac`) or `ctrl+alt+s`. Navigate to `Build, Execution, Deployment > Build Tools > Gradle` and change `Gradle JVM` to 1.8
-Time for a first build! On the right side of the screen, click the small button that says gradle and has a picture of an elephant. Navigate to battlecode20-scaffold > Tasks > battlecode and double click on build. This will install the client and engine for you.
+Hit OK.  
+
+We need to set the jdk properly; open the settings with `File > Settings (IntelliJ IDEA > Preferences on Mac`) or `ctrl+alt+s`. Navigate to `Build, Execution, Deployment > Build Tools > Gradle` and change `Gradle JVM` to 1.8  
+
+Time for a first build!   
+On the right side of the screen, click the small button that says gradle and has a picture of an elephant. Navigate to battlecode20-scaffold > Tasks > battlecode and double click on build. This will install the client and engine for you.
 If you haven't seen any errors, you should be good to go.
 
 There should now be a folder called `client` in your scaffold folder; if you go in there, and double click the `Battlecode Client` application, you should be able to run and watch matches. (Please don't move that application, it will be sad.) If you're on Linux, navigate to the `client` folder and run `./battlecode-visualizer` to launch the client.
