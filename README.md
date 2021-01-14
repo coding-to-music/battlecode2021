@@ -51,12 +51,13 @@
   - [Idea Installation Instructions](#idea-installation-instructions)
   - [Changes to .bashrc for your PATH variable](#changes-to-bashrc-for-your-path-variable)
 - [Use VSCode](#use-vscode)
-- [Optional - Install IntelliJ - I ended up not going this route, I usually use vscode and will continue with that](#optional---install-intellij---i-ended-up-not-going-this-route-i-usually-use-vscode-and-will-continue-with-that)
-    - [Possible Intellij Error - Terminal won’t load from within Intellij and Gradle won’t build](#possible-intellij-error---terminal-wont-load-from-within-intellij-and-gradle-wont-build)
-- [run the gradle from the terminal in vscode](#run-the-gradle-from-the-terminal-in-vscode)
-- [Build the game - `./gradlew update`](#build-the-game---gradlew-update)
+- [Install IntelliJ - I usually use vscode, turn it off to preserve memory](#install-intellij---i-usually-use-vscode-turn-it-off-to-preserve-memory)
+    - [When IntelliJ IDEA first starts it may take 12 minutes for the full build on a Chromebook](#when-intellij-idea-first-starts-it-may-take-12-minutes-for-the-full-build-on-a-chromebook)
+  - [Time for a first build!](#time-for-a-first-build)
+  - [Now execute the runner and run the default example robot](#now-execute-the-runner-and-run-the-default-example-robot)
+- [Using the terminal - Build the game - `./gradlew update`](#using-the-terminal---build-the-game---gradlew-update)
     - [Build the gradle](#build-the-gradle)
-    - [grade.](#grade)
+    - [each robot you build lives in it's own src directory](#each-robot-you-build-lives-in-its-own-src-directory)
 - [Modify the bot and make it your own](#modify-the-bot-and-make-it-your-own)
 - [RUNNING GAME FROM THE TERMINAL](#running-game-from-the-terminal)
     - [gradle.properties file is what will be run](#gradleproperties-file-is-what-will-be-run)
@@ -559,13 +560,7 @@ There should now be a folder called `client` in your scaffold folder; if you go 
 </b>
 <br />  
 
-### this should have been covered above -- run the gradle from the terminal in vscode
-Ensure you JAVA_HOME environment variable in your .bashrc or .bash_aliases is set to 
-```java
-/usr/lib/jvm/jdk1.8.0_271
-```
-
-# Build the game - `./gradlew update`  
+# Using the terminal - Build the game - `./gradlew update`  
 Open a terminal in the scaffold you just downloaded. Run the commands `./gradlew update` and `./gradlew build`  
 
 ```java
@@ -623,7 +618,7 @@ BUILD SUCCESSFUL in 3m 16s
 <img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/gradlew-build.png?raw=true" align="center" alt="gradlew_update_which_java_JAVA_HOME" />
 </b>
 
-### grade.
+### each robot you build lives in it's own src directory
 
 Run a Match
 Player code is in the `src` directory of the scaffold: each package inside `src` corresponds to one distinct player. We have provided `examplefuncsplayer`, and you can create your own player by either modifying it or copying and renaming it. The only restriction is that each player must have a file named `RobotPlayer.java` which implements a `run(RobotController rc)` method.
