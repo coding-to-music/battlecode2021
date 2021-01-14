@@ -61,10 +61,9 @@
 - [Modify the bot and make it your own](#modify-the-bot-and-make-it-your-own)
 - [RUNNING GAME FROM THE TERMINAL](#running-game-from-the-terminal)
     - [gradle.properties file is what will be run](#gradleproperties-file-is-what-will-be-run)
-- [Install the sample player bot](#install-the-sample-player-bot)
-- [Have the sample bot play itself](#have-the-sample-bot-play-itself)
+- [If you're experiencing memory problems with the client, please try:](#if-youre-experiencing-memory-problems-with-the-client-please-try)
 - [Upload the bot to compete against others](#upload-the-bot-to-compete-against-others)
-- [Upload Your Bot and Scrimmage](#upload-your-bot-and-scrimmage)
+  - [Upload Your Bot and Scrimmage](#upload-your-bot-and-scrimmage)
 
 ## Introduction  
 This is my scrapbook for the Battlecode 2021 contest, I will attempt to keep it up-to-date for all Battlecode-related things for the duration of the contest. For a general overview of what Battlecode is, visit the [Battlecode landing page](https://2020.battlecode.org).  
@@ -626,7 +625,7 @@ Player code is in the `src` directory of the scaffold: each package inside `src`
 You should have a client application in the `client` folder. Launch it, and go to the `Runner` section. There, you can specify which players to run against each other, and on which map, and you can view the match as it is running.
 
 ```java
-// I have not verified this yet  
+// run at the command line - need to verify  
 ./client/runner
 ```
 
@@ -680,18 +679,14 @@ source=src
 gpr.user=battlecodedownloadpackage
 profilerEnabled=false
 ```
-Client Tips
-If you're experiencing memory problems with the client, please try:
+# If you're experiencing memory problems with the client, please try:
+Client Tips  
 
 Making fewer logs and/or disabling log processsing in the client (toggled with "L").
 Making .bc21 files with the engine directly and uploading them to the client's match queue, rather than using the client's runner. With this method, you can just use the web version at 2021.battlecode.org/visualizer.html rather than the desktop application.  
 
-# Install the sample player bot  
-  
-# Have the sample bot play itself  
-
 # Upload the bot to compete against others  
-# Upload Your Bot and Scrimmage  
+## Upload Your Bot and Scrimmage  
 Create a zip file containing only your robot code (only 1 package), and uploaded it to the submissions page.  
 Your bot will automatically be ran against other players to determine your ranking. You can also request scrimmages with other teams, and see the replays.  
   
