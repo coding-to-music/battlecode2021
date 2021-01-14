@@ -52,9 +52,10 @@
   - [Changes to .bashrc for your PATH variable](#changes-to-bashrc-for-your-path-variable)
 - [Use VSCode](#use-vscode)
 - [Optional - Install IntelliJ - I ended up not going this route, I usually use vscode and will continue with that](#optional---install-intellij---i-ended-up-not-going-this-route-i-usually-use-vscode-and-will-continue-with-that)
+    - [Possible Intellij Error - Terminal won’t load from within Intellij and Gradle won’t build](#possible-intellij-error---terminal-wont-load-from-within-intellij-and-gradle-wont-build)
 - [run the gradle from the terminal in vscode](#run-the-gradle-from-the-terminal-in-vscode)
-    - [Error - Terminal won’t load from within Intellij and Gradle won’t build](#error---terminal-wont-load-from-within-intellij-and-gradle-wont-build)
-- [STEP 3: Build the game - LOCAL SETUP](#step-3-build-the-game---local-setup)
+- [Build the game - `./gradlew update`](#build-the-game---gradlew-update)
+    - [Build the gradle](#build-the-gradle)
 - [Install the sample player bot](#install-the-sample-player-bot)
 - [Have the sample bot play itself](#have-the-sample-bot-play-itself)
 - [Modify the bot and make it your own](#modify-the-bot-and-make-it-your-own)
@@ -538,11 +539,20 @@ If you haven't seen any errors, you should be good to go.
 
 There should now be a folder called `client` in your scaffold folder; if you go in there, and double click the `Battlecode Client` application, you should be able to run and watch matches. (Please don't move that application, it will be sad.) If you're on Linux, navigate to the `client` folder and run `./battlecode-visualizer` to launch the client.
 
+### Possible Intellij Error - Terminal won’t load from within Intellij and Gradle won’t build  
+You may get this message:  
+
+Message when trying to open Terminal within Intellij  
+Platform SDK does not point to valid JDK  
+  
 # run the gradle from the terminal in vscode
 Ensure you JAVA_HOME environment variable in your .bashrc or .bash_aliases is set to 
 ```java
 /usr/lib/jvm/jdk1.8.0_271
 ```
+
+# Build the game - `./gradlew update`  
+Open a terminal in the scaffold you just downloaded. Run the commands `./gradlew update` and `./gradlew build`  
 
 ```java
 // Now run "./gradle update"
@@ -577,22 +587,40 @@ BUILD SUCCESSFUL in 23s
 <img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/gradlew_update_which_java_JAVA_HOME.png?raw=true" align="center" alt="gradlew_update_which_java_JAVA_HOME" />
 </b>
 
+### Build the gradle  
+```java
+connorstom@penguin:~/aprojects/battlecode21-scaffold$ ./gradlew build
+
+> Task :compileScala
+Scala Compiler interface compilation took 38.592 secs
+
+> Task :compileTestScala
+Scala Compiler interface compilation took 38.471 secs
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 7.0.
+Use '--warning-mode all' to show the individual deprecation warnings.
+See https://docs.gradle.org/6.0.1/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 3m 16s
+8 actionable tasks: 8 executed
+```
+
+<br />  
+<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/gradlew-build.png?raw=true" align="center" alt="gradlew_update_which_java_JAVA_HOME" />
+</b>
+
+
 
 Run a Match
 Player code is in the `src` directory of the scaffold: each package inside `src` corresponds to one distinct player. We have provided `examplefuncsplayer`, and you can create your own player by either modifying it or copying and renaming it. The only restriction is that each player must have a file named `RobotPlayer.java` which implements a `run(RobotController rc)` method.
 
 You should have a client application in the `client` folder. Launch it, and go to the `Runner` section. There, you can specify which players to run against each other, and on which map, and you can view the match as it is running.
 
+```java
+./client/runner
+```
+
 You can also run a match without the client, by invoking the Gradle task `run`. For example, `gradle run -PteamA=examplefuncsplayer -PteamB=examplefuncsplayer -Pmaps=FourLakeLand` runs `examplefuncsplayer` against itself on the `FourLakeLand` map. This produces a replay file in the `matches` directory of the scaffold, which you can upload to the client to view.
-
-### Error - Terminal won’t load from within Intellij and Gradle won’t build  
-You may get this message:  
-
-Message when trying to open Terminal within Intellij  
-Platform SDK does not point to valid JDK  
-  
-# STEP 3: Build the game - LOCAL SETUP  
-Open a terminal in the scaffold you just downloaded. Run the commands `./gradlew update` and `./gradlew build`  
   
 # Install the sample player bot  
   
