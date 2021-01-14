@@ -56,11 +56,12 @@
 - [run the gradle from the terminal in vscode](#run-the-gradle-from-the-terminal-in-vscode)
 - [Build the game - `./gradlew update`](#build-the-game---gradlew-update)
     - [Build the gradle](#build-the-gradle)
-- [Install the sample player bot](#install-the-sample-player-bot)
-- [Have the sample bot play itself](#have-the-sample-bot-play-itself)
+    - [grade.](#grade)
 - [Modify the bot and make it your own](#modify-the-bot-and-make-it-your-own)
 - [RUNNING GAME FROM THE TERMINAL](#running-game-from-the-terminal)
-- [Run a Match](#run-a-match)
+    - [gradle.properties file is what will be run](#gradleproperties-file-is-what-will-be-run)
+- [Install the sample player bot](#install-the-sample-player-bot)
+- [Have the sample bot play itself](#have-the-sample-bot-play-itself)
 - [Upload the bot to compete against others](#upload-the-bot-to-compete-against-others)
 - [Upload Your Bot and Scrimmage](#upload-your-bot-and-scrimmage)
 
@@ -609,7 +610,7 @@ BUILD SUCCESSFUL in 3m 16s
 <img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/gradlew-build.png?raw=true" align="center" alt="gradlew_update_which_java_JAVA_HOME" />
 </b>
 
-
+### grade.
 
 Run a Match
 Player code is in the `src` directory of the scaffold: each package inside `src` corresponds to one distinct player. We have provided `examplefuncsplayer`, and you can create your own player by either modifying it or copying and renaming it. The only restriction is that each player must have a file named `RobotPlayer.java` which implements a `run(RobotController rc)` method.
@@ -621,19 +622,64 @@ You should have a client application in the `client` folder. Launch it, and go t
 ```
 
 You can also run a match without the client, by invoking the Gradle task `run`. For example, `gradle run -PteamA=examplefuncsplayer -PteamB=examplefuncsplayer -Pmaps=FourLakeLand` runs `examplefuncsplayer` against itself on the `FourLakeLand` map. This produces a replay file in the `matches` directory of the scaffold, which you can upload to the client to view.
-  
-# Install the sample player bot  
-  
-# Have the sample bot play itself  
-  
+
+```java
+
+// run the game as defined in the gradle.properties - but to the console, it is huge
+connorstom@penguin:~/aprojects/battlecode21-scaffold$ ./gradlew run 
+
+// this went on forever I needed to kill it with ctrl-C ^C
+[A:SLANDERER#11514@68] I am trying to move NORTH; false 9.072361313166404 false
+[A:POLITICIAN#10475@68] I'm a POLITICIAN! Location [10007, 23925]
+[A:POLITICIAN#10475@68] I am trying to move NORTHEAST; false 1.6308742204463966 false
+[B:POLITICIAN#11218@68] I'm a POLITICIAN! Location [10027, 23928]
+[B:POLITICIAN#11218@68] I am trying to move SOUTHEAST; false 2.282011952169438 false
+[A:MUCKRAKER#13908@68] I'm a MUCKRAKER! Location [10005, 23927]
+[A:MUCKRAKER#13908@68] I am trying to move EAST; true 0.0 true
+[A:MUCKRAKER#13908@68] I moved!
+[B:SLANDERER#10110@68] I'm a SLANDERER! Location [10025, 23927]
+[B:SLANDERER#10110@68] I am trying to move NORTHEAST; false 2.5545705508935868 false
+[B:SLANDERER#13348@68] I'm a SLANDERER and I just got created!
+[B:SLANDERER#13348@68] I'm a SLANDERER! Location [10026, 23927]
+
+// run the game as defined in the gradle.properties - but output it to a junk.txt file - add that to the .gitignore
+connorstom@penguin:~/aprojects/battlecode21-scaffold$ ./gradlew run > junk.txt
+
+// find out how many lines of output are in the console output
+connorstom@penguin:~/aprojects/battlecode21-scaffold$ wc -l junk.txt
+309508 junk.txt
+
+// there are 310,000 lines in the output of doing a run
+// it took about 30 or 60 seconds to run the game itself
+
+```
+
+
 # Modify the bot and make it your own  
 Place each version of your robot in a new subfolder in the `src` folder. Make sure every version has a `RobotPlayer.java`    
 # RUNNING GAME FROM THE TERMINAL  
 Open a terminal in the scaffold. Run the commands `./gradlew run -Pmaps=[map] -PteamA=[Team A] -PteamB=[Team B]`  
-# Run a Match  
-Player code is in the src directory of the scaffold: each package inside src corresponds to one distinct player. We have provided examplefuncsplayer, and you can create your own player by either modifying it or copying and renaming it.  
-You should have a client application in the client folder. Launch it, and go to the Runner section. There, you can specify which players to run against each other, and on which map, and you can view the match as it is running.  
-You can also run a match without the client, by invoking the Gradle task run. For example, gradle run -PteamA=examplefuncsplayer -PteamB=examplefuncsplayer -Pmaps=FourLakeLand runs examplefuncsplayer against itself on the FourLakeLand map. This produces a replay file in the matches directory of the scaffold, which you can upload to the client to view.  
+
+### gradle.properties file is what will be run
+```java
+// gradle.properties
+// modify this file to change project properties
+teamA=examplefuncsplayer
+teamB=examplefuncsplayer
+maps=maptestsmall
+source=src
+gpr.user=battlecodedownloadpackage
+profilerEnabled=false
+```
+Client Tips
+If you're experiencing memory problems with the client, please try:
+
+Making fewer logs and/or disabling log processsing in the client (toggled with "L").
+Making .bc21 files with the engine directly and uploading them to the client's match queue, rather than using the client's runner. With this method, you can just use the web version at 2021.battlecode.org/visualizer.html rather than the desktop application.  
+
+# Install the sample player bot  
+  
+# Have the sample bot play itself  
 
 # Upload the bot to compete against others  
 # Upload Your Bot and Scrimmage  
