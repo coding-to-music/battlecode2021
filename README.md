@@ -618,6 +618,7 @@ Player code is in the `src` directory of the scaffold: each package inside `src`
 You should have a client application in the `client` folder. Launch it, and go to the `Runner` section. There, you can specify which players to run against each other, and on which map, and you can view the match as it is running.
 
 ```java
+// I have not verified this yet  
 ./client/runner
 ```
 
