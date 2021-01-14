@@ -51,7 +51,8 @@
   - [Idea Installation Instructions](#idea-installation-instructions)
   - [Changes to .bashrc for your PATH variable](#changes-to-bashrc-for-your-path-variable)
 - [Use VSCode](#use-vscode)
-- [Install IntelliJ](#install-intellij)
+- [Optional - Install IntelliJ - I ended up not going this route, I usually use vscode and will continue with that](#optional---install-intellij---i-ended-up-not-going-this-route-i-usually-use-vscode-and-will-continue-with-that)
+- [run the gradle from the terminal in vscode](#run-the-gradle-from-the-terminal-in-vscode)
     - [Error - Terminal won’t load from within Intellij and Gradle won’t build](#error---terminal-wont-load-from-within-intellij-and-gradle-wont-build)
 - [STEP 3: Build the game - LOCAL SETUP](#step-3-build-the-game---local-setup)
 - [Install the sample player bot](#install-the-sample-player-bot)
@@ -395,7 +396,7 @@ The Java Development Kit files are installed in a directory called `jdk1.8.0_ver
 ## Changes to .bashrc for your environment variables, PATH and JAVA_HOME  
 Paste thise into your Path in your .bashrc 
 ```java
-export JAVA_HOME="/usr/lib/jvm/jdk1.8.0_271/bin"
+export JAVA_HOME="/usr/lib/jvm/jdk1.8.0_271"
 export PATH=$PATH:/usr/lib/jvm/jdk1.8.0_271/bin:/usr/lib/jvm/jdk1.8.0_271/jre/bin
 
 // then at the command line in root:
@@ -419,7 +420,7 @@ update-alternatives --list javac
 ### To verify the installation, get the Java version
 ```java
 connorstom@penguin:~$ env | grep JAVA
-JAVA_HOME=/usr/lib/jvm/jdk1.8.0_271/bin
+JAVA_HOME=/usr/lib/jvm/jdk1.8.0_271
 // test to find the java version
 connorstom@penguin:~$ java -version
 java version "1.8.0_271"
@@ -521,7 +522,7 @@ Run idea.sh from the bin subdirectory.
 <span style="color:blue">some blue text</span>  
 <span style="color:blue">some *blue* text</span>  
 
-# Install IntelliJ
+# Optional - Install IntelliJ - I ended up not going this route, I usually use vscode and will continue with that
 Battlecode 2020 uses Gradle to run tasks like `run`, `debug` and `jarForUpload` (but don't worry about that — you don't need to install it).
 
 Install IntelliJ IDEA Community Edition from [here](https://www.jetbrains.com/idea/download/).
@@ -536,6 +537,46 @@ On the right side of the screen, click the small button that says gradle and has
 If you haven't seen any errors, you should be good to go.
 
 There should now be a folder called `client` in your scaffold folder; if you go in there, and double click the `Battlecode Client` application, you should be able to run and watch matches. (Please don't move that application, it will be sad.) If you're on Linux, navigate to the `client` folder and run `./battlecode-visualizer` to launch the client.
+
+# run the gradle from the terminal in vscode
+Ensure you JAVA_HOME environment variable in your .bashrc or .bash_aliases is set to 
+```java
+/usr/lib/jvm/jdk1.8.0_271
+```
+
+```java
+// Now run "./gradle update"
+connorstom@penguin:~/aprojects/battlecode21-scaffold$ ./gradlew update
+
+Welcome to Gradle 6.0.1!
+
+Here are the highlights of this release:
+ - Substantial improvements in dependency management, including
+   - Publishing Gradle Module Metadata in addition to pom.xml
+   - Advanced control of transitive versions
+   - Support for optional features and dependencies
+   - Rules to tweak published metadata
+ - Support for Java 13
+ - Faster incremental Java and Groovy compilation
+ - New Zinc compiler for Scala
+ - VS2019 support
+ - Support for Gradle Enterprise plugin 3.0
+
+For more details see https://docs.gradle.org/6.0.1/release-notes.html
+
+Starting a Gradle Daemon (subsequent builds will be faster)
+
+> Task :update
+Updated to 2021.2.3.0
+
+BUILD SUCCESSFUL in 23s
+1 actionable task: 1 executed
+```
+
+<br />  
+<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/gradlew_update_which_java_JAVA_HOME.png?raw=true" align="center" alt="gradlew_update_which_java_JAVA_HOME" />
+</b>
+
 
 Run a Match
 Player code is in the `src` directory of the scaffold: each package inside `src` corresponds to one distinct player. We have provided `examplefuncsplayer`, and you can create your own player by either modifying it or copying and renaming it. The only restriction is that each player must have a file named `RobotPlayer.java` which implements a `run(RobotController rc)` method.
