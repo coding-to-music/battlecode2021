@@ -524,7 +524,7 @@ Run idea.sh from the bin subdirectory.
 <span style="color:blue">some blue text</span>  
 <span style="color:blue">some *blue* text</span>  
 
-# Optional - Install IntelliJ - I ended up not going this route, I usually use vscode and will continue with that
+# Install IntelliJ - I usually use vscode, turn it off to preserve memory
 Battlecode 2020 uses Gradle to run tasks like `run`, `debug` and `jarForUpload` (but don't worry about that — you don't need to install it).
 
 Install IntelliJ IDEA Community Edition from [here](https://www.jetbrains.com/idea/download/).
@@ -533,6 +533,14 @@ In the `Select File or Dictionary to Import` window, select the `build.gradle` f
 Hit OK.  
 
 We need to set the jdk properly; open the settings with `File > Settings (IntelliJ IDEA > Preferences on Mac`) or `ctrl+alt+s`. Navigate to `Build, Execution, Deployment > Build Tools > Gradle` and change `Gradle JVM` to 1.8  
+
+### When IntelliJ IDEA first starts it may take 12 minutes for the full build on a Chromebook
+
+<br />  
+<img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/IntelliJ_IDEA_Battlecode_Scaffold_full_screen.png?raw=true" align="center" alt="IntelliJ_IDEA_Battlecode_Scaffold_full_screen.png" />
+</b>
+<br />  
+
 
 Time for a first build!   
 On the right side of the screen, click the small button that says gradle and has a picture of an elephant. Navigate to battlecode20-scaffold > Tasks > battlecode and double click on build. This will install the client and engine for you.
