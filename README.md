@@ -542,19 +542,24 @@ We need to set the jdk properly; open the settings with `File > Settings (Intell
 <br />  
 
 
-Time for a first build!   
+## Time for a first build!   
 On the right side of the screen, click the small button that says gradle and has a picture of an elephant. Navigate to battlecode20-scaffold > Tasks > battlecode and double click on build. This will install the client and engine for you.
 If you haven't seen any errors, you should be good to go.
 
 There should now be a folder called `client` in your scaffold folder; if you go in there, and double click the `Battlecode Client` application, you should be able to run and watch matches. (Please don't move that application, it will be sad.) If you're on Linux, navigate to the `client` folder and run `./battlecode-visualizer` to launch the client.
 
-### Possible Intellij Error - Terminal won’t load from within Intellij and Gradle won’t build  
-You may get this message:  
+<br />  
+<img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/battlecode-visualizer-initial-spash-screen.png?raw=true" align="center" alt="battlecode-visualizer-initial-spash-screen.png" />
+</b>
+<br />  
 
-Message when trying to open Terminal within Intellij  
-Platform SDK does not point to valid JDK  
-  
-# run the gradle from the terminal in vscode
+## Now execute the runner and run the default example robot
+<br />  
+<img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/battlecode-visualizer-runner-execute.png?raw=true" align="center" alt="battlecode-visualizer-runner-execute.png" />
+</b>
+<br />  
+
+### this should have been covered above -- run the gradle from the terminal in vscode
 Ensure you JAVA_HOME environment variable in your .bashrc or .bash_aliases is set to 
 ```java
 /usr/lib/jvm/jdk1.8.0_271
