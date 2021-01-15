@@ -6,6 +6,7 @@
 - [Bug 2](#bug-2)
 - [Using enlightenment centers to coordinate locations and using flags to communicate](#using-enlightenment-centers-to-coordinate-locations-and-using-flags-to-communicate)
   - [How to use our 24 bits of flag width to communicate with between the robots and enlightenment centers](#how-to-use-our-24-bits-of-flag-width-to-communicate-with-between-the-robots-and-enlightenment-centers)
+  - [More pathing and navigation](#more-pathing-and-navigation)
 
 # Introduction to pathing and navigation  
  
@@ -45,7 +46,8 @@ From lecture #2
 <br />  
 <img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/grid-modulus-64-max-size.png?raw=true" align="center" alt="grid-modulus-64-max-size" />
 </b>
+[Twitch video time 49:18](https://www.twitch.tv/videos/866439939)
 
-- More pathing and navigation  
-
+## More pathing and navigation  
+- 
 
