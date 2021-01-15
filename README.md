@@ -68,6 +68,11 @@
 ## Introduction  
 This is my scrapbook for the Battlecode 2021 contest, I will attempt to keep it up-to-date for all Battlecode-related things for the duration of the contest. For a general overview of what Battlecode is, visit the [Battlecode landing page](https://2020.battlecode.org).  
 This year's game is a thrilling survival adventure involving 🍲, ▀⛓, 🐮, 🤖, and more. You will write bots in Java.  
+
+<br />  
+<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/Battlecode-inspirational-quotes.png?raw=true" align="center" alt="Battlecode-inspirational-quotes" />
+</b>
+
 ## Why this document is needed  
 In software it is common to write good documentation. This is so that other members of the team can be equally up-to-date with how things work. This is normal documentation for any well-run organization.  
 You really don't want to have some production problem and not have written down important details. Everything should be documented that you will need to be successful. Team members who do not document leave behind a technical debt of unfinished work that snowballs up and eventually really disrupts the stability and effectiveness of the organization.  

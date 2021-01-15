@@ -73,10 +73,6 @@ From lecture #2
 </b>
 
 <br />  
-<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/Battlecode-inspirational-quotes.png?raw=true" align="center" alt="Battlecode-inspirational-quotes" />
-</b>
-
-<br />  
 <img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/IntelliJ-IDEA-home-screen.png?raw=true" align="center" alt="IntelliJ-IDEA-home-screen" />
 </b>
 
