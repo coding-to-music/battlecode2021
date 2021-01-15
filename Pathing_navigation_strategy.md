@@ -14,6 +14,7 @@ From lecture #2
 [Twitch video](https://www.twitch.tv/videos/866439939)
 
 # Bug 1  
+
 # Bug 2  
 
 # Using enlightenment centers to coordinate locations and using flags to communicate  
@@ -50,4 +51,44 @@ From lecture #2
 
 ## More pathing and navigation  
 - 
+
+<br />  
+<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/XXXXXXXXX.png?raw=true" align="center" alt="XXXXXXXXX" />
+</b>
+[Twitch video time 49:18](https://www.twitch.tv/videos/866439939)
+
+<br />  
+<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/XXXXXXXXX.png?raw=true" align="center" alt="XXXXXXXXX" />
+</b>
+[Twitch video time 49:18](https://www.twitch.tv/videos/866439939)
+
+<br />  
+<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/XXXXXXXXX.png?raw=true" align="center" alt="XXXXXXXXX" />
+</b>
+[Twitch video time 49:18](https://www.twitch.tv/videos/866439939)
+
+<br />  
+<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/XXXXXXXXX.png?raw=true" align="center" alt="XXXXXXXXX" />
+</b>
+[Twitch video time 49:18](https://www.twitch.tv/videos/866439939)
+
+<br />  
+<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/XXXXXXXXX.png?raw=true" align="center" alt="XXXXXXXXX" />
+</b>
+[Twitch video time 49:18](https://www.twitch.tv/videos/866439939)
+
+<br />  
+<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/XXXXXXXXX.png?raw=true" align="center" alt="XXXXXXXXX" />
+</b>
+[Twitch video time 49:18](https://www.twitch.tv/videos/866439939)
+
+<br />  
+<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/XXXXXXXXX.png?raw=true" align="center" alt="XXXXXXXXX" />
+</b>
+[Twitch video time 49:18](https://www.twitch.tv/videos/866439939)
+
+<br />  
+<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/XXXXXXXXX.png?raw=true" align="center" alt="XXXXXXXXX" />
+</b>
+[Twitch video time 49:18](https://www.twitch.tv/videos/866439939)
 
