@@ -33,7 +33,6 @@
     - [Let vscode know about the GitHub token at the bottom left of vscode click bottom-left and paste github token into the command prompt area in the top menu toolbar](#let-vscode-know-about-the-github-token-at-the-bottom-left-of-vscode-click-bottom-left-and-paste-github-token-into-the-command-prompt-area-in-the-top-menu-toolbar)
 - [- End general setup of your computer](#--end-general-setup-of-your-computer)
 - [- Begin MIT Content](#--begin-mit-content)
-    - [- Java version 8](#--java-version-8)
 - [Install Java Release 8](#install-java-release-8)
   - [Installation Instructions for Java JDK using OpenJava - we won't use this but it is another option](#installation-instructions-for-java-jdk-using-openjava---we-wont-use-this-but-it-is-another-option)
   - [We will use Oracle's version of Java - Download the correct Java Version 8](#we-will-use-oracles-version-of-java---download-the-correct-java-version-8)
@@ -110,18 +109,18 @@ Visit oracle.com/java/technologies/javase/javase-jdk8-downloads.html
 -  It can take a half hour to receive the email address confirmation link :(
 - Use your Oracle account to download the JDK package.
 
-Download https://github.com/battlecode/battlecode21-scaffold.git
--Edit environment variable JAVA_HOME to point to the jdk
--Open command prompt
-- cd Downloads\battlecode21-scaffold-master
-- gradlew.bat
-- gradlew.bat update
-- gradlew.bat build
-- gradlew.bat run   -- runs a match using the settings in gradle.properties
--Double click on client\Battlecode Client.exe
-- Go to Queue tab
-- Click Upload a .bc21 replay file
-- Watch the match
+Download https://github.com/battlecode/battlecode21-scaffold.git   
+-Edit environment variable JAVA_HOME to point to the jdk  
+-Open command prompt  
+- cd Downloads\battlecode21-scaffold-master  
+- gradlew.bat  
+- gradlew.bat update  
+- gradlew.bat build   
+- gradlew.bat run   -- runs a match using the settings in gradle.properties  
+-Double click on client\Battlecode Client.exe  
+- Go to Queue tab  
+- Click Upload a .bc21 replay file  
+- Watch the match  
 
 # Setup your computer, we will cover each item     
 ## Enable Linux on your Chromebook     
@@ -372,7 +371,6 @@ Once you copy the key,
   
 # - End general setup of your computer
 # - Begin MIT Content
-### - Java version 8
 # Install Java Release 8  
 ## Installation Instructions for Java JDK using OpenJava - we won't use this but it is another option  
 If you're unsure how to install the JDK, you can find instructions for all operating systems here (pay attention to PATH and CLASSPATH).  
@@ -587,7 +585,7 @@ If you haven't seen any errors, you should be good to go.
 
 ### IntelliJ Gradle Icon - right-hand side   
 <br />  
-<img width="50px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/IntelliJ-IDEA-Gradle-icon.png?raw=true" align="center" alt="IntelliJ-IDEA-Gradle-icon" />
+<img width="100px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/IntelliJ-IDEA-Gradle-icon.png?raw=true" align="center" alt="IntelliJ-IDEA-Gradle-icon" />
 </b>
 
 
