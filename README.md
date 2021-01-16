@@ -9,6 +9,7 @@
   - [Why this document is needed](#why-this-document-is-needed)
   - [Account and Team Creation](#account-and-team-creation)
   - [Links and resources for this year's Battlecode](#links-and-resources-for-this-years-battlecode)
+  - [Excellent seven minute video by Max Mann of how to get everything installed](#excellent-seven-minute-video-by-max-mann-of-how-to-get-everything-installed)
 - [Setup your computer, we will cover each item](#setup-your-computer-we-will-cover-each-item)
   - [Enable Linux on your Chromebook](#enable-linux-on-your-chromebook)
   - [Details about your computer and operating system](#details-about-your-computer-and-operating-system)
@@ -50,10 +51,14 @@
   - [Download IntelliJ IDEA](#download-intellij-idea)
   - [Idea Installation Instructions](#idea-installation-instructions)
   - [Changes to .bashrc for your PATH variable](#changes-to-bashrc-for-your-path-variable)
-- [Use VSCode](#use-vscode)
 - [Install IntelliJ - I usually use vscode, turn it off to preserve memory](#install-intellij---i-usually-use-vscode-turn-it-off-to-preserve-memory)
+    - [IntelliJ - Error Message: "Please fix JAVA_HOME variable"](#intellij---error-message-please-fix-java_home-variable)
+    - [IntelliJ-IDEA Setting the JAVA Variable](#intellij-idea-setting-the-java-variable)
     - [When IntelliJ IDEA first starts it may take 12 minutes for the full build on a Chromebook](#when-intellij-idea-first-starts-it-may-take-12-minutes-for-the-full-build-on-a-chromebook)
+    - [IntelliJ-IDEA Spash Screen](#intellij-idea-spash-screen)
+    - [IntelliJ-IDEA Home Screen](#intellij-idea-home-screen)
   - [Time for a first build!](#time-for-a-first-build)
+    - [IntelliJ Gradle Icon - right-hand side](#intellij-gradle-icon---right-hand-side)
   - [Now execute the runner and run the default example robot](#now-execute-the-runner-and-run-the-default-example-robot)
 - [Using the terminal - Build the game - `./gradlew update`](#using-the-terminal---build-the-game---gradlew-update)
     - [Build the gradle](#build-the-gradle)
@@ -92,6 +97,31 @@ Some tweets about battlecode are on [Twitter](https://twitter.com/search?q=thoma
 A great postmortum from 2020 [Team Battlegaode](http://web.mit.edu/agrebe/www/battlecode/20/index.html)    
 
 It is assumed you will be developing on a linux environment, this document provides instructions for Chromebook and also there are some references to Digitalocean, that way you can use the cloud for your development environment, giving access to greater stability and unlimted resources. By developing in Digitalocean you can create specific environments and install and remove software without worrying about it messing up your Chromebook or main computer. Generally I have to wipe and rebuild my chromebook linux environment several times per year, all the various changes end up hurting the stablility of the chromebook, so better to use Digitalocean in the cloud as your messy sandbox.
+
+## Excellent seven minute video by Max Mann of how to get everything installed
+His main [YouTube page](https://www.youtube.com/user/fghulds)
+His [videos](https://www.youtube.com/user/fghulds/videos)
+In this [video, his notes for Installation instructions:](https://www.youtube.com/watch?v=G-SxsYLlk44&ab_channel=MaxMann)
+
+Visit oracle.com/java/technologies/javase/javase-jdk8-downloads.html
+- Accept cookies
+- Select the Windows x64 package, jdk-8u271-windows-x64.exe
+- Create an account with Oracle if you don't have one already
+-  It can take a half hour to receive the email address confirmation link :(
+- Use your Oracle account to download the JDK package.
+
+Download https://github.com/battlecode/battlecode21-scaffold.git
+-Edit environment variable JAVA_HOME to point to the jdk
+-Open command prompt
+- cd Downloads\battlecode21-scaffold-master
+- gradlew.bat
+- gradlew.bat update
+- gradlew.bat build
+- gradlew.bat run   -- runs a match using the settings in gradle.properties
+-Double click on client\Battlecode Client.exe
+- Go to Queue tab
+- Click Upload a .bc21 replay file
+- Watch the match
 
 # Setup your computer, we will cover each item     
 ## Enable Linux on your Chromebook     
@@ -513,22 +543,6 @@ Now run IntelliJ!
 Run idea.sh from the bin subdirectory.  
 ```
 
-# Use VSCode  
-<span style="color:white">some white text</span>  
-<span style="color:white">some *white* text</span>  
-
-<span style="color:yellow">some yellow text</span>  
-<span style="color:yellow">some *yellow* text</span>  
-
-<span style="color:green">some green text</span>  
-<span style="color:green">some *green* text</span>  
-
-<span style="color:red">some red text</span>  
-<span style="color:red">some *red* text</span>  
-
-<span style="color:blue">some blue text</span>  
-<span style="color:blue">some *blue* text</span>  
-
 # Install IntelliJ - I usually use vscode, turn it off to preserve memory
 Battlecode 2020 uses Gradle to run tasks like `run`, `debug` and `jarForUpload` (but don't worry about that — you don't need to install it).
 
@@ -539,6 +553,16 @@ Hit OK.
 
 We need to set the jdk properly; open the settings with `File > Settings (IntelliJ IDEA > Preferences on Mac`) or `ctrl+alt+s`. Navigate to `Build, Execution, Deployment > Build Tools > Gradle` and change `Gradle JVM` to 1.8  
 
+### IntelliJ - Error Message: "Please fix JAVA_HOME variable"   
+<br />  
+<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/Please-fix-JAVA_HOME-variable.png?raw=true" align="center" alt="Please-fix-JAVA_HOME-variable" />
+</b>
+
+### IntelliJ-IDEA Setting the JAVA Variable  
+<br />  
+<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/IntelliJ-IDEA-setting-JAVA-variable.png?raw=true" align="center" alt="IntelliJ-IDEA-setting-JAVA-variable" />
+</b>
+
 ### When IntelliJ IDEA first starts it may take 12 minutes for the full build on a Chromebook
 
 <br />  
@@ -546,10 +570,26 @@ We need to set the jdk properly; open the settings with `File > Settings (Intell
 </b>
 <br />  
 
+### IntelliJ-IDEA Spash Screen  
+<br />  
+<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/IntelliJ-IDEA-splash-screen.png?raw=true" align="center" alt="IntelliJ-IDEA-splash-screen" />
+</b>
+
+### IntelliJ-IDEA Home Screen  
+<br />  
+<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/IntelliJ-IDEA-home-screen.png?raw=true" align="center" alt="IntelliJ-IDEA-home-screen" />
+</b>
+
 
 ## Time for a first build!   
 On the right side of the screen, click the small button that says gradle and has a picture of an elephant. Navigate to battlecode20-scaffold > Tasks > battlecode and double click on build. This will install the client and engine for you.
 If you haven't seen any errors, you should be good to go.
+
+### IntelliJ Gradle Icon - right-hand side   
+<br />  
+<img width="50px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/IntelliJ-IDEA-Gradle-icon.png?raw=true" align="center" alt="IntelliJ-IDEA-Gradle-icon" />
+</b>
+
 
 There should now be a folder called `client` in your scaffold folder; if you go in there, and double click the `Battlecode Client` application, you should be able to run and watch matches. (Please don't move that application, it will be sad.) If you're on Linux, navigate to the `client` folder and run `./battlecode-visualizer` to launch the client.
 

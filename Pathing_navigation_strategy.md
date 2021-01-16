@@ -7,6 +7,14 @@
 - [Using enlightenment centers to coordinate locations and using flags to communicate](#using-enlightenment-centers-to-coordinate-locations-and-using-flags-to-communicate)
   - [How to use our 24 bits of flag width to communicate with between the robots and enlightenment centers](#how-to-use-our-24-bits-of-flag-width-to-communicate-with-between-the-robots-and-enlightenment-centers)
   - [More pathing and navigation](#more-pathing-and-navigation)
+    - [packing bits](#packing-bits)
+    - [coordinates above 10,000](#coordinates-above-10000)
+    - [Coordinates using modululos 128](#coordinates-using-modululos-128)
+    - [128 by 128 square](#128-by-128-square)
+    - [Breadth-first-search](#breadth-first-search)
+    - [MapLocation Java code](#maplocation-java-code)
+    - [Basic Bug Strategy](#basic-bug-strategy)
+    - [An example of an how to break up an expensive operation so it will continue over multiple rounds](#an-example-of-an-how-to-break-up-an-expensive-operation-so-it-will-continue-over-multiple-rounds)
 
 # Introduction to pathing and navigation  
  
@@ -51,56 +59,43 @@ From lecture #2
 
 ## More pathing and navigation  
 - 
-
-<br />  
-<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/breadth-first-search.png?raw=true" align="center" alt="breadth-first-search" />
-</b>
-
-<br />  
-<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/basicBug.png?raw=true" align="center" alt="basicBug" />
-</b>
-
-<br />  
-<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/IntelliJ-IDEA-Gradle-icon.png?raw=true" align="center" alt="IntelliJ-IDEA-Gradle-icon" />
-</b>
-
-<br />  
-<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/Please-fix-JAVA_HOME-variable.png?raw=true" align="center" alt="Please-fix-JAVA_HOME-variable" />
-</b>
-
-<br />  
-<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/IntelliJ-IDEA-setting-JAVA-variable.png?raw=true" align="center" alt="IntelliJ-IDEA-setting-JAVA-variable" />
-</b>
-
-<br />  
-<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/IntelliJ-IDEA-home-screen.png?raw=true" align="center" alt="IntelliJ-IDEA-home-screen" />
-</b>
-
-<br />  
-<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/IntelliJ-IDEA-splash-screen.png?raw=true" align="center" alt="IntelliJ-IDEA-splash-screen" />
-</b>
-
-<br />  
-<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/Battlecode expensive loop.png?raw=true" align="center" alt="Battlecode expensive loop" />
-</b>
-
-<br />  
-<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/Battlecode-MapLocation.png?raw=true" align="center" alt="Battlecode-MapLocation" />
-</b>
-
+### packing bits   
 <br />  
 <img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/packing-bits.png?raw=true" align="center" alt="packing-bits" />
 </b>
 
+### coordinates above 10,000
 <br />  
 <img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/coordinates-above-10000.png?raw=true" align="center" alt="coordinates-above-10000" />
 </b>
 
+### Coordinates using modululos 128  
 <br />  
 <img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/coordinates-using-128.png?raw=true" align="center" alt="coordinates-using-128" />
 </b>
 
+### 128 by 128 square
 <br />  
 <img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/128-by-128-square.png?raw=true" align="center" alt="128-by-128-square" />
+</b>
+
+### Breadth-first-search  
+<br />  
+<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/breadth-first-search.png?raw=true" align="center" alt="breadth-first-search" />
+</b>
+
+### MapLocation Java code  
+<br />  
+<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/Battlecode-MapLocation.png?raw=true" align="center" alt="Battlecode-MapLocation" />
+</b>
+
+### Basic Bug Strategy  
+<br />  
+<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/basicBug.png?raw=true" align="center" alt="basicBug" />
+</b>
+
+### An example of an how to break up an expensive operation so it will continue over multiple rounds  
+<br />  
+<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/Battlecode expensive loop.png?raw=true" align="center" alt="Battlecode expensive loop" />
 </b>
 
