@@ -36,15 +36,15 @@
 - [Install Java Release 8](#install-java-release-8)
   - [Installation Instructions for Java JDK using OpenJava - we won't use this but it is another option](#installation-instructions-for-java-jdk-using-openjava---we-wont-use-this-but-it-is-another-option)
   - [We will use Oracle's version of Java - Download the correct Java Version 8](#we-will-use-oracles-version-of-java---download-the-correct-java-version-8)
-    - [- Set environment variables `PATH` and `CLASSPATH` `JAVA_HOME` etc](#--set-environment-variables-path-and-classpath-java_home-etc)
-- [- Begin Battlecode](#--begin-battlecode)
-    - [- Clone the Battlecode Scaffold, where you can run your robot](#--clone-the-battlecode-scaffold-where-you-can-run-your-robot)
+  - [Also install the latest version Java 15 so that vscode is happy for it's extensions](#also-install-the-latest-version-java-15-so-that-vscode-is-happy-for-its-extensions)
   - [Changes to .bashrc for your environment variables, PATH and JAVA_HOME](#changes-to-bashrc-for-your-environment-variables-path-and-java_home)
-    - [This update-alternatives is something that may be useful but you probably do not need it](#this-update-alternatives-is-something-that-may-be-useful-but-you-probably-do-not-need-it)
+    - [- Set environment variables `PATH` and `JAVA_HOME`](#--set-environment-variables-path-and-java_home)
   - [Validating Java works correctly](#validating-java-works-correctly)
     - [To verify the installation, get the Java version](#to-verify-the-installation-get-the-java-version)
     - ['Which' Java as a validation test](#which-java-as-a-validation-test)
   - [Cleaning up](#cleaning-up)
+- [- Begin Battlecode](#--begin-battlecode)
+  - [- Clone the Battlecode Scaffold, where you can run your robot](#--clone-the-battlecode-scaffold-where-you-can-run-your-robot)
   - [Download (clone) the Battlecode competition scaffold for BATTLECODE](#download-clone-the-battlecode-competition-scaffold-for-battlecode)
 - [- Setup editor such as vscode, IntelliJ, Eclipse etc](#--setup-editor-such-as-vscode-intellij-eclipse-etc)
   - [Download IntelliJ IDEA](#download-intellij-idea)
@@ -425,31 +425,47 @@ The Java Development Kit files are installed in a directory called `jdk1.8.0_ver
 // this directory was just created
 /usr/lib/jvm/jdk1.8.0_271
 ```
-### - Set environment variables `PATH` and `CLASSPATH` `JAVA_HOME` etc
-# - Begin Battlecode 
-### - Clone the Battlecode Scaffold, where you can run your robot
+
+## Also install the latest version Java 15 so that vscode is happy for it's extensions
+https://www.oracle.com/java/technologies/javase-downloads.html
+
+<br />  
+<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/java15-download.png?raw=true" align="center" alt="java15 download" />
+</b>
+
+
+```java
+// You will need to log into Oracle and agree to the conditions to start the download  
+// ok lets try this one
+XXXXXXX - Linux x64 Compressed Archive	 
+XXXXXXX - 136.51 MB	 
+XXXXXXX - jdk-8u271-linux-x64.tar.gz  
+// I downloaded this and left it in my root home directory, it is just a temporary file we will delete it later
+XXXXXXX    jdk-8u271-linux-x64.tar.gz
+
+cd /usr/lib/jvm
+// untar the file that is located in your home dir
+XXXXXXX sudo tar -xzvf ~/jdk-8u271-linux-x64.tar.gz 
+```
+The Java Development Kit files are installed in a directory called `jdk1.8.0_version` in the current directory.  
+```java
+// this directory was just created
+XXXXXXX  /usr/lib/jvm/jdk1.8.0_271
+```
+
+
 ## Changes to .bashrc for your environment variables, PATH and JAVA_HOME  
+### - Set environment variables `PATH` and `JAVA_HOME`   
 Paste thise into your Path in your .bashrc 
 ```java
 export JAVA_HOME="/usr/lib/jvm/jdk1.8.0_271"
 export PATH=$PATH:/usr/lib/jvm/jdk1.8.0_271/bin:/usr/lib/jvm/jdk1.8.0_271/jre/bin
 
 // then at the command line in root:
-$ source .bashrc
+$ source ~/.bashrc
 
 // then in the future you just need to source .bashrc by using the alias 'sc'
 sc
-```
-### This update-alternatives is something that may be useful but you probably do not need it
-```java
-// probably not needed
-sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk1.8.0_271/bin/java" 0
-sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk1.8.0_271/bin/javac" 0
-sudo update-alternatives --set java /usr/lib/jvm/jdk1.8.0_271/bin/java
-sudo update-alternatives --set javac /usr/lib/jvm/jdk1.8.0_271/bin/javac
-// you can test this but it did not work for me
-update-alternatives --list java
-update-alternatives --list javac
 ```
 ## Validating Java works correctly
 ### To verify the installation, get the Java version
@@ -479,6 +495,9 @@ This may also be useful but I have not tested it yet
 // Verify that the path is set by repeating the java command  
 % java -version  
 ```   
+# - Begin Battlecode 
+
+This next snippet is not needed as far as I know  
 ```java
 // Modify build.gradle to view the Java version  
 task version {  
@@ -489,6 +508,7 @@ task version {
     }  
 }  
 ```
+## - Clone the Battlecode Scaffold, where you can run your robot
 ## Download (clone) the Battlecode competition scaffold for BATTLECODE  
 Next, you should download the Battlecode 2021 scaffold. To get up and running quickly, you can click "Clone or download" and then "Download ZIP," and move on to the next step.  
 We recommend, however, that you instead use Git to organize your code. If you haven't used Git before, read this [guide](https://guides.github.com/introduction/git-handbook/) (or wait for our lecture covering it). On the [scaffold page](https://github.com/battlecode/battlecode20-scaffold), click `"Use this template."` Importantly, on the next page, make your new repo private (you don't want other teams to steal your code!). You can then clone your newly created repo and invite your team members to collaborate on it.  
