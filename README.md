@@ -46,6 +46,7 @@
 - [- Begin Battlecode](#--begin-battlecode)
   - [- Clone the Battlecode Scaffold, where you can run your robot](#--clone-the-battlecode-scaffold-where-you-can-run-your-robot)
   - [Download (clone) the Battlecode competition scaffold for BATTLECODE](#download-clone-the-battlecode-competition-scaffold-for-battlecode)
+  - [Create our own PRIVATE empty repo on GitHub](#create-our-own-private-empty-repo-on-github)
 - [- Setup editor such as vscode, IntelliJ, Eclipse etc](#--setup-editor-such-as-vscode-intellij-eclipse-etc)
   - [Download IntelliJ IDEA](#download-intellij-idea)
   - [Idea Installation Instructions](#idea-installation-instructions)
@@ -70,7 +71,6 @@
 - [If you're experiencing memory problems with the client, please try:](#if-youre-experiencing-memory-problems-with-the-client-please-try)
 - [Upload the bot to compete against others](#upload-the-bot-to-compete-against-others)
   - [Upload Your Bot and Scrimmage](#upload-your-bot-and-scrimmage)
-  - [Need to modify the origin URL for git](#need-to-modify-the-origin-url-for-git)
 
 ## Introduction  
 This is my scrapbook for the Battlecode 2021 contest, I will attempt to keep it up-to-date for all Battlecode-related things for the duration of the contest. For a general overview of what Battlecode is, visit the [Battlecode landing page](https://2020.battlecode.org).  
@@ -528,6 +528,34 @@ remote: Total 50 (delta 17), reused 36 (delta 10), pack-reused 0
 Unpacking objects: 100% (50/50), done.
 ```
     
+## Create our own PRIVATE empty repo on GitHub  
+Private so other people won't look at it during the competition. We can make it public when the competition is over.  
+We will name the repo: my-battlecode-2021-scaffold  
+```java  
+// first we must delete the .git directory that came from the original GitHub battlecode scaffold
+connorstom@penguin:~/aprojects/my-battlecode-2021-scaffold$ rm -rf .git  
+
+// follow the instructions provided on GitHub
+git init
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:coding-to-music/my-battlecode-2021-scaffold.git
+git push -u origin main
+// may need to do this  
+git push --set-upstream origin master
+
+Enumerating objects: 21, done.
+Counting objects: 100% (21/21), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (21/21), 22.16 KiB | 2.01 MiB/s, done.
+Total 21 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:coding-to-music/my-battlecode-2021-scaffold.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+```
+
 # - Setup editor such as vscode, IntelliJ, Eclipse etc     
   
 ## Download IntelliJ IDEA
@@ -733,7 +761,10 @@ connorstom@penguin:~/aprojects/battlecode21-scaffold$ wc -l junk.txt
 # Modify the bot and make it your own  
 Place each version of your robot in a new subfolder in the `src` folder. Make sure every version has a `RobotPlayer.java`    
 # RUNNING GAME FROM THE TERMINAL  
-Open a terminal in the scaffold. Run the commands `./gradlew run -Pmaps=[map] -PteamA=[Team A] -PteamB=[Team B]`  
+Open a terminal in the scaffold. Run the commands 
+```java
+./gradlew run -Pmaps=[map] -PteamA=[Team A] -PteamB=[Team B]
+```  
 
 ### gradle.properties file is what will be run
 ```java
@@ -757,54 +788,3 @@ Making .bc21 files with the engine directly and uploading them to the client's m
 Create a zip file containing only your robot code (only 1 package), and uploaded it to the submissions page.  
 Your bot will automatically be ran against other players to determine your ranking. You can also request scrimmages with other teams, and see the replays.  
 
-## Need to modify the origin URL for git     
-```java
-connorstom@penguin:~/aprojects/battlecode21-scaffold$ git push
-remote: Permission to battlecode/battlecode21-scaffold.git denied to coding-to-music.
-fatal: unable to access 'https://github.com/battlecode/battlecode21-scaffold.git/': The requested URL returned error: 403
-connorstom@penguin:~/aprojects/battlecode21-scaffold$ git remote set-url --push origin git@github.com:coding-to-music/battlecode21-scaffold.git
-connorstom@penguin:~/aprojects/battlecode21-scaffold$ git remote -v
-origin  https://github.com/battlecode/battlecode21-scaffold.git (fetch)
-origin  git@github.com:coding-to-music/battlecode21-scaffold.git (push)
-connorstom@penguin:~/aprojects/battlecode21-scaffold$ git add .
-connorstom@penguin:~/aprojects/battlecode21-scaffold$ git commit -m 'changed remote'
-On branch master
-Your branch is ahead of 'origin/master' by 2 commits.
-  (use "git push" to publish your local commits)
-
-nothing to commit, working tree clean
-connorstom@penguin:~/aprojects/battlecode21-scaffold$ git push
-To github.com:coding-to-music/battlecode21-scaffold.git
- ! [rejected]        master -> master (fetch first)
-error: failed to push some refs to 'git@github.com:coding-to-music/battlecode21-scaffold.git'
-hint: Updates were rejected because the remote contains work that you do
-hint: not have locally. This is usually caused by another repository pushing
-hint: to the same ref. You may want to first integrate the remote changes
-hint: (e.g., 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-connorstom@penguin:~/aprojects/battlecode21-scaffold$ git pull
-Already up to date.
-connorstom@penguin:~/aprojects/battlecode21-scaffold$ git push
-To github.com:coding-to-music/battlecode21-scaffold.git
- ! [rejected]        master -> master (fetch first)
-error: failed to push some refs to 'git@github.com:coding-to-music/battlecode21-scaffold.git'
-hint: Updates were rejected because the remote contains work that you do
-hint: not have locally. This is usually caused by another repository pushing
-hint: to the same ref. You may want to first integrate the remote changes
-hint: (e.g., 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-
-connorstom@penguin:~/aprojects/battlecode21-scaffold$ git remote -v
-origin  git@github.com:coding-to-music/battlecode21-scaffold.git (fetch)
-origin  git@github.com:coding-to-music/battlecode21-scaffold.git (push)
-connorstom@penguin:~/aprojects/battlecode21-scaffold$ git push
-To github.com:coding-to-music/battlecode21-scaffold.git
- ! [rejected]        master -> master (fetch first)
-error: failed to push some refs to 'git@github.com:coding-to-music/battlecode21-scaffold.git'
-hint: Updates were rejected because the remote contains work that you do
-hint: not have locally. This is usually caused by another repository pushing
-hint: to the same ref. You may want to first integrate the remote changes
-hint: (e.g., 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-
-```
