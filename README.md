@@ -763,7 +763,18 @@ Place each version of your robot in a new subfolder in the `src` folder. Make su
 # RUNNING GAME FROM THE TERMINAL  
 Open a terminal in the scaffold. Run the commands 
 ```java
+// general how-to  
 ./gradlew run -Pmaps=[map] -PteamA=[Team A] -PteamB=[Team B]
+
+// run this to run your robot  
+./gradlew run >> /dev/null
+
+// run this to run your robot  
+./gradlew run > junk.txt
+
+// Then view the results of the run  
+tail junk.txt
+
 ```  
 
 ### gradle.properties file is what will be run
