@@ -62,12 +62,15 @@
 - [Using the terminal - Build the game - `./gradlew update`](#using-the-terminal---build-the-game---gradlew-update)
     - [Build the gradle](#build-the-gradle)
     - [each robot you build lives in it's own src directory](#each-robot-you-build-lives-in-its-own-src-directory)
+    - [Using the Client UI](#using-the-client-ui)
+    - [Using the command line `gradle run`](#using-the-command-line-gradle-run)
 - [Modify the bot and make it your own](#modify-the-bot-and-make-it-your-own)
 - [RUNNING GAME FROM THE TERMINAL](#running-game-from-the-terminal)
     - [gradle.properties file is what will be run](#gradleproperties-file-is-what-will-be-run)
 - [If you're experiencing memory problems with the client, please try:](#if-youre-experiencing-memory-problems-with-the-client-please-try)
 - [Upload the bot to compete against others](#upload-the-bot-to-compete-against-others)
   - [Upload Your Bot and Scrimmage](#upload-your-bot-and-scrimmage)
+  - [Need to modify the origin URL for git](#need-to-modify-the-origin-url-for-git)
 
 ## Introduction  
 This is my scrapbook for the Battlecode 2021 contest, I will attempt to keep it up-to-date for all Battlecode-related things for the duration of the contest. For a general overview of what Battlecode is, visit the [Battlecode landing page](https://2020.battlecode.org).  
@@ -433,15 +436,18 @@ https://www.oracle.com/java/technologies/javase-downloads.html
 <img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/java15-download.png?raw=true" align="center" alt="java15 download" />
 </b>
 
+Clicking Download brings us to this page
+https://www.oracle.com/java/technologies/javase-jdk15-downloads.html
+
 
 ```java
 // You will need to log into Oracle and agree to the conditions to start the download  
-// ok lets try this one
+// lets try this one
 XXXXXXX - Linux x64 Compressed Archive	 
-XXXXXXX - 136.51 MB	 
-XXXXXXX - jdk-8u271-linux-x64.tar.gz  
+XXXXXXX - 179.33 MB	 
+XXXXXXX - jdk-15.0.1_linux-x64_bin.tar.gz  
 // I downloaded this and left it in my root home directory, it is just a temporary file we will delete it later
-XXXXXXX    jdk-8u271-linux-x64.tar.gz
+XXXXXXX   jdk-15.0.1_linux-x64_bin.tar.gz
 
 cd /usr/lib/jvm
 // untar the file that is located in your home dir
@@ -685,13 +691,10 @@ BUILD SUCCESSFUL in 3m 16s
 Run a Match
 Player code is in the `src` directory of the scaffold: each package inside `src` corresponds to one distinct player. We have provided `examplefuncsplayer`, and you can create your own player by either modifying it or copying and renaming it. The only restriction is that each player must have a file named `RobotPlayer.java` which implements a `run(RobotController rc)` method.
 
+### Using the Client UI  
 You should have a client application in the `client` folder. Launch it, and go to the `Runner` section. There, you can specify which players to run against each other, and on which map, and you can view the match as it is running.
 
-```java
-// run at the command line - need to verify  
-./client/runner
-```
-
+### Using the command line `gradle run`
 You can also run a match without the client, by invoking the Gradle task `run`. For example, `gradle run -PteamA=examplefuncsplayer -PteamB=examplefuncsplayer -Pmaps=FourLakeLand` runs `examplefuncsplayer` against itself on the `FourLakeLand` map. This produces a replay file in the `matches` directory of the scaffold, which you can upload to the client to view.
 
 ```java
@@ -714,7 +717,8 @@ connorstom@penguin:~/aprojects/battlecode21-scaffold$ ./gradlew run
 [B:SLANDERER#13348@68] I'm a SLANDERER! Location [10026, 23927]
 
 // run the game as defined in the gradle.properties - but output it to a junk.txt file - add that to the .gitignore
-connorstom@penguin:~/aprojects/battlecode21-scaffold$ ./gradlew run > junk.txt
+// Or send the output to >> /dev/null
+connorstom@penguin:~/aprojects/battlecode21-scaffold$ ./gradlew run >> /dev/null
 
 // find out how many lines of output are in the console output
 connorstom@penguin:~/aprojects/battlecode21-scaffold$ wc -l junk.txt
@@ -736,7 +740,7 @@ Open a terminal in the scaffold. Run the commands `./gradlew run -Pmaps=[map] -P
 // gradle.properties
 // modify this file to change project properties
 teamA=examplefuncsplayer
-teamB=examplefuncsplayer
+teamB=MyFirstRobot
 maps=maptestsmall
 source=src
 gpr.user=battlecodedownloadpackage
@@ -752,4 +756,55 @@ Making .bc21 files with the engine directly and uploading them to the client's m
 ## Upload Your Bot and Scrimmage  
 Create a zip file containing only your robot code (only 1 package), and uploaded it to the submissions page.  
 Your bot will automatically be ran against other players to determine your ranking. You can also request scrimmages with other teams, and see the replays.  
-  
+
+## Need to modify the origin URL for git     
+```java
+connorstom@penguin:~/aprojects/battlecode21-scaffold$ git push
+remote: Permission to battlecode/battlecode21-scaffold.git denied to coding-to-music.
+fatal: unable to access 'https://github.com/battlecode/battlecode21-scaffold.git/': The requested URL returned error: 403
+connorstom@penguin:~/aprojects/battlecode21-scaffold$ git remote set-url --push origin git@github.com:coding-to-music/battlecode21-scaffold.git
+connorstom@penguin:~/aprojects/battlecode21-scaffold$ git remote -v
+origin  https://github.com/battlecode/battlecode21-scaffold.git (fetch)
+origin  git@github.com:coding-to-music/battlecode21-scaffold.git (push)
+connorstom@penguin:~/aprojects/battlecode21-scaffold$ git add .
+connorstom@penguin:~/aprojects/battlecode21-scaffold$ git commit -m 'changed remote'
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+connorstom@penguin:~/aprojects/battlecode21-scaffold$ git push
+To github.com:coding-to-music/battlecode21-scaffold.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'git@github.com:coding-to-music/battlecode21-scaffold.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+connorstom@penguin:~/aprojects/battlecode21-scaffold$ git pull
+Already up to date.
+connorstom@penguin:~/aprojects/battlecode21-scaffold$ git push
+To github.com:coding-to-music/battlecode21-scaffold.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'git@github.com:coding-to-music/battlecode21-scaffold.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+connorstom@penguin:~/aprojects/battlecode21-scaffold$ git remote -v
+origin  git@github.com:coding-to-music/battlecode21-scaffold.git (fetch)
+origin  git@github.com:coding-to-music/battlecode21-scaffold.git (push)
+connorstom@penguin:~/aprojects/battlecode21-scaffold$ git push
+To github.com:coding-to-music/battlecode21-scaffold.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'git@github.com:coding-to-music/battlecode21-scaffold.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+```
