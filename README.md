@@ -59,6 +59,7 @@
     - [IntelliJ-IDEA Home Screen](#intellij-idea-home-screen)
   - [Time for a first build!](#time-for-a-first-build)
     - [IntelliJ Gradle Icon - right-hand side](#intellij-gradle-icon---right-hand-side)
+    - [Run the gradle from the command line and view the output in the visualizer](#run-the-gradle-from-the-command-line-and-view-the-output-in-the-visualizer)
   - [Now execute the runner and run the default example robot](#now-execute-the-runner-and-run-the-default-example-robot)
 - [Using the terminal - Build the game - `./gradlew update`](#using-the-terminal---build-the-game---gradlew-update)
     - [Build the gradle](#build-the-gradle)
@@ -644,6 +645,12 @@ If you haven't seen any errors, you should be good to go.
 
 
 There should now be a folder called `client` in your scaffold folder; if you go in there, and double click the `Battlecode Client` application, you should be able to run and watch matches. (Please don't move that application, it will be sad.) If you're on Linux, navigate to the `client` folder and run `./battlecode-visualizer` to launch the client.
+
+### Run the gradle from the command line and view the output in the visualizer  
+```java
+./gradlew run
+./client/battlecode-visualizer
+```
 
 <br />  
 <img width="800px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/battlecode-visualizer-initial-spash-screen.png?raw=true" align="center" alt="battlecode-visualizer-initial-spash-screen.png" />
