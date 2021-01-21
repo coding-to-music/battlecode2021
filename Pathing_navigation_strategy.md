@@ -28,19 +28,16 @@
     - [Slanderers](#slanderers)
     - [Muckrakers](#muckrakers)
   - [1500 Rounds, you take turns, can have multiple robots making changes each round](#1500-rounds-you-take-turns-can-have-multiple-robots-making-changes-each-round)
-  - [How scoring is counted to determine the winner](#how-scoring-is-counted-to-determine-the-winner)
-  - [Rushing](#rushing)
   - [Buffs](#buffs)
   - [Cooldown Periods](#cooldown-periods)
-  - [Communications between the Robots](#communications-between-the-robots)
-  - [Important useful functions available to us](#important-useful-functions-available-to-us)
 - [Various Stratigies Reviewed and Defined](#various-stratigies-reviewed-and-defined)
+    - [Breadth-first-search](#breadth-first-search)
   - [Basic Bug Strategy](#basic-bug-strategy)
   - [Bug 1](#bug-1)
   - [Bug 2](#bug-2)
+  - [Rushing](#rushing)
 - [Using enlightenment centers to coordinate locations and using flags to communicate](#using-enlightenment-centers-to-coordinate-locations-and-using-flags-to-communicate)
-  - [More pathing and navigation](#more-pathing-and-navigation)
-    - [Breadth-first-search](#breadth-first-search)
+  - [Important useful functions available to us](#important-useful-functions-available-to-us)
     - [MapLocation Java code](#maplocation-java-code)
     - [An example of an how to break up an expensive operation so it will continue over multiple rounds](#an-example-of-an-how-to-break-up-an-expensive-operation-so-it-will-continue-over-multiple-rounds)
 - [Introduction to pathing and navigation](#introduction-to-pathing-and-navigation)
@@ -79,7 +76,7 @@ In order to prevent maps from favoring one player over another, it is guaranteed
 ## Overview: Influence  
 The core resource is **influence**. Wielding influence enables you to amass a larger and more powerful army of robots. Influence is not a global resource: your team's influence is distributed among your Enlightenment Centers, and is generated passively both by the Enlightenment Centers and by specific robot types.
 
-Each robot has a hard limit of 108 influence: any influence in excessive of this will be permanently lost.
+Each robot has a hard limit of 10<sup>8</sup> influence: any influence in excessive of this will be permanently lost.
 
 ## Overview: Votes  
 The objective of **Battlecode: Campaign** is to win the most votes. Each round, one citizen's vote is up for auction. Each Enlightenment Center may bid a non-negative amount of influence to win that vote, and Enlightenment Center which enters the highest bid will win that vote for its team.
@@ -199,14 +196,15 @@ Every function you could possibly use to interact with the game can be found in 
 ### Slanderers  
 ### Muckrakers  
 ## 1500 Rounds, you take turns, can have multiple robots making changes each round  
-## How scoring is counted to determine the winner    
-## Rushing  
 ## Buffs  
 ## Cooldown Periods  
-## Communications between the Robots  
-## Important useful functions available to us
 
 # Various Stratigies Reviewed and Defined  
+
+### Breadth-first-search  
+<br />  
+<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/breadth-first-search.png?raw=true" align="center" alt="breadth-first-search" />
+</b>
 
 ## Basic Bug Strategy  
 <br />  
@@ -215,8 +213,9 @@ Every function you could possibly use to interact with the game can be found in 
 
 ## Bug 1  
 
-
 ## Bug 2  
+
+## Rushing  
 
 # Using enlightenment centers to coordinate locations and using flags to communicate  
 
@@ -226,13 +225,7 @@ Every function you could possibly use to interact with the game can be found in 
 
 [Twitch video time 44:04](https://www.twitch.tv/videos/866439939)
 
-## More pathing and navigation  
-
-### Breadth-first-search  
-<br />  
-<img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/breadth-first-search.png?raw=true" align="center" alt="breadth-first-search" />
-</b>
-
+## Important useful functions available to us
 ### MapLocation Java code  
 <br />  
 <img width="600px" src="https://github.com/coding-to-music/battlecode2021/blob/main/Assets/Battlecode-MapLocation.png?raw=true" align="center" alt="Battlecode-MapLocation" />
