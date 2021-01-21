@@ -140,9 +140,9 @@ The conviction of a unit describes how loyal it is to your party; by transferrin
 Buildings are immobile robots; the only type of available building is Enlightenment Centers.
 
 
-|  |  Enlightenment Center  |  Politician  |  Slanderer  |  Muckraker  |  
+|  |  **Enlightenment Center**  |  **Politician**  |  **Slanderer**  |  **Muckraker**  |  
 | --- | --- | --- | --- | --- |  
-|  Class  |  Building  |  Unit  |  Unit  |  Unit  |  
+|  **Class**  |  **Building**  |  **Unit**  |  **Unit**  |  **Unit**  |  
 Influence  |  Cannot be created	C (variable)	C (variable)	C (variable)  |  
 Minimum influence  |  N/A  |  1  |  	1  |  	1  |  
 Initial conviction1  |  = current influence  |  	⌈1.0C⌉  |  	⌈1.0C⌉  |  	⌈0.7C⌉  |  
