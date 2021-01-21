@@ -11,17 +11,6 @@
   - [Note: radius squared](#note-radius-squared)
   - [Movement](#movement)
   - [Sensing, detecting and vision](#sensing-detecting-and-vision)
-    - [EC Enlightenment Centers](#ec-enlightenment-centers)
-    - [Politicians](#politicians)
-    - [Slanderers](#slanderers)
-    - [Muckrakers](#muckrakers)
-  - [1500 Rounds, you take turns, can have multiple robots making changes each round](#1500-rounds-you-take-turns-can-have-multiple-robots-making-changes-each-round)
-  - [How scoring is counted to determine the winner](#how-scoring-is-counted-to-determine-the-winner)
-  - [Rushing](#rushing)
-  - [Buffs](#buffs)
-  - [Cooldown Periods](#cooldown-periods)
-  - [Communications between the Robots](#communications-between-the-robots)
-- [Inportant useful functions available to us](#inportant-useful-functions-available-to-us)
   - [Victory](#victory)
     - [Votes](#votes)
     - [Victory conditions and tiebreakers](#victory-conditions-and-tiebreakers)
@@ -33,6 +22,18 @@
   - [Monitoring](#monitoring)
   - [GameActionExceptions](#gameactionexceptions)
   - [Complete documentation](#complete-documentation)
+  - [More details about the Robots](#more-details-about-the-robots)
+    - [EC Enlightenment Centers](#ec-enlightenment-centers)
+    - [Politicians](#politicians)
+    - [Slanderers](#slanderers)
+    - [Muckrakers](#muckrakers)
+  - [1500 Rounds, you take turns, can have multiple robots making changes each round](#1500-rounds-you-take-turns-can-have-multiple-robots-making-changes-each-round)
+  - [How scoring is counted to determine the winner](#how-scoring-is-counted-to-determine-the-winner)
+  - [Rushing](#rushing)
+  - [Buffs](#buffs)
+  - [Cooldown Periods](#cooldown-periods)
+  - [Communications between the Robots](#communications-between-the-robots)
+  - [Important useful functions available to us](#important-useful-functions-available-to-us)
 - [Various Stratigies Reviewed and Defined](#various-stratigies-reviewed-and-defined)
   - [Basic Bug Strategy](#basic-bug-strategy)
   - [Bug 1](#bug-1)
@@ -136,18 +137,6 @@ All robots may **sense** the passability of nearby map squares and any robots lo
 
 Additionally, robots can **detect** the presence of robots near them, without sensing any properties about those robots other than their location. Muckrakers have a larger detection radius than sensor radius, and so are able to detect robots further away than they can sense.  
 
-### EC Enlightenment Centers
-### Politicians  
-### Slanderers  
-### Muckrakers  
-## 1500 Rounds, you take turns, can have multiple robots making changes each round  
-## How scoring is counted to determine the winner    
-## Rushing  
-## Buffs  
-## Cooldown Periods  
-## Communications between the Robots  
-# Inportant useful functions available to us
-
 ## Victory  
 ### Votes  
 To win Battlecode: Campaign, your team must win more votes than the opposing team. Each round, one citizen's vote is up for auction. Each Enlightenment Center may bid a non-negative amount of influence to win that vote. Neutral Enlightenment Centers will always bid zero.
@@ -159,10 +148,10 @@ If both teams have the equal highest bid, then the citizens will instead opt to 
 ### Victory conditions and tiebreakers
 If a team loses all its robots, then it immediately loses, regardless of its vote count. Otherwise, at the conclusion of 3000 rounds, the winner is determined according to the following tiebreakers.
 
-Highest total vote count.
-Most total owned Enlightenment Centers.
-Highest total unit influence.
-The citizens of Mars flip a coin to determine the winner.  
+- Highest total vote count.  
+- Most total owned Enlightenment Centers.  
+- Highest total unit influence.  
+- The citizens of Mars flip a coin to determine the winner.  
 
 ## Communication  
 Robots can only see their immediate surroundings and are independently controlled by copies of your code, making coordination very challenging. You will be unable to share any variables between them; note that even static variables will not be shared, as each robot will receive its own copy.  
@@ -203,6 +192,19 @@ Throwing any `Exceptions` cause a bytecode penalty of 500 bytecodes. Unhandled e
 
 ## Complete documentation  
 Every function you could possibly use to interact with the game can be found in our [javadocs](http://2021.battlecode.org/javadoc/).  
+
+## More details about the Robots  
+### EC Enlightenment Centers
+### Politicians  
+### Slanderers  
+### Muckrakers  
+## 1500 Rounds, you take turns, can have multiple robots making changes each round  
+## How scoring is counted to determine the winner    
+## Rushing  
+## Buffs  
+## Cooldown Periods  
+## Communications between the Robots  
+## Important useful functions available to us
 
 # Various Stratigies Reviewed and Defined  
 
