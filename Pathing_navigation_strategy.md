@@ -28,6 +28,17 @@
   - [Cooldown Periods](#cooldown-periods)
   - [Communications between the Robots](#communications-between-the-robots)
 - [Inportant useful functions available to us](#inportant-useful-functions-available-to-us)
+  - [Victory](#victory)
+    - [Votes](#votes)
+    - [Victory conditions and tiebreakers](#victory-conditions-and-tiebreakers)
+  - [Communication](#communication)
+  - [Bytecode limits](#bytecode-limits)
+- [Other resources and utilities](#other-resources-and-utilities)
+  - [Sample player](#sample-player)
+  - [Debugging](#debugging)
+  - [Monitoring](#monitoring)
+  - [GameActionExceptions](#gameactionexceptions)
+  - [Complete documentation](#complete-documentation)
 - [Various Stratigies Reviewed and Defined](#various-stratigies-reviewed-and-defined)
   - [Basic Bug Strategy](#basic-bug-strategy)
   - [Bug 1](#bug-1)
@@ -186,6 +197,61 @@ Additionally, robots can detect the presence of robots near them, without sensin
 ## Communications between the Robots  
 # Inportant useful functions available to us
 
+## Victory  
+### Votes  
+To win Battlecode: Campaign, your team must win more votes than the opposing team. Each round, one citizen's vote is up for auction. Each Enlightenment Center may bid a non-negative amount of influence to win that vote. Neutral Enlightenment Centers will always bid zero.
+
+The Enlightenment Center which enters the highest bid will win that vote for its team, expending the influence it bid. The Enlightenment Center with the highest bid on the opposing team will spend half its bid influence for its failed bid, rounded up to the nearest integer. All other Enlightenment Centers will not spend any influence.
+
+If both teams have the equal highest bid, then the citizens will instead opt to vote for an unnamed third party. In this case, both teams will spend half their largest bid influence for the failed attempt. If multiple Enlightenment Centers within a team bid the equal highest amount, then ties are first broken by lowest robot age and then by lowest robot ID (same order as for Empower).
+
+### Victory conditions and tiebreakers
+If a team loses all its robots, then it immediately loses, regardless of its vote count. Otherwise, at the conclusion of 3000 rounds, the winner is determined according to the following tiebreakers.
+
+Highest total vote count.
+Most total owned Enlightenment Centers.
+Highest total unit influence.
+The citizens of Mars flip a coin to determine the winner.  
+
+## Communication  
+Robots can only see their immediate surroundings and are independently controlled by copies of your code, making coordination very challenging. You will be unable to share any variables between them; note that even static variables will not be shared, as each robot will receive its own copy.  
+
+To facilitate communication, each robot on the map has a flag, which it may set to any color. Colors are described as 24-bit integers, so each robot may communicate a non-negative integer less than 2<sup>24</sup>. A robot's flag is visible to all other robots that can sense it, even enemy robots. Flag colors will persist from each round to the next unless they are changed; however, changing the flag color will incur a bytecode cost (see [below](http://2021.battlecode.org/specs/specs.md.html#bytecodelimits)).  
+
+Additionally, enlightenment centers can see the flags of all robots, and all robots can see the flags of all enlightenment centers.  
+
+## Bytecode limits
+Robots are also very limited in the amount of computation they are allowed to perform per turn. Bytecodes are a convenient measure of computation in languages like Java, where one Java bytecode corresponds roughly to one basic operation such as “subtract” or “get field”, and a single line of code generally contains several bytecodes. (For details see [here](http://en.wikipedia.org/wiki/Java_bytecode)). Because bytecodes are a feature of the compiled code itself, the same program will always compile to the same bytecodes and thus take the same amount of computation on the same inputs. This is great, because it allows us to avoid using time as a measure of computation, which leads to problems such as nondeterminism. With bytecode cutoffs, re-running the same match between the same bots produces exactly the same results—a feature you will find very useful for debugging.
+
+Every round each robot sequentially takes its turn. If a robot attempts to exceed its bytecode limit (usually unexpectedly, if you have too big of a loop or something), its computation will be paused and then resumed at exactly that point next turn. The code will resume running just fine, but this can cause problems if, for example, you check if a tile is empty, then the robot is cut off and the others take their turns, and then you attempt to move into a now-occupied tile. Instead, use the `Clock.yield()` function to end a robot's turn. This will pause computation where you choose, and resume on the next line next turn.  
+
+The per-turn bytecode limits for various robots are as follows:  
+
+- Politician: 15,000  
+- Slanderer: 7,500  
+- Muckraker: 15,000  
+- Enlightenment Center: 20,000  
+Some standard functions such as the math library and sensing functions have fixed bytecode costs, available [here](https://github.com/battlecode/battlecode21/blob/master/engine/src/main/battlecode/instrumenter/bytecode/resources/MethodCosts.txt). More details on this at the end of the spec.  
+
+# Other resources and utilities  
+## Sample player  
+[examplefuncsplayer](https://github.com/battlecode/battlecode21-scaffold), a simple player which performs various game actions, is included with battlecode. It includes helpful comments and is a template you can use to see what RobotPlayer files should look like.
+
+If you are interested, you may find the full game engine implementation [here](https://github.com/battlecode/battlecode21/blob/master/engine/src/main/battlecode/). This is not at all required, but may be helpful if you are curious about the engine's implementation specifics.
+
+## Debugging  
+Debugging is extremely important. See the [debugging tips](http://2021.battlecode.org/debugging) to learn about our useful debug tools.
+
+## Monitoring  
+The Clock class provides a way to identify the current round (`rc.getRoundNum()`), and how many bytecodes have been executed during the current round (`Clock.getBytecodeNum()`z).
+
+## GameActionExceptions  
+GameActionExceptions are thrown when something cannot be done. It is often the result of illegal actions such as moving onto another robot, or an unexpected round change in your code. Thus, you must write your player defensively and handle `GameActionExceptions` judiciously. You should also be prepared for any ability to fail and make sure that this has as little effect as possible on the control flow of your program.
+
+Throwing any `Exceptions` cause a bytecode penalty of 500 bytecodes. Unhandled exceptions may paralyze your robot.
+
+## Complete documentation  
+Every function you could possibly use to interact with the game can be found in our [javadocs](http://2021.battlecode.org/javadoc/).  
 
 # Various Stratigies Reviewed and Defined  
 
