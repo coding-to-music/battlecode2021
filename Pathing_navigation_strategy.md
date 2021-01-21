@@ -1,6 +1,6 @@
-# Pathing and Navigation Strategy
+# Battlecode 2021: Pathing, Navigation, Strategy & Communications  
 
-- [Pathing and Navigation Strategy](#pathing-and-navigation-strategy)
+- [Battlecode 2021: Pathing, Navigation, Strategy & Communications](#battlecode-2021-pathing-navigation-strategy--communications)
 - [The Game, explained](#the-game-explained)
   - [Background](#background)
   - [Environment](#environment)
