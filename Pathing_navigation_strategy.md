@@ -141,6 +141,7 @@ Buildings are immobile robots; the only type of available building is Enlightenm
 
 
 |  |  Enlightenment Center  |  Politician  |  Slanderer  |  Muckraker  |  
+| --- | --- | --- | --- | --- |  
 |  Class  |  Building  |  Unit  |  Unit  |  Unit  |  
 Influence  |  Cannot be created	C (variable)	C (variable)	C (variable)  |  
 Minimum influence  |  N/A  |  1  |  	1  |  	1  |  
